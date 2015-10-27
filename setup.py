@@ -5,25 +5,25 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='oslogmerger',
 
-    version='1.0.0',
+    version='1.0.1',
     description='Openstack Log merge tool',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/mangelajo/olsogmerger',
+    url='https://github.com/mangelajo/oslogmerger',
 
     # Author details
     author='Miguel Angel Ajo',
     author_email='majopela@redhat.com',
 
     # Choose your license
-    license='Apache',
+    license='Apache Software License',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -37,17 +37,13 @@ setup(
         'Intended Audience :: Developers',
 
         # Pick your license as you wish (should match "license" above)
-        'License :: OSI Approved :: Apache License',
+        'License :: OSI Approved :: Apache Software License',
+        'Topic :: Utilities',
+        'Environment :: OpenStack',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
     ],
 
     # What does your project relate to?
@@ -63,6 +59,7 @@ setup(
     #    'dev': ['check-manifest'],
     #    'test': ['coverage'],
     # },
+    data_files = ['README.rst'],
 
     entry_points={
         'console_scripts': [
