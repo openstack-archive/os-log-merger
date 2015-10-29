@@ -1,0 +1,6 @@
+2015-10-20 10:46:07.920 7806 INFO neutron.common.config [-] Logging enabled!
+2015-10-20 10:46:07.923 7806 INFO neutron.common.config [-] /bin/neutron-ns-metadata-proxy version 2014.2.3-19.el7ost
+2015-10-20 10:46:08.075 7822 INFO neutron.wsgi [-] (7822) wsgi starting up on http://0.0.0.0:9697/
+2015-10-20 12:42:41.552 12269 INFO neutron.common.config [-] Logging enabled!
+2015-10-20 12:42:41.561 12269 INFO neutron.common.config [-] /bin/neutron-ns-metadata-proxy version 2014.2.3-19.el7ost
+2015-10-20 12:42:41.879 12282 INFO neutron.wsgi [-] (12282) wsgi starting up on http://0.0.0.0:9697/

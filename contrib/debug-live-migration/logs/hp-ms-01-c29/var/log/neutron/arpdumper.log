@@ -1,0 +1,4 @@
+2015-10-29 10:52:24.719 tcpdump DEBUG tcpdump: WARNING: br-int: no IPv4 address assigned
+2015-10-29 10:52:24.748 tcpdump DEBUG tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+2015-10-29 10:52:24.753 tcpdump DEBUG listening on br-int, link-type EN10MB (Ethernet), capture size 65535 bytes
+2015-10-29 10:53:45.082 tcpdump DEBUG 10:53:45.076033 fa:16:3e:c5:24:11 > Broadcast, ethertype 802.1Q (0x8100), length 46: vlan 1, p 0, ethertype ARP, Request who-has 192.168.200.6 tell 192.168.200.1, length 28

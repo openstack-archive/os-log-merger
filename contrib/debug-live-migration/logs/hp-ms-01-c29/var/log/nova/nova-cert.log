@@ -1,0 +1,80 @@
+2015-10-20 09:04:38.111 28372 AUDIT nova.service [-] Starting cert node (version 2014.2.3-31.el7ost)
+2015-10-20 09:04:42.204 28372 INFO oslo.messaging._drivers.impl_rabbit [req-76ec237e-2672-4555-9a25-8dc9f5e2ea14 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:04:42.270 28372 INFO oslo.messaging._drivers.impl_rabbit [req-76ec237e-2672-4555-9a25-8dc9f5e2ea14 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:57.150 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.150 28372 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:10:57.163 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:58.166 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:58.219 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 09:10:59.221 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:00.223 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:00.279 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 09:11:03.281 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:04.285 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.534 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:23.510 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: [Errno 110] Connection timed out
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 302, in drain_events
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     chanmap, None, timeout=timeout,
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 365, in _wait_multiple
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     channel, method_sig, args, content = read_timeout(timeout)
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 336, in read_timeout
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.method_reader.read_method()
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 189, in read_method
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit     raise m
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:23.510 28372 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:23.514 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:23.545 28372 WARNING nova.openstack.common.loopingcall [-] task <bound method DbDriver._report_state of <nova.servicegroup.drivers.db.DbDriver object at 0x3c8f510>> run outlasted interval by 15.89 sec
+2015-10-20 10:17:24.517 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.706 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:20:25.630 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 12:20:25.630 28372 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 12:20:25.636 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 12:20:26.639 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:20:26.695 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 12:20:27.697 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 12:20:28.699 28372 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:20:28.736 28372 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 12:20:29.813 28372 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2015-10-20 12:40:59.561 1478 AUDIT nova.service [-] Starting cert node (version 2014.2.3-31.el7ost)
+2015-10-20 12:41:15.399 1478 WARNING oslo.db.sqlalchemy.session [req-488162e1-c945-4270-8dbb-518edc0a94af ] SQL connection failed. -1 attempts left.
+2015-10-20 12:41:25.414 1478 WARNING oslo.db.sqlalchemy.session [req-488162e1-c945-4270-8dbb-518edc0a94af ] SQL connection failed. -2 attempts left.
+2015-10-20 12:41:39.332 1478 INFO oslo.messaging._drivers.impl_rabbit [req-488162e1-c945-4270-8dbb-518edc0a94af ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:39.536 1478 INFO oslo.messaging._drivers.impl_rabbit [req-488162e1-c945-4270-8dbb-518edc0a94af ] Connected to AMQP server on 10.12.27.29:5672

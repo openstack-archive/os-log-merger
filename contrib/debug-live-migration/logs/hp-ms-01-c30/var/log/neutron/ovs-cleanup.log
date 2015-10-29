@@ -1,0 +1,15 @@
+2015-10-20 09:21:07.041 12845 INFO neutron.common.config [-] Logging enabled!
+2015-10-20 09:21:07.042 12845 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2014.2.3-19.el7ost
+2015-10-20 09:21:07.611 12845 INFO neutron.agent.ovs_cleanup_util [-] Cleaning br-int
+2015-10-20 09:21:07.889 12845 INFO neutron.agent.ovs_cleanup_util [-] OVS cleanup completed successfully
+2015-10-20 12:20:22.229 32136 INFO neutron.common.config [-] Logging enabled!
+2015-10-20 12:20:22.230 32136 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2014.2.3-19.el7ost
+2015-10-20 12:20:25.396 32136 INFO neutron.agent.ovs_cleanup_util [-] Cleaning br-int
+2015-10-20 12:20:28.106 32136 INFO neutron.agent.ovs_cleanup_util [-] Cleaning br-ex
+2015-10-20 12:20:29.483 32136 INFO neutron.agent.ovs_cleanup_util [-] Delete qvo2fd11ba3-51
+2015-10-20 12:20:29.502 32136 INFO neutron.agent.ovs_cleanup_util [-] OVS cleanup completed successfully
+2015-10-20 12:40:30.315 1399 INFO neutron.common.config [-] Logging enabled!
+2015-10-20 12:40:30.318 1399 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2014.2.3-19.el7ost
+2015-10-20 12:40:34.463 1399 INFO neutron.agent.ovs_cleanup_util [-] Cleaning br-int
+2015-10-20 12:40:35.305 1399 INFO neutron.agent.ovs_cleanup_util [-] Cleaning br-ex
+2015-10-20 12:40:36.158 1399 INFO neutron.agent.ovs_cleanup_util [-] OVS cleanup completed successfully

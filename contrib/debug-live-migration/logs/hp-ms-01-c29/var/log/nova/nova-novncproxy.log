@@ -1,0 +1,170 @@
+2015-10-20 11:13:40.740 13290 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=783f24a2-4c5a-4492-ae72-e839060b82e9&title=instance1(ecf81ced-4799-4022-a7c8-14069046afd8) HTTP/1.1" 200 -
+2015-10-20 11:13:41.109 13291 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/base.css HTTP/1.1" 200 -
+2015-10-20 11:13:41.396 13292 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/util.js HTTP/1.1" 200 -
+2015-10-20 11:13:41.881 13296 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/webutil.js HTTP/1.1" 200 -
+2015-10-20 11:13:41.892 13297 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/base64.js HTTP/1.1" 200 -
+2015-10-20 11:13:41.914 13298 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/websock.js HTTP/1.1" 200 -
+2015-10-20 11:13:41.937 13300 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/des.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.131 13299 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keysymdef.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.133 13303 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/input.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.135 13301 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keyboard.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.426 13304 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/display.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.432 13307 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keysym.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.437 13305 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/jsunzip.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.633 13306 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/rfb.js HTTP/1.1" 200 -
+2015-10-20 11:13:42.910 13308 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=783f24a2-4c5a-4492-ae72-e839060b82e9&title=instance1(ecf81ced-4799-4022-a7c8-14069046afd8) HTTP/1.1" 200 -
+2015-10-20 11:13:43.551 13309 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/rfb.js HTTP/1.1" 200 -
+2015-10-20 11:13:44.168 13314 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 11:13:44.172 13314 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 11:13:44.173 13314 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 11:13:44.182 13315 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /favicon.ico HTTP/1.1" 404 -
+2015-10-20 11:13:44.193 13314 INFO oslo.messaging._drivers.impl_rabbit [req-36677455-5b22-43e8-958a-c9c143b66e2b ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:13:44.262 13314 INFO oslo.messaging._drivers.impl_rabbit [req-36677455-5b22-43e8-958a-c9c143b66e2b ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:13:44.277 13314 INFO oslo.messaging._drivers.impl_rabbit [req-36677455-5b22-43e8-958a-c9c143b66e2b ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:13:44.326 13314 INFO oslo.messaging._drivers.impl_rabbit [req-36677455-5b22-43e8-958a-c9c143b66e2b ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:13:44.693 13316 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /favicon.ico HTTP/1.1" 404 -
+2015-10-20 11:13:44.763 13314 INFO nova.console.websocketproxy [req-36677455-5b22-43e8-958a-c9c143b66e2b None] connect info: {u'instance_uuid': u'ecf81ced-4799-4022-a7c8-14069046afd8', u'internal_access_path': None, u'last_activity_at': 1445354018.437952, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'783f24a2-4c5a-4492-ae72-e839060b82e9', u'port': u'5900'}
+2015-10-20 11:13:44.765 13314 INFO nova.console.websocketproxy [req-36677455-5b22-43e8-958a-c9c143b66e2b None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 11:42:53.442 18853 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=25a866d9-6802-4c59-8901-b20d5d3d909c&title=instance1(456d8388-2014-4935-9af5-adeaca222a9b) HTTP/1.1" 200 -
+2015-10-20 11:42:53.826 18854 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 11:42:53.831 18854 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 11:42:53.832 18854 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 11:42:53.853 18854 INFO oslo.messaging._drivers.impl_rabbit [req-3546330a-7d92-4c91-8b12-a7c356131138 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:53.939 18854 INFO oslo.messaging._drivers.impl_rabbit [req-3546330a-7d92-4c91-8b12-a7c356131138 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:53.955 18854 INFO oslo.messaging._drivers.impl_rabbit [req-3546330a-7d92-4c91-8b12-a7c356131138 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:54.013 18854 INFO oslo.messaging._drivers.impl_rabbit [req-3546330a-7d92-4c91-8b12-a7c356131138 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:54.528 18854 INFO nova.console.websocketproxy [req-3546330a-7d92-4c91-8b12-a7c356131138 None] connect info: {u'instance_uuid': u'456d8388-2014-4935-9af5-adeaca222a9b', u'internal_access_path': None, u'last_activity_at': 1445355771.899593, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'25a866d9-6802-4c59-8901-b20d5d3d909c', u'port': u'5900'}
+2015-10-20 11:42:54.530 18854 INFO nova.console.websocketproxy [req-3546330a-7d92-4c91-8b12-a7c356131138 None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 11:43:03.748 18896 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=25a866d9-6802-4c59-8901-b20d5d3d909c&title=instance1(456d8388-2014-4935-9af5-adeaca222a9b) HTTP/1.1" 200 -
+2015-10-20 11:43:04.185 18899 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 11:43:04.190 18899 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 11:43:04.191 18899 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 11:43:04.231 18899 INFO oslo.messaging._drivers.impl_rabbit [req-b10f6987-ca9c-4632-99e9-7b33686724ab ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:43:04.330 18899 INFO oslo.messaging._drivers.impl_rabbit [req-b10f6987-ca9c-4632-99e9-7b33686724ab ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:43:04.359 18899 INFO oslo.messaging._drivers.impl_rabbit [req-b10f6987-ca9c-4632-99e9-7b33686724ab ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:43:04.443 18899 INFO oslo.messaging._drivers.impl_rabbit [req-b10f6987-ca9c-4632-99e9-7b33686724ab ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:43:04.954 18899 INFO nova.console.websocketproxy [req-b10f6987-ca9c-4632-99e9-7b33686724ab None] connect info: {u'instance_uuid': u'456d8388-2014-4935-9af5-adeaca222a9b', u'internal_access_path': None, u'last_activity_at': 1445355771.899593, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'25a866d9-6802-4c59-8901-b20d5d3d909c', u'port': u'5900'}
+2015-10-20 11:43:04.956 18899 INFO nova.console.websocketproxy [req-b10f6987-ca9c-4632-99e9-7b33686724ab None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 13:52:00.589 27505 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=44c9f4cb-d246-40c2-975b-b6165ea93de5&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 13:52:01.023 27508 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 13:52:01.027 27508 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 13:52:01.028 27508 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 13:52:01.043 27508 INFO oslo.messaging._drivers.impl_rabbit [req-7fef22aa-a313-4313-a246-76d4991f7eda ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:01.107 27508 INFO oslo.messaging._drivers.impl_rabbit [req-7fef22aa-a313-4313-a246-76d4991f7eda ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:01.129 27508 INFO oslo.messaging._drivers.impl_rabbit [req-7fef22aa-a313-4313-a246-76d4991f7eda ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:01.215 27508 INFO oslo.messaging._drivers.impl_rabbit [req-7fef22aa-a313-4313-a246-76d4991f7eda ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:01.912 27508 INFO nova.console.websocketproxy [req-7fef22aa-a313-4313-a246-76d4991f7eda None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445363517.963422, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'44c9f4cb-d246-40c2-975b-b6165ea93de5', u'port': u'5900'}
+2015-10-20 13:52:01.915 27508 INFO nova.console.websocketproxy [req-7fef22aa-a313-4313-a246-76d4991f7eda None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 13:52:03.853 27534 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=44c9f4cb-d246-40c2-975b-b6165ea93de5&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 13:52:04.394 27535 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 13:52:04.398 27535 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 13:52:04.399 27535 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 13:52:04.413 27535 INFO oslo.messaging._drivers.impl_rabbit [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:04.479 27535 INFO oslo.messaging._drivers.impl_rabbit [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:04.495 27535 INFO oslo.messaging._drivers.impl_rabbit [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:04.553 27535 INFO oslo.messaging._drivers.impl_rabbit [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:52:05.032 27535 INFO nova.console.websocketproxy [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445363517.963422, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'44c9f4cb-d246-40c2-975b-b6165ea93de5', u'port': u'5900'}
+2015-10-20 13:52:05.035 27535 INFO nova.console.websocketproxy [req-1615a2ea-1a1d-4e3a-9f3d-8e8c91e666a8 None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:14:42.509 32298 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=026e99e9-a55f-4fea-86d1-e2462e3571fb&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 14:14:43.110 32301 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:14:43.113 32301 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:14:43.114 32301 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:14:43.127 32301 INFO oslo.messaging._drivers.impl_rabbit [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:43.190 32301 INFO oslo.messaging._drivers.impl_rabbit [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:43.205 32301 INFO oslo.messaging._drivers.impl_rabbit [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:43.256 32301 INFO oslo.messaging._drivers.impl_rabbit [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:43.701 32301 INFO nova.console.websocketproxy [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445364879.822647, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'026e99e9-a55f-4fea-86d1-e2462e3571fb', u'port': u'5900'}
+2015-10-20 14:14:43.702 32301 INFO nova.console.websocketproxy [req-7c4e009a-1a34-4c61-a357-8130af05f4b6 None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:14:51.278 32322 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=026e99e9-a55f-4fea-86d1-e2462e3571fb&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 14:14:51.686 32326 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:14:51.690 32326 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:14:51.692 32326 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:14:51.707 32326 INFO oslo.messaging._drivers.impl_rabbit [req-aedef96c-fd58-420a-999d-62752134f405 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:51.792 32326 INFO oslo.messaging._drivers.impl_rabbit [req-aedef96c-fd58-420a-999d-62752134f405 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:51.823 32326 INFO oslo.messaging._drivers.impl_rabbit [req-aedef96c-fd58-420a-999d-62752134f405 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:51.884 32326 INFO oslo.messaging._drivers.impl_rabbit [req-aedef96c-fd58-420a-999d-62752134f405 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:52.262 32326 INFO nova.console.websocketproxy [req-aedef96c-fd58-420a-999d-62752134f405 None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445364879.822647, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'026e99e9-a55f-4fea-86d1-e2462e3571fb', u'port': u'5900'}
+2015-10-20 14:14:52.263 32326 INFO nova.console.websocketproxy [req-aedef96c-fd58-420a-999d-62752134f405 None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:20:00.866 1366 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=d9f41bbd-cf9a-4594-9a17-735c7286b3ba&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 14:20:01.322 1369 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:20:01.327 1369 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:20:01.329 1369 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:20:01.350 1369 INFO oslo.messaging._drivers.impl_rabbit [req-b4c962de-e181-434a-bb88-1fec4b1e3925 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:01.423 1369 INFO oslo.messaging._drivers.impl_rabbit [req-b4c962de-e181-434a-bb88-1fec4b1e3925 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:01.440 1369 INFO oslo.messaging._drivers.impl_rabbit [req-b4c962de-e181-434a-bb88-1fec4b1e3925 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:01.498 1369 INFO oslo.messaging._drivers.impl_rabbit [req-b4c962de-e181-434a-bb88-1fec4b1e3925 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:01.907 1369 INFO nova.console.websocketproxy [req-b4c962de-e181-434a-bb88-1fec4b1e3925 None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445365198.392311, u'console_type': u'novnc', u'host': u'hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com', u'token': u'd9f41bbd-cf9a-4594-9a17-735c7286b3ba', u'port': u'5900'}
+2015-10-20 14:20:01.909 1369 INFO nova.console.websocketproxy [req-b4c962de-e181-434a-bb88-1fec4b1e3925 None] connecting to: hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:20:03.893 1384 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=d9f41bbd-cf9a-4594-9a17-735c7286b3ba&title=instance1(92ff693e-82c2-40d4-9b96-0c5a614ab218) HTTP/1.1" 200 -
+2015-10-20 14:20:04.360 1393 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:20:04.365 1393 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:20:04.367 1393 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:20:04.384 1393 INFO oslo.messaging._drivers.impl_rabbit [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:04.480 1393 INFO oslo.messaging._drivers.impl_rabbit [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:04.505 1393 INFO oslo.messaging._drivers.impl_rabbit [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:04.586 1393 INFO oslo.messaging._drivers.impl_rabbit [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:20:05.195 1393 INFO nova.console.websocketproxy [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 None] connect info: {u'instance_uuid': u'92ff693e-82c2-40d4-9b96-0c5a614ab218', u'internal_access_path': None, u'last_activity_at': 1445365198.392311, u'console_type': u'novnc', u'host': u'hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com', u'token': u'd9f41bbd-cf9a-4594-9a17-735c7286b3ba', u'port': u'5900'}
+2015-10-20 14:20:05.204 1393 INFO nova.console.websocketproxy [req-1a89a9b6-9cbc-4125-8c02-50b884aa6579 None] connecting to: hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:40:58.244 5832 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=ecf1364f-e246-4d4e-9fc8-a5b58503255d&title=instance1(a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) HTTP/1.1" 200 -
+2015-10-20 14:40:58.818 5835 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:40:58.821 5835 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:40:58.822 5835 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:40:58.836 5835 INFO oslo.messaging._drivers.impl_rabbit [req-0d809498-8121-4726-8a34-89d09a6d0c3d ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:40:58.898 5835 INFO oslo.messaging._drivers.impl_rabbit [req-0d809498-8121-4726-8a34-89d09a6d0c3d ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:40:58.914 5835 INFO oslo.messaging._drivers.impl_rabbit [req-0d809498-8121-4726-8a34-89d09a6d0c3d ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:40:58.967 5835 INFO oslo.messaging._drivers.impl_rabbit [req-0d809498-8121-4726-8a34-89d09a6d0c3d ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:40:59.377 5835 INFO nova.console.websocketproxy [req-0d809498-8121-4726-8a34-89d09a6d0c3d None] connect info: {u'instance_uuid': u'a18a5824-4215-4e24-bcfc-cb9f89f6bcbd', u'internal_access_path': None, u'last_activity_at': 1445366456.148141, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'ecf1364f-e246-4d4e-9fc8-a5b58503255d', u'port': u'5900'}
+2015-10-20 14:40:59.379 5835 INFO nova.console.websocketproxy [req-0d809498-8121-4726-8a34-89d09a6d0c3d None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:41:00.730 5836 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=ecf1364f-e246-4d4e-9fc8-a5b58503255d&title=instance1(a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) HTTP/1.1" 200 -
+2015-10-20 14:41:01.208 5841 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:41:01.211 5841 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:41:01.212 5841 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:41:01.225 5841 INFO oslo.messaging._drivers.impl_rabbit [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:41:01.284 5841 INFO oslo.messaging._drivers.impl_rabbit [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:41:01.300 5841 INFO oslo.messaging._drivers.impl_rabbit [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:41:01.355 5841 INFO oslo.messaging._drivers.impl_rabbit [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:41:01.828 5841 INFO nova.console.websocketproxy [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 None] connect info: {u'instance_uuid': u'a18a5824-4215-4e24-bcfc-cb9f89f6bcbd', u'internal_access_path': None, u'last_activity_at': 1445366456.148141, u'console_type': u'novnc', u'host': u'hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com', u'token': u'ecf1364f-e246-4d4e-9fc8-a5b58503255d', u'port': u'5900'}
+2015-10-20 14:41:01.830 5841 INFO nova.console.websocketproxy [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 None] connecting to: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com:5900
+2015-10-20 14:47:30.549 5841 INFO nova.console.websocketproxy [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 None] handler exception: [Errno 107] Transport endpoint is not connected
+2015-10-20 14:47:30.599 5841 INFO nova.console.websocketproxy [req-a57350bc-0c5c-4916-b5c5-f8a1140f1d87 None] Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/websockify/websocket.py", line 711, in top_new_client
+    self.new_client()
+  File "/usr/lib/python2.7/site-packages/nova/console/websocketproxy.py", line 180, in new_client
+    self.new_websocket_client()
+  File "/usr/lib/python2.7/site-packages/nova/console/websocketproxy.py", line 139, in new_websocket_client
+    tsock.shutdown(socket.SHUT_RDWR)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 107] Transport endpoint is not connected
+
+2015-10-20 14:47:44.758 7277 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /vnc_auto.html?token=ecf1364f-e246-4d4e-9fc8-a5b58503255d&title=instance1(a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) HTTP/1.1" 200 -
+2015-10-20 14:47:45.203 7280 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/base.css HTTP/1.1" 200 -
+2015-10-20 14:47:45.209 7281 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/util.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.805 7284 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/webutil.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.821 7285 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/websock.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.852 7287 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keysymdef.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.871 7286 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/base64.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.875 7288 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/des.js HTTP/1.1" 200 -
+2015-10-20 14:47:45.890 7289 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keyboard.js HTTP/1.1" 200 -
+2015-10-20 14:47:46.124 7291 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/input.js HTTP/1.1" 200 -
+2015-10-20 14:47:46.283 7292 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/display.js HTTP/1.1" 200 -
+2015-10-20 14:47:46.302 7293 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/jsunzip.js HTTP/1.1" 200 -
+2015-10-20 14:47:46.414 7295 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/keysym.js HTTP/1.1" 200 -
+2015-10-20 14:47:47.010 7294 INFO nova.console.websocketproxy [-] 10.10.52.115: "GET /include/rfb.js HTTP/1.1" 200 -
+2015-10-20 14:47:47.491 7301 INFO nova.console.websocketproxy [-] 10.10.52.115: Plain non-SSL (ws://) WebSocket connection
+2015-10-20 14:47:47.495 7301 INFO nova.console.websocketproxy [-] 10.10.52.115: Version hybi-13, base64: 'False'
+2015-10-20 14:47:47.496 7301 INFO nova.console.websocketproxy [-] 10.10.52.115: Path: '/websockify'
+2015-10-20 14:47:47.513 7301 INFO oslo.messaging._drivers.impl_rabbit [req-f49d4d6c-0f90-41df-82aa-df5657b78423 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:47:47.651 7301 INFO oslo.messaging._drivers.impl_rabbit [req-f49d4d6c-0f90-41df-82aa-df5657b78423 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:47:47.677 7301 INFO oslo.messaging._drivers.impl_rabbit [req-f49d4d6c-0f90-41df-82aa-df5657b78423 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:47:47.769 7301 INFO oslo.messaging._drivers.impl_rabbit [req-f49d4d6c-0f90-41df-82aa-df5657b78423 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:47:47.823 7301 INFO nova.console.websocketproxy [req-f49d4d6c-0f90-41df-82aa-df5657b78423 None] handler exception: Invalid Token
+2015-10-20 14:47:47.830 7301 INFO nova.console.websocketproxy [req-f49d4d6c-0f90-41df-82aa-df5657b78423 None] Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/websockify/websocket.py", line 711, in top_new_client
+    self.new_client()
+  File "/usr/lib/python2.7/site-packages/nova/console/websocketproxy.py", line 180, in new_client
+    self.new_websocket_client()
+  File "/usr/lib/python2.7/site-packages/nova/console/websocketproxy.py", line 86, in new_websocket_client
+    raise Exception(_("Invalid Token"))
+Exception: Invalid Token
+

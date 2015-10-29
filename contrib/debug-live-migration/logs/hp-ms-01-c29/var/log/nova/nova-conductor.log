@@ -1,0 +1,983 @@
+2015-10-20 09:03:14.057 28068 INFO nova.openstack.common.service [-] Starting 4 workers
+2015-10-20 09:03:14.064 28068 INFO nova.openstack.common.service [-] Started child 28139
+2015-10-20 09:03:14.079 28068 INFO nova.openstack.common.service [-] Started child 28140
+2015-10-20 09:03:14.088 28139 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 09:03:14.094 28068 INFO nova.openstack.common.service [-] Started child 28141
+2015-10-20 09:03:14.103 28140 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 09:03:14.109 28068 INFO nova.openstack.common.service [-] Started child 28142
+2015-10-20 09:03:14.136 28141 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 09:03:14.143 28142 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 09:03:21.388 28142 INFO oslo.messaging._drivers.impl_rabbit [req-6ff800e7-1284-4d10-a694-09bebca13ec1 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:21.426 28140 INFO oslo.messaging._drivers.impl_rabbit [req-f898b71e-ecc3-40a5-bbac-af976990bbd6 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:21.558 28140 INFO oslo.messaging._drivers.impl_rabbit [req-f898b71e-ecc3-40a5-bbac-af976990bbd6 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:21.604 28142 INFO oslo.messaging._drivers.impl_rabbit [req-6ff800e7-1284-4d10-a694-09bebca13ec1 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:22.127 28139 INFO oslo.messaging._drivers.impl_rabbit [req-e3a29512-5119-47e5-a16d-5f5199522ce9 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:22.267 28139 INFO oslo.messaging._drivers.impl_rabbit [req-e3a29512-5119-47e5-a16d-5f5199522ce9 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:22.514 28141 INFO oslo.messaging._drivers.impl_rabbit [req-bbc29b61-0985-40ce-842f-eb1675b87129 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:22.581 28141 INFO oslo.messaging._drivers.impl_rabbit [req-bbc29b61-0985-40ce-842f-eb1675b87129 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.108 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.186 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.419 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.495 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.723 28139 INFO oslo.messaging._drivers.impl_rabbit [req-6964af20-7fed-451c-be53-348f4dbb483a ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:24.843 28139 INFO oslo.messaging._drivers.impl_rabbit [req-6964af20-7fed-451c-be53-348f4dbb483a ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:25.148 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:03:25.265 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:57.153 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.153 28139 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:10:57.163 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:57.195 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.195 28142 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:10:57.227 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:57.202 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.202 28140 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:10:57.230 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:57.210 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 323, in drain_events
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(channel, args)
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 529, in _close
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit     (class_id, method_id), ConnectionError)
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+2015-10-20 09:10:57.210 28141 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:10:57.232 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:58.165 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:58.234 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:58.235 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:58.246 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:10:58.314 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 09:10:58.387 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 09:10:58.407 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 09:10:58.416 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2015-10-20 09:10:59.315 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:59.389 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:59.409 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:10:59.417 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:00.317 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:00.374 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 09:11:00.396 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:00.410 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:00.422 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:00.573 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 09:11:00.578 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 09:11:00.585 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] AMQP server on 10.12.27.29:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2015-10-20 09:11:03.376 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:03.575 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:03.580 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:03.588 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:04.383 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.582 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.593 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.603 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.725 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.928 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.968 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:04.986 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:12.671 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_922484e2cef4454091dea8057b0fa8a1': [Errno 32] Broken pipe
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     (40, 11),  # Channel.exchange_declare_ok
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 67, in wait
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, allowed_methods)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 273, in _wait_method
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.wait()
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.dispatch_method(method_sig, args, content)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(self, args)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 526, in _close
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self._x_close_ok()
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 554, in _x_close_ok
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((10, 51))
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 32] Broken pipe
+2015-10-20 09:11:12.671 28139 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:11:12.683 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:13.398 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_04c60d6dba4345f6a8504766aecc3b93': [Errno 32] Broken pipe
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     (40, 11),  # Channel.exchange_declare_ok
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 67, in wait
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, allowed_methods)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 273, in _wait_method
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.wait()
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.dispatch_method(method_sig, args, content)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(self, args)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 526, in _close
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self._x_close_ok()
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 554, in _x_close_ok
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((10, 51))
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 32] Broken pipe
+2015-10-20 09:11:13.398 28140 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:11:13.415 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:13.685 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:13.747 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:14.417 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:14.507 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:22.666 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_922484e2cef4454091dea8057b0fa8a1': [Errno 32] Broken pipe
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     (40, 11),  # Channel.exchange_declare_ok
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 67, in wait
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, allowed_methods)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 273, in _wait_method
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.wait()
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.dispatch_method(method_sig, args, content)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(self, args)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 526, in _close
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self._x_close_ok()
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 554, in _x_close_ok
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((10, 51))
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 32] Broken pipe
+2015-10-20 09:11:22.666 28142 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:11:22.678 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:23.350 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_04c60d6dba4345f6a8504766aecc3b93': [Errno 32] Broken pipe
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     (40, 11),  # Channel.exchange_declare_ok
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 67, in wait
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, allowed_methods)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 273, in _wait_method
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.wait()
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.dispatch_method(method_sig, args, content)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(self, args)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 526, in _close
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self._x_close_ok()
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 554, in _x_close_ok
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((10, 51))
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 32] Broken pipe
+2015-10-20 09:11:23.350 28141 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 09:11:23.364 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 09:11:23.680 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:23.740 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:24.366 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 09:11:24.440 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:22.806 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: [Errno 110] Connection timed out
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 302, in drain_events
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     chanmap, None, timeout=timeout,
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 365, in _wait_multiple
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     channel, method_sig, args, content = read_timeout(timeout)
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 336, in read_timeout
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     return self.method_reader.read_method()
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 189, in read_method
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit     raise m
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:22.806 28142 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:22.811 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:22.845 28142 WARNING nova.openstack.common.loopingcall [-] task <bound method DbDriver._report_state of <nova.servicegroup.drivers.db.DbDriver object at 0x2198990>> run outlasted interval by 15.88 sec
+2015-10-20 10:17:22.902 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: [Errno 110] Connection timed out
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 302, in drain_events
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     chanmap, None, timeout=timeout,
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 365, in _wait_multiple
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     channel, method_sig, args, content = read_timeout(timeout)
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 336, in read_timeout
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.method_reader.read_method()
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 189, in read_method
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit     raise m
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:22.902 28140 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:22.905 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:22.936 28140 WARNING nova.openstack.common.loopingcall [-] task <bound method DbDriver._report_state of <nova.servicegroup.drivers.db.DbDriver object at 0x2198990>> run outlasted interval by 15.74 sec
+2015-10-20 10:17:23.542 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: [Errno 110] Connection timed out
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 302, in drain_events
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     chanmap, None, timeout=timeout,
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 365, in _wait_multiple
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     channel, method_sig, args, content = read_timeout(timeout)
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 336, in read_timeout
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     return self.method_reader.read_method()
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 189, in read_method
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit     raise m
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:23.542 28141 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:23.546 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:23.574 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to consume message from queue: [Errno 110] Connection timed out
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 762, in _consume
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.connection.drain_events(timeout=poll_timeout)
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 275, in drain_events
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.transport.drain_events(self.connection, **kwargs)
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 91, in drain_events
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     return connection.drain_events(**kwargs)
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 302, in drain_events
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     chanmap, None, timeout=timeout,
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 365, in _wait_multiple
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     channel, method_sig, args, content = read_timeout(timeout)
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/connection.py", line 336, in read_timeout
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     return self.method_reader.read_method()
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 189, in read_method
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit     raise m
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:23.574 28139 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:23.578 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:23.578 28141 WARNING nova.openstack.common.loopingcall [-] task <bound method DbDriver._report_state of <nova.servicegroup.drivers.db.DbDriver object at 0x2198990>> run outlasted interval by 15.65 sec
+2015-10-20 10:17:23.605 28139 WARNING nova.openstack.common.loopingcall [-] task <bound method DbDriver._report_state of <nova.servicegroup.drivers.db.DbDriver object at 0x2198990>> run outlasted interval by 15.89 sec
+2015-10-20 10:17:23.812 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:23.884 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:23.907 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:23.987 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.121 28142 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_922484e2cef4454091dea8057b0fa8a1': [Errno 110] Connection timed out
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 613, in exchange_declare
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((40, 10), args)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:24.121 28142 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:24.127 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:24.130 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.173 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.215 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.258 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.330 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.335 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.339 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.344 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.551 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.548 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_04c60d6dba4345f6a8504766aecc3b93': [Errno 110] Connection timed out
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 613, in exchange_declare
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((40, 10), args)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:24.548 28140 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:24.569 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:24.580 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.734 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:24.739 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.129 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.160 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.210 28142 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.233 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.571 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:25.619 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:31.943 28141 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_922484e2cef4454091dea8057b0fa8a1': [Errno 110] Connection timed out
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 613, in exchange_declare
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((40, 10), args)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:31.943 28141 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:31.947 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:32.949 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:33.002 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:34.442 28139 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_04c60d6dba4345f6a8504766aecc3b93': [Errno 110] Connection timed out
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 613, in exchange_declare
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self._send_method((40, 10), args)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 56, in _send_method
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     self.channel_id, method_sig, args, content,
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/method_framing.py", line 221, in write_method
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     write_frame(1, channel, payload)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/transport.py", line 182, in write_frame
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     frame_type, channel, size, payload, 0xce,
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 377, in sendall
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     tail = self.send(data, flags)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/eventlet/greenio/base.py", line 359, in send
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit     total_sent += fd.send(data[total_sent:], flags)
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit error: [Errno 110] Connection timed out
+2015-10-20 10:17:34.442 28139 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:17:34.446 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:17:35.448 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:17:35.502 28139 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:33:49.322 28140 ERROR oslo.messaging._drivers.impl_rabbit [-] Failed to publish message to topic 'reply_922484e2cef4454091dea8057b0fa8a1': Exchange.declare: (404) NOT_FOUND - no exchange 'reply_922484e2cef4454091dea8057b0fa8a1' in vhost '/'
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit Traceback (most recent call last):
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 674, in ensure
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     return method()
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 782, in _publish
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     publisher = cls(self.conf, self.channel, topic=topic, **kwargs)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 374, in __init__
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     type='direct', **options)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 339, in __init__
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.reconnect(channel)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/impl_rabbit.py", line 347, in reconnect
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     routing_key=self.routing_key)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.revive(self._channel)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.declare()
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     self.exchange.declare()
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     nowait=nowait, passive=passive,
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     (40, 11),  # Channel.exchange_declare_ok
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     return self.dispatch_method(method_sig, args, content)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     return amqp_method(self, args)
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit     reply_code, reply_text, (class_id, method_id), ChannelError,
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_922484e2cef4454091dea8057b0fa8a1' in vhost '/'
+2015-10-20 10:33:49.322 28140 TRACE oslo.messaging._drivers.impl_rabbit 
+2015-10-20 10:33:49.327 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Delaying reconnect for 1.0 seconds...
+2015-10-20 10:33:50.331 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:33:50.386 28140 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 10:54:19.070 28141 INFO oslo.messaging._drivers.impl_rabbit [req-05632eb8-480d-4988-86ec-066cfdd0d802 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 10:54:19.119 28141 INFO oslo.messaging._drivers.impl_rabbit [req-05632eb8-480d-4988-86ec-066cfdd0d802 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:15.792 28139 INFO oslo.messaging._drivers.impl_rabbit [req-73736a9e-bc3c-4aec-971f-6cbbf156bebb ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 11:42:15.845 28139 INFO oslo.messaging._drivers.impl_rabbit [req-73736a9e-bc3c-4aec-971f-6cbbf156bebb ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 11:51:28.083 28141 WARNING nova.scheduler.utils [req-a40a6ce0-ec37-4fae-9773-f915c79c2aab None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 11:51:28.086 28141 WARNING nova.scheduler.utils [req-a40a6ce0-ec37-4fae-9773-f915c79c2aab None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 11:52:17.144 28142 WARNING nova.scheduler.utils [req-0e58c5ff-b025-4880-86d2-9176e3665ed8 None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 11:52:17.147 28142 WARNING nova.scheduler.utils [req-0e58c5ff-b025-4880-86d2-9176e3665ed8 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 11:58:47.478 28141 WARNING nova.scheduler.utils [req-ad8838a6-f187-47fb-99c5-7016e1855b82 None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 11:58:47.480 28141 WARNING nova.scheduler.utils [req-ad8838a6-f187-47fb-99c5-7016e1855b82 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 12:01:45.855 28141 WARNING nova.scheduler.utils [req-7d0eea8b-a04a-43d7-9a4b-b47452f1dc2c None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 12:01:45.857 28141 WARNING nova.scheduler.utils [req-7d0eea8b-a04a-43d7-9a4b-b47452f1dc2c None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 12:02:08.599 28141 WARNING nova.scheduler.utils [req-ca1f60bb-d2dc-4e13-8ecb-9a9b8b051333 None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 12:02:08.601 28141 WARNING nova.scheduler.utils [req-ca1f60bb-d2dc-4e13-8ecb-9a9b8b051333 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 12:03:09.584 28140 WARNING nova.scheduler.utils [req-a44ff3bc-e130-414b-997b-ad619ebda334 None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 12:03:09.587 28140 WARNING nova.scheduler.utils [req-a44ff3bc-e130-414b-997b-ad619ebda334 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 12:04:47.928 28139 WARNING nova.scheduler.utils [req-809a8e33-2130-4860-b5db-880d74657de4 None] Failed to compute_task_migrate_server: Unable to migrate instance (456d8388-2014-4935-9af5-adeaca222a9b) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 12:04:47.931 28139 WARNING nova.scheduler.utils [req-809a8e33-2130-4860-b5db-880d74657de4 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 12:06:16.568 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:06:16.666 28141 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:18:51.482 28140 INFO oslo.messaging._drivers.impl_rabbit [req-494a7193-8b54-4546-abda-7448cf30ec86 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:18:51.534 28140 INFO oslo.messaging._drivers.impl_rabbit [req-494a7193-8b54-4546-abda-7448cf30ec86 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:20:19.838 28142 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2015-10-20 12:20:19.838 28139 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2015-10-20 12:20:19.844 28068 INFO nova.openstack.common.service [-] Caught SIGTERM, stopping children
+2015-10-20 12:20:19.846 28068 INFO nova.openstack.common.service [-] Waiting on 4 children to exit
+2015-10-20 12:20:19.848 28141 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2015-10-20 12:20:19.858 28140 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2015-10-20 12:20:19.875 28068 INFO nova.openstack.common.service [-] Child 28141 exited with status 1
+2015-10-20 12:20:20.043 28068 INFO nova.openstack.common.service [-] Child 28139 exited with status 1
+2015-10-20 12:20:20.047 28068 INFO nova.openstack.common.service [-] Child 28140 exited with status 1
+2015-10-20 12:20:20.049 28068 INFO nova.openstack.common.service [-] Child 28142 exited with status 1
+2015-10-20 12:40:58.120 1404 INFO nova.openstack.common.service [-] Starting 4 workers
+2015-10-20 12:40:58.318 1404 INFO nova.openstack.common.service [-] Started child 2309
+2015-10-20 12:40:58.397 1404 INFO nova.openstack.common.service [-] Started child 2315
+2015-10-20 12:40:58.505 2309 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 12:40:58.541 2316 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 12:40:58.434 1404 INFO nova.openstack.common.service [-] Started child 2316
+2015-10-20 12:40:58.597 2315 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 12:40:58.581 1404 INFO nova.openstack.common.service [-] Started child 2326
+2015-10-20 12:40:58.843 2326 AUDIT nova.service [-] Starting conductor node (version 2014.2.3-31.el7ost)
+2015-10-20 12:41:13.867 2316 WARNING oslo.db.sqlalchemy.session [req-97add66d-8ce5-4112-add4-d6d5bedd1b20 ] SQL connection failed. -1 attempts left.
+2015-10-20 12:41:14.305 2309 WARNING oslo.db.sqlalchemy.session [req-de4ac5c2-a694-4d0a-bc2f-a59c42bab4c5 ] SQL connection failed. -1 attempts left.
+2015-10-20 12:41:14.336 2315 WARNING oslo.db.sqlalchemy.session [req-36009f26-c025-4ccd-9416-b7716b548c90 ] SQL connection failed. -1 attempts left.
+2015-10-20 12:41:15.297 2326 WARNING oslo.db.sqlalchemy.session [req-aedc9d9f-09ea-4d05-96a5-4df2cdb186b6 ] SQL connection failed. -1 attempts left.
+2015-10-20 12:41:25.367 2316 WARNING oslo.db.sqlalchemy.session [req-97add66d-8ce5-4112-add4-d6d5bedd1b20 ] SQL connection failed. -2 attempts left.
+2015-10-20 12:41:25.371 2309 WARNING oslo.db.sqlalchemy.session [req-de4ac5c2-a694-4d0a-bc2f-a59c42bab4c5 ] SQL connection failed. -2 attempts left.
+2015-10-20 12:41:25.374 2315 WARNING oslo.db.sqlalchemy.session [req-36009f26-c025-4ccd-9416-b7716b548c90 ] SQL connection failed. -2 attempts left.
+2015-10-20 12:41:25.377 2326 WARNING oslo.db.sqlalchemy.session [req-aedc9d9f-09ea-4d05-96a5-4df2cdb186b6 ] SQL connection failed. -2 attempts left.
+2015-10-20 12:41:40.372 2309 INFO oslo.messaging._drivers.impl_rabbit [req-de4ac5c2-a694-4d0a-bc2f-a59c42bab4c5 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.382 2315 INFO oslo.messaging._drivers.impl_rabbit [req-36009f26-c025-4ccd-9416-b7716b548c90 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.567 2315 INFO oslo.messaging._drivers.impl_rabbit [req-36009f26-c025-4ccd-9416-b7716b548c90 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.627 2326 INFO oslo.messaging._drivers.impl_rabbit [req-aedc9d9f-09ea-4d05-96a5-4df2cdb186b6 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.646 2316 INFO oslo.messaging._drivers.impl_rabbit [req-97add66d-8ce5-4112-add4-d6d5bedd1b20 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.668 2309 INFO oslo.messaging._drivers.impl_rabbit [req-de4ac5c2-a694-4d0a-bc2f-a59c42bab4c5 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.804 2326 INFO oslo.messaging._drivers.impl_rabbit [req-aedc9d9f-09ea-4d05-96a5-4df2cdb186b6 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:40.838 2316 INFO oslo.messaging._drivers.impl_rabbit [req-97add66d-8ce5-4112-add4-d6d5bedd1b20 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:44.553 2315 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:44.643 2315 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:45.973 2309 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:46.057 2309 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:46.416 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:46.485 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:46.800 2316 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 12:41:46.870 2316 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:02:06.968 2315 INFO oslo.messaging._drivers.impl_rabbit [req-3d2e34e0-ff36-45c4-94c9-218f9c5e5bf6 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:02:07.023 2315 INFO oslo.messaging._drivers.impl_rabbit [req-3d2e34e0-ff36-45c4-94c9-218f9c5e5bf6 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:02:07.840 2315 WARNING nova.scheduler.utils [req-3d2e34e0-ff36-45c4-94c9-218f9c5e5bf6 None] Failed to compute_task_migrate_server: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4971, in check_can_live_migrate_source
+    block_device_info)
+
+  File "/usr/lib/python2.7/site-packages/nova/virt/libvirt/driver.py", line 5342, in check_can_live_migrate_source
+    raise exception.InvalidSharedStorage(reason=reason, path=source)
+
+InvalidSharedStorage: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4943, in check_can_live_migrate_destination
+    dest_check_data)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/rpcapi.py", line 403, in check_can_live_migrate_source
+    dest_check_data=dest_check_data)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/client.py", line 152, in call
+    retry=self.retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/transport.py", line 90, in _send
+    timeout=timeout, retry=retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/amqpdriver.py", line 416, in send
+    retry=retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/amqpdriver.py", line 407, in _send
+    raise result
+
+InvalidSharedStorage_Remote: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4971, in check_can_live_migrate_source
+    block_device_info)
+
+  File "/usr/lib/python2.7/site-packages/nova/virt/libvirt/driver.py", line 5342, in check_can_live_migrate_source
+    raise exception.InvalidSharedStorage(reason=reason, path=source)
+
+InvalidSharedStorage: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+
+
+2015-10-20 13:02:07.842 2315 WARNING nova.scheduler.utils [req-3d2e34e0-ff36-45c4-94c9-218f9c5e5bf6 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 13:08:55.780 2326 INFO oslo.messaging._drivers.impl_rabbit [req-d12b8303-89ca-4461-ae0b-3eccdd4a0c06 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:08:55.831 2326 INFO oslo.messaging._drivers.impl_rabbit [req-d12b8303-89ca-4461-ae0b-3eccdd4a0c06 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 13:08:56.687 2326 WARNING nova.scheduler.utils [req-d12b8303-89ca-4461-ae0b-3eccdd4a0c06 None] Failed to compute_task_migrate_server: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4971, in check_can_live_migrate_source
+    block_device_info)
+
+  File "/usr/lib/python2.7/site-packages/nova/virt/libvirt/driver.py", line 5342, in check_can_live_migrate_source
+    raise exception.InvalidSharedStorage(reason=reason, path=source)
+
+InvalidSharedStorage: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4943, in check_can_live_migrate_destination
+    dest_check_data)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/rpcapi.py", line 403, in check_can_live_migrate_source
+    dest_check_data=dest_check_data)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/client.py", line 152, in call
+    retry=self.retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/transport.py", line 90, in _send
+    timeout=timeout, retry=retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/amqpdriver.py", line 416, in send
+    retry=retry)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/_drivers/amqpdriver.py", line 407, in _send
+    raise result
+
+InvalidSharedStorage_Remote: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 134, in _dispatch_and_reply
+    incoming.message))
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 177, in _dispatch
+    return self._do_dispatch(endpoint, method, ctxt, args)
+
+  File "/usr/lib/python2.7/site-packages/oslo/messaging/rpc/dispatcher.py", line 123, in _do_dispatch
+    result = getattr(endpoint, method)(ctxt, **new_args)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 88, in wrapped
+    payload)
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/exception.py", line 71, in wrapped
+    return f(self, context, *args, **kw)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 343, in decorated_function
+    kwargs['instance'], e, sys.exc_info())
+
+  File "/usr/lib/python2.7/site-packages/nova/openstack/common/excutils.py", line 82, in __exit__
+    six.reraise(self.type_, self.value, self.tb)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 331, in decorated_function
+    return function(self, context, *args, **kwargs)
+
+  File "/usr/lib/python2.7/site-packages/nova/compute/manager.py", line 4971, in check_can_live_migrate_source
+    block_device_info)
+
+  File "/usr/lib/python2.7/site-packages/nova/virt/libvirt/driver.py", line 5342, in check_can_live_migrate_source
+    raise exception.InvalidSharedStorage(reason=reason, path=source)
+
+InvalidSharedStorage: hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com is not on shared storage: Live migration can not be used without shared storage.
+
+
+2015-10-20 13:08:56.689 2326 WARNING nova.scheduler.utils [req-d12b8303-89ca-4461-ae0b-3eccdd4a0c06 None] [instance: 456d8388-2014-4935-9af5-adeaca222a9b] Setting instance to ACTIVE state.
+2015-10-20 13:15:05.093 2309 INFO oslo.messaging._drivers.impl_rabbit [req-3d0b6359-7677-4d73-8667-c5caa9b05655 ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 13:15:05.170 2309 INFO oslo.messaging._drivers.impl_rabbit [req-3d0b6359-7677-4d73-8667-c5caa9b05655 ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:10.232 2316 INFO oslo.messaging._drivers.impl_rabbit [req-6b10a779-0a4d-48d8-9534-4609ab16c20a ] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-20 14:14:10.285 2316 INFO oslo.messaging._drivers.impl_rabbit [req-6b10a779-0a4d-48d8-9534-4609ab16c20a ] Connected to AMQP server on 10.12.27.29:5672
+2015-10-20 14:17:15.469 2309 WARNING nova.scheduler.utils [req-9b7650da-b9d7-45e1-b196-aae4e51fd5f1 None] Failed to compute_task_migrate_server: Unable to migrate instance (92ff693e-82c2-40d4-9b96-0c5a614ab218) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 14:17:15.472 2309 WARNING nova.scheduler.utils [req-9b7650da-b9d7-45e1-b196-aae4e51fd5f1 None] [instance: 92ff693e-82c2-40d4-9b96-0c5a614ab218] Setting instance to ACTIVE state.
+2015-10-20 14:17:26.407 2315 WARNING nova.scheduler.utils [req-95fbd05b-045d-4637-8e84-71aa92db0215 None] Failed to compute_task_migrate_server: Unable to migrate instance (92ff693e-82c2-40d4-9b96-0c5a614ab218) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 14:17:26.409 2315 WARNING nova.scheduler.utils [req-95fbd05b-045d-4637-8e84-71aa92db0215 None] [instance: 92ff693e-82c2-40d4-9b96-0c5a614ab218] Setting instance to ACTIVE state.
+2015-10-20 14:48:16.520 2316 WARNING nova.scheduler.utils [req-953d6884-e77e-4765-8ba9-daf3fca8c5df None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-20 14:48:16.522 2316 WARNING nova.scheduler.utils [req-953d6884-e77e-4765-8ba9-daf3fca8c5df None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-21 08:00:47.893 2309 WARNING nova.scheduler.utils [req-8af234e7-13a2-43b0-ac1e-983cdaee2b64 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-21 08:00:47.895 2309 WARNING nova.scheduler.utils [req-8af234e7-13a2-43b0-ac1e-983cdaee2b64 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-27 06:02:02.666 2309 WARNING nova.scheduler.utils [req-1c40e640-31e2-4da7-bbd8-f007addbb262 None] Failed to compute_task_migrate_server: Compute service of hp-ms-01-c20.moonshot1.lab.eng.rdu.redhat.com is unavailable at this time.
+2015-10-27 06:02:02.670 2309 WARNING nova.scheduler.utils [req-1c40e640-31e2-4da7-bbd8-f007addbb262 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-28 07:42:11.930 2326 WARNING nova.scheduler.utils [req-0e173ac0-3b60-4c67-b51d-69aadd797c11 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-28 07:42:11.933 2326 WARNING nova.scheduler.utils [req-0e173ac0-3b60-4c67-b51d-69aadd797c11 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-28 10:20:26.345 2309 WARNING nova.scheduler.utils [req-2bad4bc2-0969-4344-ace9-21d0aad10074 None] Failed to compute_task_migrate_server: Compute service of hp-ms-01-c29^Coonshot1.lab.eng.rdu.redhat.com is unavailable at this time.
+2015-10-28 10:20:26.349 2309 WARNING nova.scheduler.utils [req-2bad4bc2-0969-4344-ace9-21d0aad10074 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-28 10:35:06.036 2309 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-28 10:35:06.250 2309 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-28 10:39:48.699 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-28 10:39:48.785 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-28 11:13:43.943 2326 WARNING nova.scheduler.utils [req-d06d853f-fe5e-44a1-bfc1-1f310450f20c None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-28 11:13:43.945 2326 WARNING nova.scheduler.utils [req-d06d853f-fe5e-44a1-bfc1-1f310450f20c None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-28 15:31:30.687 2316 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-28 15:31:30.785 2316 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-28 15:43:10.922 2309 WARNING nova.scheduler.utils [req-a156ef03-2d7b-4702-b5e7-8edc9d05525d None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-28 15:43:10.925 2309 WARNING nova.scheduler.utils [req-a156ef03-2d7b-4702-b5e7-8edc9d05525d None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-28 15:57:15.718 2316 WARNING nova.scheduler.utils [req-64f29c21-072f-4b90-b681-5dcf2638cc26 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-28 15:57:15.721 2316 WARNING nova.scheduler.utils [req-64f29c21-072f-4b90-b681-5dcf2638cc26 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 05:17:58.205 2326 WARNING nova.scheduler.utils [req-b9c017c1-88eb-400b-849c-8e259898b132 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c30.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 05:17:58.208 2326 WARNING nova.scheduler.utils [req-b9c017c1-88eb-400b-849c-8e259898b132 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:14:42.679 2326 WARNING nova.scheduler.utils [req-1311fd78-ae5c-4a69-aaaa-716a97898a13 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:14:42.682 2326 WARNING nova.scheduler.utils [req-1311fd78-ae5c-4a69-aaaa-716a97898a13 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:23:29.226 2315 WARNING nova.scheduler.utils [req-e9599234-c98f-49fa-9ced-16516d1f09c7 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:23:29.230 2315 WARNING nova.scheduler.utils [req-e9599234-c98f-49fa-9ced-16516d1f09c7 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:28:09.325 2315 WARNING nova.scheduler.utils [req-114e3b52-7957-49a2-a317-02f5ec397e8c None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:28:09.328 2315 WARNING nova.scheduler.utils [req-114e3b52-7957-49a2-a317-02f5ec397e8c None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:28:56.660 2309 WARNING nova.scheduler.utils [req-80738fe4-6d7f-443d-bb69-c0035768bb76 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:28:56.662 2309 WARNING nova.scheduler.utils [req-80738fe4-6d7f-443d-bb69-c0035768bb76 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:31:21.269 2315 WARNING nova.scheduler.utils [req-9359e012-1e10-42fd-9528-31e67bb41e10 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:31:21.271 2315 WARNING nova.scheduler.utils [req-9359e012-1e10-42fd-9528-31e67bb41e10 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:33:42.030 2309 WARNING nova.scheduler.utils [req-f371a58e-6291-4cf2-bde2-96da0d52c394 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:33:42.032 2309 WARNING nova.scheduler.utils [req-f371a58e-6291-4cf2-bde2-96da0d52c394 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:36:37.611 2315 WARNING nova.scheduler.utils [req-08ac3daf-9ca2-4b2a-a103-14773ed963c0 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:36:37.613 2315 WARNING nova.scheduler.utils [req-08ac3daf-9ca2-4b2a-a103-14773ed963c0 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:43:51.389 2326 WARNING nova.scheduler.utils [req-21a65751-abb1-488d-9e81-9c305eb04dd7 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:43:51.391 2326 WARNING nova.scheduler.utils [req-21a65751-abb1-488d-9e81-9c305eb04dd7 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:49:44.350 2326 WARNING nova.scheduler.utils [req-9d388942-7ec2-4e56-adad-bbb59f971a29 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 06:49:44.352 2326 WARNING nova.scheduler.utils [req-9d388942-7ec2-4e56-adad-bbb59f971a29 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
+2015-10-29 06:57:20.096 2315 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-29 06:57:20.213 2315 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-29 06:58:29.113 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.12.27.29:5672
+2015-10-29 06:58:29.195 2326 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.12.27.29:5672
+2015-10-29 10:27:37.843 2316 WARNING nova.scheduler.utils [req-4c215208-9243-437d-a545-63504d817e92 None] Failed to compute_task_migrate_server: Unable to migrate instance (a18a5824-4215-4e24-bcfc-cb9f89f6bcbd) to current host (hp-ms-01-c29.moonshot1.lab.eng.rdu.redhat.com).
+2015-10-29 10:27:37.846 2316 WARNING nova.scheduler.utils [req-4c215208-9243-437d-a545-63504d817e92 None] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] Setting instance to ACTIVE state.
