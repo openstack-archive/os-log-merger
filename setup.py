@@ -11,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='oslogmerger',
 
-    version='1.0.1',
+    version='1.0.2',
     description='Openstack Log merge tool',
     long_description=long_description,
 
