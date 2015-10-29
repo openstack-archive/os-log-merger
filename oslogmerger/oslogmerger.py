@@ -11,16 +11,19 @@ class OpenStackLog:
         self._filename = filename
 
     def _extract_with_date(self, line):
-        chunks = line.split(" ")
-        datetime_str = ' '.join(chunks[:2])
-        # this is likely to be not necessary, we can just compare
-        # strings, and that's going to be faster than parsing
-        # and regenerating later
-        date_object = datetime.strptime(
-            datetime_str, "%Y-%m-%d %H:%M:%S.%f")
-        pid, level = chunks[2], chunks[3]
-        rest = ' '.join(chunks[4:])
-        return (date_object, self._filename, pid, level, rest)
+        try:
+            chunks = line.split(" ")
+            datetime_str = ' '.join(chunks[:2])
+            # this is likely to be not necessary, we can just compare
+            # strings, and that's going to be faster than parsing
+            # and regenerating later
+            date_object = datetime.strptime(
+                  datetime_str, "%Y-%m-%d %H:%M:%S.%f")
+            pid, level = chunks[2], chunks[3]
+            rest = ' '.join(chunks[4:])
+            return (date_object, self._filename, pid, level, rest)
+        except IndexError:
+            return None
 
     def log_entries(self):
         entry = None
@@ -30,6 +33,8 @@ class OpenStackLog:
                 break
             try:
                 new_entry = self._extract_with_date(line)
+                if new_entry is None:
+                    continue
                 if entry:
                     yield entry
                 entry = new_entry
@@ -40,7 +45,8 @@ class OpenStackLog:
                 entry = (date_object, filename, pid, level,
                          rest + EXTRALINES_PADDING + line)
 
-        yield entry
+        if entry:
+            yield entry
 
 
 def help():
