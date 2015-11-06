@@ -48,4 +48,5 @@ The previous example would produce something like this::
                                         Exit code: 0
                                         Stdout: 'ha-2cdba01d-e4\nha-44dca3a9-44\nha-499d3db7-97\nha-55a19f5e-ef\nha-b2d04f15-f2\nha-b5b271a1-d8\nha-fa58d644-81\nint-br-enp7s0\nint-br-ex\nqr-34b826df-97\nqr-5d5ea109-48\nqr-6adcffbf-09\nqr-743ccaa6-7e\nqr-79b33879-32\nqr-c12e6e06-ff\nqr-dc662767-61\n'
 
-
+References to http url files instead of local files is also supported. Files
+will be cached locally to avoid re-downloading on next runs.
