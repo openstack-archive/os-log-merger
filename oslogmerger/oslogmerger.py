@@ -75,9 +75,10 @@ class OpenStackLog:
             except ValueError:
                 # it's a non-dated line, just append to the entry
                 # extra info
-                (date_object, filename, pid, level, rest) = entry
-                entry = (date_object, filename, pid, level,
-                         rest + EXTRALINES_PADDING + line)
+                if entry:
+                    (date_object, filename, pid, level, rest) = entry
+                    entry = (date_object, filename, pid, level,
+                             rest + EXTRALINES_PADDING + line)
 
         if entry:
             yield entry
