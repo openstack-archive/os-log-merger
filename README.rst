@@ -10,6 +10,8 @@ file, ordered by time entries.
 
 It should work as long as the logs are based on oslo logger output.
 
+Quick presentation: http://mangelajo.github.io/openstack-debugging-presentation/
+
 Limitations
 ~~~~~~~~~~~
 

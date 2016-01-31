@@ -47,7 +47,7 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='openstack log merger',
+    keywords='OpenStack log merger',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
@@ -59,10 +59,11 @@ setup(
     #    'dev': ['check-manifest'],
     #    'test': ['coverage'],
     # },
-    data_files = ['README.rst'],
+    data_files=['README.rst'],
 
     entry_points={
         'console_scripts': [
+            'os-log-merger=oslogmerger.oslogmerger:main',
             'oslogmerger=oslogmerger.oslogmerger:main',
         ],
     },
