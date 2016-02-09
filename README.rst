@@ -1,10 +1,10 @@
-oslogmerger
-===========
+os-log-merger
+=============
 
-What is oslogmerger?
-~~~~~~~~~~~~~~~~~~~~
+What is os-log-merger?
+~~~~~~~~~~~~~~~~~~~~~~
 
-oslogmerger stands for OpenStack LOG merger, it's a tool designed to take a
+os-log-merger stands for OpenStack LOG merger, it's a tool designed to take a
 bunch of openstack logs across different projects, and merge them in a single
 file, ordered by time entries.
 
@@ -16,7 +16,7 @@ Limitations
 ~~~~~~~~~~~
 
 This tool is not able to properly (or meaningfully) merge logs if your servers
-are not time synced to a common source.
+are not time synced to a common time source.
 
 This is a naive implementation, not smart at all, instead of runtime comparing
 input dates as they come from log files, we create a big memory list with
@@ -24,17 +24,17 @@ all log lines, sort them, and spite them out. This can be improved.
 
 How to install
 ~~~~~~~~~~~~~~
-pip install oslogmerger
+pip install os-lo-gmerger
 
 How to use it
 ~~~~~~~~~~~~~
 
 .. code:: bash
 
-     oslogmerger ../bz/1257567/40-os1ctrl01/var/log/neutron/server.log:NS1 \
-                 ../bz/1257567/50-os1ctrl02/var/log/neutron/server.log:NS2 \
-                 ../bz/1257567/40-os1ctrl01/var/log/neutron/openvswitch-agent.log:OVS1 \
-                 ../bz/1257567/50-os1ctrl02/var/log/neutron/openvswitch-agent.log:OVS2
+     os-log-merger ../bz/1257567/40-os1ctrl01/var/log/neutron/server.log:NS1 \
+                   ../bz/1257567/50-os1ctrl02/var/log/neutron/server.log:NS2 \
+                   ../bz/1257567/40-os1ctrl01/var/log/neutron/openvswitch-agent.log:OVS1 \
+                   ../bz/1257567/50-os1ctrl02/var/log/neutron/openvswitch-agent.log:OVS2
 
 
 Please note that the :NS1, :NS2, :OVS1, :OVS2 are aliases and can be omitted,
