@@ -1,0 +1,1866 @@
+2016-01-29 11:29:00.434 13858 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 11:29:00.434 13858 INFO neutron.common.config [-] /usr/bin/neutron-netns-cleanup version 2015.1.2-2.el7ost
+2016-01-29 11:29:00.434 13858 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-netns-cleanup --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 11:29:00.434 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.441 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd
+qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e
+qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb
+qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.442 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.521 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.522 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.597 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.598 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.665 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-15191950-d1 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.665 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.735 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.736 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.807 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.808 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.880 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.881 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:00.955 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-372305fc-30 qr-cd149ceb-9f qg-ec1de36f-84 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:00.956 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.029 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.030 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.100 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo ha-428e4676-36 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.100 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.174 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-c7684c9c-92 ha-4c1698fa-92 qr-39c06a96-7f 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.175 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.246 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-325b2192-ab ha-86a3776a-14 lo qg-e0bbc4de-6f 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.246 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.314 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-37f68089-03 ha-dc5daee2-62 qr-8c11395d-b8 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.314 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.387 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-62e3bc7f-48 qg-31302469-1d ha-19380964-77 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.387 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.460 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.461 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.534 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-64bb1ee9-4a lo qr-ed1ba3c0-2c qg-6e6a1faf-d2 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.535 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.611 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-f90c23e0-e3 qr-e5534556-b8 ha-fd38bd4e-69 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.612 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.683 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-6e9d316d-47 qr-650d690e-0b ha-7a238e66-0d lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.683 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.761 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.761 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.828 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.829 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.902 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.903 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:01.977 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-13fa9efd-c9 lo ha-5bc176ca-49 qr-9287f2af-2e 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:01.978 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.053 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-9791f6c6-e5 ha-7d7b96d2-53 lo qr-c1c873e3-44 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.054 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.126 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-5133f527-5c qg-4330d6be-09 ha-8a748da7-cc lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.126 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.199 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qr-6f5d1784-97 qg-596c7f4b-0a ha-8fd402ae-fc 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.199 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.273 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-fd242e12-8a lo qr-86189fbf-73 qg-150e41bd-f0 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.274 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.349 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-57db305c-8b qg-5e11c6f4-4e lo qr-988decd4-2e 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.349 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.426 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-9ceddf42-ac qr-8f35376d-52 qg-18133cec-0e lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.427 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.503 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-d2d9eedf-5d lo ha-76643d99-d5 qg-f78ef22b-d5 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.503 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.575 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-e52079a2-d1 ha-df83277f-2b qr-48093dc8-b6 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.576 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.649 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.649 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.727 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: tap15de57fe-5c lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.727 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.799 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.799 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.875 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.876 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:02.945 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:02.946 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:03.019 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:03.020 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:03.098 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:03.099 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:03.179 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:03.180 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:03.256 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:03.257 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:03.331 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.334 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.388 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd
+qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e
+qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb
+qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.389 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.466 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.466 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.518 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-8d736f0a-7cc7-4aec-bdb5-573ecbb0eecd']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.519 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.568 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e
+qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb
+qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.569 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.652 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.652 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.700 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-5f6eea03-0c46-497a-a548-f8134ad2e29e']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.701 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.752 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb
+qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.752 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.832 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.833 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.883 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-4a893c35-b41a-4317-b57f-dd68543002bb']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.884 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:05.936 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:05.937 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.013 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.014 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.062 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-d1112cfd-b942-40d6-86cf-14c66af9c866']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.062 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.119 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.120 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.193 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.193 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.243 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-a4e07c82-a11b-472a-8fb4-32367884f73e']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.243 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.294 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.294 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.369 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.370 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.420 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-51368000-d5f3-4a59-a8c6-fb198701b74d']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.420 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.470 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.470 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.542 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.542 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.590 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.591 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.639 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.639 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.714 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.715 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.763 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-6376b176-f415-4a29-805a-e36fd35f25ff']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.764 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.817 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.817 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.893 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.894 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.941 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-edcb4b44-2093-447f-89b7-d99e825e19d3']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.941 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:06.994 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qdhcp-d668363f-1f72-46aa-820f-470854ea87c8
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:06.994 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.070 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.070 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.119 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-d668363f-1f72-46aa-820f-470854ea87c8']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.119 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.168 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.168 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.252 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.252 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.300 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-ef8e9a9d-2a52-4ee4-982b-2231964603ce']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.301 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.352 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.353 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.427 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.428 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.477 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-c83829d3-fb43-4fb1-85b5-a04753cd1de7']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.478 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.531 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.532 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.606 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.607 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.658 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-6221499a-97e5-473c-84db-473ce16d8a7b']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.659 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.712 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.712 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.778 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.778 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.827 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-8e391b33-04a4-49af-8b66-fa0b2c0c971c']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.828 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.878 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.878 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:07.954 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:07.955 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.003 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-9cec0ad9-6130-462a-87aa-7a737d7fa44e']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.003 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.054 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.055 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.130 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.131 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.180 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-182a7136-1c21-4b6e-beee-412fa5cf64e5']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.181 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.234 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.234 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.311 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.312 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.360 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-0da84ca0-76ed-4267-af84-6ce2dad29d69']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.361 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.414 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.415 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.487 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.487 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.539 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-00aa418d-15ab-43c9-a865-6dacef8c5654']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.540 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.590 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qdhcp-44cb052d-d17f-4268-ba45-608c77a43967
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.590 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.665 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:08.666 13858 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:08.715 13858 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'delete', 'qdhcp-44cb052d-d17f-4268-ba45-608c77a43967']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.272 14171 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 11:29:14.272 14171 INFO neutron.common.config [-] /usr/bin/neutron-netns-cleanup version 2015.1.2-2.el7ost
+2016-01-29 11:29:14.272 14171 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-netns-cleanup --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 11:29:14.272 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.278 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.279 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.349 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-15191950-d1 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.350 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.426 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-372305fc-30 qr-cd149ceb-9f qg-ec1de36f-84 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.427 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.504 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo ha-428e4676-36 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.504 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.575 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-c7684c9c-92 ha-4c1698fa-92 qr-39c06a96-7f 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.576 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.643 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-325b2192-ab ha-86a3776a-14 lo qg-e0bbc4de-6f 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.644 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.722 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-37f68089-03 ha-dc5daee2-62 qr-8c11395d-b8 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.722 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.798 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-62e3bc7f-48 qg-31302469-1d ha-19380964-77 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.799 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.871 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-64bb1ee9-4a lo qr-ed1ba3c0-2c qg-6e6a1faf-d2 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.872 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:14.947 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-f90c23e0-e3 qr-e5534556-b8 ha-fd38bd4e-69 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:14.948 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.017 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-6e9d316d-47 qr-650d690e-0b ha-7a238e66-0d lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.018 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.086 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-13fa9efd-c9 lo ha-5bc176ca-49 qr-9287f2af-2e 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.087 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.159 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qg-9791f6c6-e5 ha-7d7b96d2-53 lo qr-c1c873e3-44 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.160 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.237 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-5133f527-5c qg-4330d6be-09 ha-8a748da7-cc lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.238 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.312 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qr-6f5d1784-97 qg-596c7f4b-0a ha-8fd402ae-fc 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.313 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.379 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-fd242e12-8a lo qr-86189fbf-73 qg-150e41bd-f0 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.380 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.450 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-57db305c-8b qg-5e11c6f4-4e lo qr-988decd4-2e 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.451 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.521 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-9ceddf42-ac qr-8f35376d-52 qg-18133cec-0e lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.521 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.591 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: qr-d2d9eedf-5d lo ha-76643d99-d5 qg-f78ef22b-d5 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.592 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.662 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo qg-e52079a2-d1 ha-df83277f-2b qr-48093dc8-b6 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:15.663 14171 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:15.737 14171 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: tap15de57fe-5c lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:38.156 14276 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 11:29:38.157 14276 INFO neutron.common.config [-] /usr/bin/neutron-netns-cleanup version 2015.1.2-2.el7ost
+2016-01-29 11:29:38.157 14276 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-netns-cleanup --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini --force setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 11:29:38.157 14276 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 11:29:38.162 14276 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486
+qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204
+qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65
+qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899
+qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2
+qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de
+qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a
+qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4
+qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e
+qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9
+qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536
+qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8
+qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7
+qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd
+qrouter-1399ac22-78c7-455c-9913-e470ed30b567
+qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a
+qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a
+qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7
+qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 11:29:40.167 14276 ERROR neutron.agent.linux.dhcp [-] An interface driver must be specified
+2016-01-29 11:29:55.375 14293 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 11:29:55.376 14293 INFO neutron.common.config [-] /usr/bin/neutron-netns-cleanup version 2015.1.2-2.el7ost
+2016-01-29 11:29:57.386 14293 WARNING oslo_config.cfg [-] Option "use_namespaces" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+2016-01-29 11:29:57.587 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'ip', 'link', 'delete', 'ha-15191950-d1']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:58.080 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'ip', 'link', 'delete', 'ha-372305fc-30']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:58.287 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'ip', 'link', 'delete', 'qr-cd149ceb-9f']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:58.494 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2da2bc26-b14a-4bd3-8b55-d7a000148204', 'ip', 'link', 'delete', 'qg-ec1de36f-84']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:58.993 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'ip', 'link', 'delete', 'ha-428e4676-36']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:59.485 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'qg-c7684c9c-92']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:59.680 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'ha-4c1698fa-92']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:29:59.883 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'qr-39c06a96-7f']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:00.382 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'qr-325b2192-ab']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:00.600 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'ha-86a3776a-14']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:00.807 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'qg-e0bbc4de-6f']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:01.300 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'qg-37f68089-03']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:01.503 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'ha-dc5daee2-62']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:01.697 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'qr-8c11395d-b8']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:02.214 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'qr-62e3bc7f-48']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:02.413 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'qg-31302469-1d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:02.609 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'ha-19380964-77']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:03.102 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'ha-64bb1ee9-4a']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:03.306 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'qr-ed1ba3c0-2c']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:03.506 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'qg-6e6a1faf-d2']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:03.994 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'qg-f90c23e0-e3']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:04.191 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'qr-e5534556-b8']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:04.384 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'ha-fd38bd4e-69']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:04.869 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'qg-6e9d316d-47']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:05.073 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'qr-650d690e-0b']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:05.264 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'ha-7a238e66-0d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:05.755 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'qg-13fa9efd-c9']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:05.952 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'ha-5bc176ca-49']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:06.140 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'qr-9287f2af-2e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:06.634 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'qg-9791f6c6-e5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:06.830 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'ha-7d7b96d2-53']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:07.029 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'qr-c1c873e3-44']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:07.508 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'qr-5133f527-5c']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:07.710 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'qg-4330d6be-09']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:07.916 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'ha-8a748da7-cc']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:08.402 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'qr-6f5d1784-97']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:08.595 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'qg-596c7f4b-0a']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:08.790 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'ha-8fd402ae-fc']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:09.275 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'ha-fd242e12-8a']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:09.468 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'qr-86189fbf-73']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:09.662 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'qg-150e41bd-f0']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:10.162 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'ha-57db305c-8b']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:10.358 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'qg-5e11c6f4-4e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:10.554 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'qr-988decd4-2e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:11.047 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'ha-9ceddf42-ac']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:11.241 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'qr-8f35376d-52']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:11.431 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'qg-18133cec-0e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:11.925 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'qr-d2d9eedf-5d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:12.121 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'ha-76643d99-d5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:12.313 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'qg-f78ef22b-d5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:12.807 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'qg-e52079a2-d1']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:12.998 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'ha-df83277f-2b']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:30:13.205 14293 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'qr-48093dc8-b6']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+

@@ -1,0 +1,282 @@
+2015-11-12 13:15:25.512 32088 INFO neutron.common.config [-] Logging enabled!
+2015-11-12 13:15:25.513 32088 INFO neutron.common.config [-] /bin/neutron-ns-metadata-proxy version 2015.1.1-7.el7ost
+2015-11-12 13:15:25.630 32103 INFO neutron.agent.linux.daemon [-] Process runs with uid/gid: 996/995
+2015-11-12 13:15:25.631 32103 INFO neutron.wsgi [-] (32103) wsgi starting up on http://0.0.0.0:9697/
+2015-11-12 13:17:19.540 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39786)
+2015-11-12 13:17:19.817 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:19] "GET /2009-04-04/meta-data/instance-id HTTP/1.1" 200 127 0.274651
+2015-11-12 13:17:19.981 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39787)
+2015-11-12 13:17:19.989 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:19] "GET /2009-04-04/meta-data/public-keys HTTP/1.1" 404 278 0.006455
+2015-11-12 13:17:20.151 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39788)
+2015-11-12 13:17:20.159 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:20] "GET /2009-04-04/meta-data/instance-id HTTP/1.1" 200 127 0.006027
+2015-11-12 13:17:20.330 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39789)
+2015-11-12 13:17:20.352 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:20] "GET /2009-04-04/meta-data/ami-launch-index HTTP/1.1" 200 117 0.007055
+2015-11-12 13:17:20.614 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39790)
+2015-11-12 13:17:21.036 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:21] "GET /2009-04-04/meta-data/instance-type HTTP/1.1" 200 123 0.419987
+2015-11-12 13:17:21.257 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39791)
+2015-11-12 13:17:21.292 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:21] "GET /2009-04-04/meta-data/local-ipv4 HTTP/1.1" 200 124 0.007914
+2015-11-12 13:17:21.525 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39792)
+2015-11-12 13:17:21.609 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:21] "GET /2009-04-04/meta-data/public-ipv4 HTTP/1.1" 200 116 0.076212
+2015-11-12 13:17:21.790 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39793)
+2015-11-12 13:17:21.805 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:21] "GET /2009-04-04/meta-data/hostname HTTP/1.1" 200 134 0.008085
+2015-11-12 13:17:22.073 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39794)
+2015-11-12 13:17:22.089 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:22] "GET /2009-04-04/meta-data/local-hostname HTTP/1.1" 200 134 0.008530
+2015-11-12 13:17:22.281 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39795)
+2015-11-12 13:17:22.485 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:22] "GET /2009-04-04/user-data HTTP/1.1" 404 278 0.198773
+2015-11-12 13:17:22.669 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39796)
+2015-11-12 13:17:22.681 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:22] "GET /2009-04-04/meta-data/block-device-mapping HTTP/1.1" 200 124 0.006868
+2015-11-12 13:17:22.805 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39797)
+2015-11-12 13:17:22.816 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:22] "GET /2009-04-04/meta-data/block-device-mapping/ami HTTP/1.1" 200 119 0.005448
+2015-11-12 13:17:22.954 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39798)
+2015-11-12 13:17:22.967 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:22] "GET /2009-04-04/meta-data/block-device-mapping/root HTTP/1.1" 200 124 0.006910
+2015-11-12 13:17:23.129 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39799)
+2015-11-12 13:17:23.141 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:23] "GET /2009-04-04/meta-data/public-hostname HTTP/1.1" 200 134 0.006382
+2015-11-12 13:17:23.343 32103 INFO neutron.wsgi [-] (32103) accepted ('10.0.0.3', 39800)
+2015-11-12 13:17:23.358 32103 INFO neutron.wsgi [-] 10.0.0.3 - - [12/Nov/2015 13:17:23] "GET /2009-04-04/meta-data/placement/availability-zone HTTP/1.1" 200 120 0.008283
+2015-11-12 13:23:47.798 3504 INFO neutron.common.config [-] Logging enabled!
+2015-11-12 13:23:47.798 3504 INFO neutron.common.config [-] /bin/neutron-ns-metadata-proxy version 2015.1.1-7.el7ost
+2015-11-12 13:23:47.799 3504 DEBUG neutron.common.config [-] command line: /bin/neutron-ns-metadata-proxy --pid_file=/var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid --metadata_proxy_socket=/var/lib/neutron/metadata_proxy --router_id=b506a0e0-95fa-494b-863a-faacd745b8d7 --state_path=/var/lib/neutron --metadata_port=9697 --metadata_proxy_user=996 --metadata_proxy_group=995 --debug --verbose --log-file=neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log --log-dir=/var/log/neutron setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2015-11-12 13:23:47.799 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2178
+2015-11-12 13:23:47.799 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2179
+2015-11-12 13:23:47.799 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] command line args: ['--pid_file=/var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid', '--metadata_proxy_socket=/var/lib/neutron/metadata_proxy', '--router_id=b506a0e0-95fa-494b-863a-faacd745b8d7', '--state_path=/var/lib/neutron', '--metadata_port=9697', '--metadata_proxy_user=996', '--metadata_proxy_group=995', '--debug', '--verbose', '--log-file=neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log', '--log-dir=/var/log/neutron'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2180
+2015-11-12 13:23:47.799 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] config files: [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2181
+2015-11-12 13:23:47.799 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ================================================================================ log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2182
+2015-11-12 13:23:47.800 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] advertise_mtu                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.800 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_bulk                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.800 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_overlapping_ips          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_pagination               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_sorting                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] api_extensions_path            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.801 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.802 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] backlog                        = 4096 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.802 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.802 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.802 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.803 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] client_socket_timeout          = 900 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.803 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] config_dir                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.803 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] config_file                    = [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.803 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] core_plugin                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.803 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] daemonize                      = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] debug                          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] default_ipv4_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] default_ipv6_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'requests.packages.urllib3.util.retry=WARN', 'urllib3.util.retry=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.804 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] force_gateway_on_subnet        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] host                           = osp7_networker2_1447326248297_70074 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.805 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] log_config_append              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] log_dir                        = /var/log/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] log_file                       = neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] log_format                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.806 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.807 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.808 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.808 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_port                  = 9697 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.808 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_group           = 995 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.808 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.808 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_user            = 996 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_watch_log       = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] network_id                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] notify_nova_on_port_data_changes = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] notify_nova_on_port_status_changes = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_auth_url            = http://localhost:5000/v2.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.809 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_password            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_tenant_id           = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_tenant_name         = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_username            = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_url                       = http://127.0.0.1:8774/v2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.810 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] pid_file                       = /var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.811 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_default_rule            = default log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.811 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_dirs                    = ['policy.d'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.811 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.811 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.811 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.812 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] router_id                      = b506a0e0-95fa-494b-863a-faacd745b8d7 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.812 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] send_events_interval           = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.812 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] service_plugins                = [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.812 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.812 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] use_ssl                        = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.813 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] verbose                        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] vlan_transparent               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-12 13:23:47.814 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.root_helper              = sudo log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.815 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.root_helper_daemon       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.815 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.use_helper_for_ns_read   = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.815 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] oslo_concurrency.disable_process_locking = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.815 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] oslo_concurrency.lock_path     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.815 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.auth_plugin               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.816 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.auth_section              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.816 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.cafile                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.816 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.certfile                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.816 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.insecure                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.816 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.keyfile                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.817 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.region_name               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.817 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.timeout                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.817 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.817 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.817 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.818 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.818 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.818 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.818 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.819 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.819 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.819 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.819 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.819 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.820 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.820 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.820 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.820 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.820 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.821 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.sqlite_db             =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.821 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.821 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-12 13:23:47.821 3504 DEBUG neutron.agent.metadata.namespace_proxy [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2201
+2015-11-12 13:23:47.832 3512 INFO neutron.agent.linux.daemon [-] Process runs with uid/gid: 996/995
+2015-11-12 13:23:47.833 3512 INFO neutron.wsgi [-] (3512) wsgi starting up on http://0.0.0.0:9697/
+2015-11-24 20:52:59.958 12556 INFO neutron.common.config [-] Logging enabled!
+2015-11-24 20:53:00.011 12556 INFO neutron.common.config [-] /bin/neutron-ns-metadata-proxy version 2015.1.1-7.el7ost
+2015-11-24 20:53:00.013 12556 DEBUG neutron.common.config [-] command line: /bin/neutron-ns-metadata-proxy --pid_file=/var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid --metadata_proxy_socket=/var/lib/neutron/metadata_proxy --router_id=b506a0e0-95fa-494b-863a-faacd745b8d7 --state_path=/var/lib/neutron --metadata_port=9697 --metadata_proxy_user=996 --metadata_proxy_group=995 --debug --verbose --log-file=neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log --log-dir=/var/log/neutron setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2015-11-24 20:53:00.013 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2178
+2015-11-24 20:53:00.014 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2179
+2015-11-24 20:53:00.014 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] command line args: ['--pid_file=/var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid', '--metadata_proxy_socket=/var/lib/neutron/metadata_proxy', '--router_id=b506a0e0-95fa-494b-863a-faacd745b8d7', '--state_path=/var/lib/neutron', '--metadata_port=9697', '--metadata_proxy_user=996', '--metadata_proxy_group=995', '--debug', '--verbose', '--log-file=neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log', '--log-dir=/var/log/neutron'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2180
+2015-11-24 20:53:00.015 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] config files: [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2181
+2015-11-24 20:53:00.015 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ================================================================================ log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2182
+2015-11-24 20:53:00.015 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] advertise_mtu                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.016 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_bulk                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.016 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_overlapping_ips          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.017 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_pagination               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.017 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] allow_sorting                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.022 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] api_extensions_path            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.023 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.066 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.067 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.067 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] backlog                        = 4096 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.068 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.068 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.068 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.069 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] client_socket_timeout          = 900 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.069 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] config_dir                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.070 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] config_file                    = [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.073 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] core_plugin                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.074 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] daemonize                      = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.075 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] debug                          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.114 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] default_ipv4_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.115 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] default_ipv6_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.115 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'requests.packages.urllib3.util.retry=WARN', 'urllib3.util.retry=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.117 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.118 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.119 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.119 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] force_gateway_on_subnet        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.120 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] host                           = localhost.localdomain log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.120 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.121 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.122 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] log_config_append              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.122 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.123 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] log_dir                        = /var/log/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.123 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] log_file                       = neutron-ns-metadata-proxy-b506a0e0-95fa-494b-863a-faacd745b8d7.log log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.124 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] log_format                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.124 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.148 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.148 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.149 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.150 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.154 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.154 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.155 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.156 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.156 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_port                  = 9697 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.158 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_group           = 995 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.159 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.161 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_user            = 996 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.217 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] metadata_proxy_watch_log       = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.218 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] network_id                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.219 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] notify_nova_on_port_data_changes = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.219 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] notify_nova_on_port_status_changes = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.221 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_auth_url            = http://localhost:5000/v2.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.221 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_password            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.222 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_tenant_id           = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.223 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_tenant_name         = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.225 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_admin_username            = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.226 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova_url                       = http://127.0.0.1:8774/v2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.227 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.227 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] pid_file                       = /var/lib/neutron/external/pids/b506a0e0-95fa-494b-863a-faacd745b8d7.pid log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.227 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_default_rule            = default log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.264 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_dirs                    = ['policy.d'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.264 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.264 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.265 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.265 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] router_id                      = b506a0e0-95fa-494b-863a-faacd745b8d7 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.265 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] send_events_interval           = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.266 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] service_plugins                = [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.266 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.267 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.267 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.267 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.268 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.268 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.269 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] use_ssl                        = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.269 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.269 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.270 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.271 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] verbose                        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.271 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] vlan_transparent               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.277 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2015-11-24 20:53:00.330 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.root_helper              = sudo log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.331 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.root_helper_daemon       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.332 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] AGENT.use_helper_for_ns_read   = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.333 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] oslo_concurrency.disable_process_locking = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.335 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] oslo_concurrency.lock_path     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.339 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.auth_plugin               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.339 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.auth_section              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.340 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.cafile                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.340 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.certfile                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.341 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.insecure                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.341 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.keyfile                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.342 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.region_name               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.342 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] nova.timeout                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.343 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.343 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.344 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.344 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.344 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.345 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.345 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.345 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.345 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.346 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.346 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.346 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.347 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.347 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.347 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.348 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.349 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.349 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.sqlite_db             =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.349 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.350 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2015-11-24 20:53:00.363 12556 DEBUG neutron.agent.metadata.namespace_proxy [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2201
+2015-11-24 20:53:00.591 12723 INFO neutron.agent.linux.daemon [-] Process runs with uid/gid: 996/995
+2015-11-24 20:53:00.596 12723 INFO neutron.wsgi [-] (12723) wsgi starting up on http://0.0.0.0:9697/

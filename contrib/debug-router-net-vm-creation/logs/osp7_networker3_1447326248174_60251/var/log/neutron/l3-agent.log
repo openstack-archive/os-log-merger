@@ -1,0 +1,1639 @@
+2016-01-29 15:38:24.220 18632 INFO neutron.openstack.common.service [req-eb53f26c-4274-4fc8-ae27-6db2f4b926a6 ] Caught SIGTERM, exiting
+2016-01-29 15:38:25.205 18632 ERROR oslo_messaging._drivers.impl_rabbit [-] Failed to consume message from queue: 
+2016-01-29 15:38:25.216 18632 INFO oslo_rootwrap.client [req-eb53f26c-4274-4fc8-ae27-6db2f4b926a6 ] Stopping rootwrap daemon process with pid=18756
+2016-01-29 15:38:25.764 21510 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 15:38:25.764 21510 INFO neutron.common.config [-] /usr/bin/neutron-l3-agent version 2015.1.2-2.el7ost
+2016-01-29 15:38:25.764 21510 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-l3-agent --config-file /usr/share/neutron/neutron-dist.conf --config-dir /usr/share/neutron/l3_agent --config-file /etc/neutron/neutron.conf --config-dir /etc/neutron/conf.d/common --config-dir /etc/neutron/conf.d/neutron-l3-agent --log-file /var/log/neutron/l3-agent.log setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 15:38:25.784 21510 WARNING oslo_config.cfg [-] Option "use_namespaces" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+2016-01-29 15:38:25.785 21510 DEBUG neutron.openstack.common.fileutils [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Reloading cached file /etc/neutron/policy.json read_cached_file /usr/lib/python2.7/site-packages/neutron/openstack/common/fileutils.py:64
+2016-01-29 15:38:25.788 21510 DEBUG neutron.openstack.common.policy [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Reloaded policy file: /etc/neutron/policy.json _load_policy_file /usr/lib/python2.7/site-packages/neutron/openstack/common/policy.py:296
+2016-01-29 15:38:25.789 21510 DEBUG oslo_messaging._drivers.amqpdriver [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] MSG_ID is 7c30112f96234b3894c4df168f978fe1 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:25.789 21510 DEBUG oslo_messaging._drivers.amqp [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:25.792 21510 INFO oslo_messaging._drivers.impl_rabbit [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:25.919 21510 INFO oslo_messaging._drivers.impl_rabbit [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:25.923 21510 DEBUG oslo_messaging._drivers.amqp [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] UNIQUE_ID is b10c0c4b48b141d7baac0a5494099a5a. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:25.924 21510 DEBUG oslo_messaging._drivers.amqp [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:25.924 21510 INFO oslo_messaging._drivers.impl_rabbit [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:26.152 21510 INFO oslo_messaging._drivers.impl_rabbit [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:26.261 21510 DEBUG neutron.callbacks.manager [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Subscribe: <function after_router_added at 0x2d690c8> router after_create subscribe /usr/lib/python2.7/site-packages/neutron/callbacks/manager.py:43
+2016-01-29 15:38:26.261 21510 DEBUG neutron.callbacks.manager [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Subscribe: <function before_router_removed at 0x2d69578> router before_delete subscribe /usr/lib/python2.7/site-packages/neutron/callbacks/manager.py:43
+2016-01-29 15:38:26.261 21510 DEBUG neutron.services.firewall.agents.l3reference.firewall_l3_agent [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Initializing firewall agent __init__ /usr/lib/python2.7/site-packages/neutron/services/firewall/agents/l3reference/firewall_l3_agent.py:56
+2016-01-29 15:38:26.263 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Full set of CONF: _wait_for_exit_or_signal /usr/lib/python2.7/site-packages/neutron/openstack/common/service.py:164
+2016-01-29 15:38:26.264 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2178
+2016-01-29 15:38:26.264 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Configuration options gathered from: log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2179
+2016-01-29 15:38:26.264 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] command line args: ['--config-file', '/usr/share/neutron/neutron-dist.conf', '--config-dir', '/usr/share/neutron/l3_agent', '--config-file', '/etc/neutron/neutron.conf', '--config-dir', '/etc/neutron/conf.d/common', '--config-dir', '/etc/neutron/conf.d/neutron-l3-agent', '--log-file', '/var/log/neutron/l3-agent.log'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2180
+2016-01-29 15:38:26.265 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] config files: ['/usr/share/neutron/neutron-dist.conf', '/etc/neutron/neutron.conf'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2181
+2016-01-29 15:38:26.265 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ================================================================================ log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2182
+2016-01-29 15:38:26.265 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] admin_password                 = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.265 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] admin_tenant_name              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.266 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] admin_user                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.266 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] advertise_mtu                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.266 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] agent_mode                     = legacy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.266 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] allow_bulk                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.266 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] allow_overlapping_ips          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] allow_pagination               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] allow_sorting                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] api_extensions_path            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] api_paste_config               = /usr/share/neutron/api-paste.ini log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] api_workers                    = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] auth_region                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.267 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] auth_url                       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] backdoor_port                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] backlog                        = 4096 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] client_socket_timeout          = 900 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.268 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] config_dir                     = /etc/neutron/conf.d/neutron-l3-agent log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] config_file                    = ['/usr/share/neutron/neutron-dist.conf', '/etc/neutron/neutron.conf'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] control_exchange               = neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] core_plugin                    = neutron.plugins.ml2.plugin.Ml2Plugin log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] debug                          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] default_ipv4_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.269 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] default_ipv6_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.270 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'requests.packages.urllib3.util.retry=WARN', 'urllib3.util.retry=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.270 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.270 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.270 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] enable_metadata_proxy          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.270 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] endpoint_type                  = publicURL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.271 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] external_ingress_mark          = 0x2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.271 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] external_network_bridge        = br-ex log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.271 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] external_pids                  = /var/lib/neutron/external/pids log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.271 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.272 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] force_gateway_on_subnet        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.272 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] gateway_external_network_id    =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.272 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ha_confs_path                  = /var/lib/neutron/ha_confs log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.272 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ha_vrrp_advert_int             = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.273 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ha_vrrp_auth_password          = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.273 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ha_vrrp_auth_type              = PASS log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.273 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] handle_internal_only_routers   = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.273 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] host                           = osp7_networker3_1447326248174_60251 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.273 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] interface_driver               = neutron.agent.linux.interface.OVSInterfaceDriver log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ipv6_gateway                   =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] log_config_append              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] log_dir                        = /var/log/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] log_file                       = /var/log/neutron/l3-agent.log log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] log_format                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.274 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.275 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] meta_flavor_driver_mappings    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_access_mark           = 0x1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_port                  = 9697 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_proxy_group           =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_proxy_user            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.276 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] metadata_proxy_watch_log       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] network_device_mtu             = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] notification_driver            = ['neutron.openstack.common.notifier.rpc_notifier'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] notification_topics            = ['notifications'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] notify_nova_on_port_data_changes = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] notify_nova_on_port_status_changes = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_admin_auth_url            = http://localhost:5000/v2.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_admin_password            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.277 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_admin_tenant_id           = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_admin_tenant_name         = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_admin_username            = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova_url                       = http://127.0.0.1:8774/v2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ovs_integration_bridge         = br-int log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ovs_use_veth                   = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.278 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ovs_vsctl_timeout              = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.279 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.279 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] periodic_fuzzy_delay           = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.279 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] periodic_interval              = 40 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.280 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] policy_default_rule            = default log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.280 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] policy_dirs                    = ['policy.d'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.280 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.280 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] publish_errors                 = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.281 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ra_confs                       = /var/lib/neutron/ra log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.281 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.281 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] router_delete_namespaces       = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.281 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] router_id                      =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] rpc_backend                    = neutron.openstack.common.rpc.impl_kombu log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] rpc_workers                    = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] send_arp_for_ha                = 3 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] send_events_interval           = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] service_plugins                = ['neutron.services.l3_router.l3_router_plugin.L3RouterPlugin'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.282 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] transport_url                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] use_namespaces                 = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.283 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] use_ssl                        = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] use_stderr                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] use_syslog                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] verbose                        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] vlan_transparent               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] OVS.ovsdb_interface            = vsctl log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.284 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.amqp_auto_delete = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.amqp_durable_queues = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.fake_rabbit = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.heartbeat_rate = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.heartbeat_timeout_threshold = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.kombu_reconnect_delay = 1.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.kombu_ssl_ca_certs =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.285 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.kombu_ssl_certfile =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.kombu_ssl_keyfile =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.kombu_ssl_version =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_ha_queues = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_host = 10.211.55.142 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_hosts = ['10.211.55.142:5672'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_login_method = AMQPLAIN log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.286 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_max_retries = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_password = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_port = 5672 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_retry_backoff = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_retry_interval = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_use_ssl = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_userid = guest log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.287 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rabbit_virtual_host = / log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_messaging_rabbit.rpc_conn_pool_size = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.auth_plugin               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.auth_section              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.cafile                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.certfile                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.insecure                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.keyfile                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.288 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.region_name               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] nova.timeout                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.connection            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.connection_trace      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.289 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.290 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.291 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.291 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.291 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.291 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.292 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.sqlite_db             =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.292 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.292 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.292 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.check_child_processes_action = respawn log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.293 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.check_child_processes_interval = 60 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.293 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.report_interval          = 10.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.293 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.root_helper              = sudo neutron-rootwrap /etc/neutron/rootwrap.conf log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.293 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.root_helper_daemon       = sudo neutron-rootwrap-daemon /etc/neutron/rootwrap.conf log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.293 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] AGENT.use_helper_for_ns_read   = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] service_providers.service_provider = [] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_concurrency.disable_process_locking = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 WARNING oslo_config.cfg [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] oslo_concurrency.lock_path     = /var/lib/neutron/lock log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] fwaas.driver                   =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] fwaas.enabled                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:26.294 21510 DEBUG neutron.openstack.common.service [req-e817bfba-3abf-4112-9f87-d8ce9b321b8a ] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2201
+2016-01-29 15:38:26.303 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:38:26.304 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 34b4fae5696a4bd3b13da969d3edc418 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:26.304 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is d7869a55631943979921db0de9c871c0. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:26.305 21510 DEBUG neutron.common.rpc [-] Creating Consumer connection for Service l3_agent start /usr/lib/python2.7/site-packages/neutron/common/rpc.py:157
+2016-01-29 15:38:26.306 21510 DEBUG oslo_messaging._drivers.amqp [-] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:26.307 21510 INFO oslo_messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:26.319 21510 INFO eventlet.wsgi.server [-] (21510) wsgi starting up on http:///:v/
+2016-01-29 15:38:26.329 21510 INFO oslo_messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:26.346 21510 INFO neutron.agent.l3.agent [-] L3 agent started
+2016-01-29 15:38:26.347 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:38:26.347 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is d12e835533e24aedb95d13ee93781db8 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:26.347 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 4e97f49be6ba468fb1dccb7117297631. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:26.349 21510 DEBUG neutron.agent.l3.agent [-] Starting _process_routers_loop _process_routers_loop /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:485
+2016-01-29 15:38:26.438 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:38:26.439 21510 DEBUG neutron.agent.l3.agent [-] Starting periodic_sync_routers_task - fullsync:True periodic_sync_routers_task /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:497
+2016-01-29 15:38:26.439 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', 'netns', 'list'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:26.450 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:38:26.451 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7
+qdhcp-6ca21ee3-7cd1-4612-b9f4-ce89f93fc711
+qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb
+qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf
+qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92
+qdhcp-3a14d134-92e0-468f-83e7-ad574f792f87
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:26.452 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is cb02f7e9158a4a5995110fe3bce605cf _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:26.452 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is d30212a2198748eab3f900d884e3c9ad. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:26.709 21510 DEBUG neutron.agent.l3.agent [-] Processing :[] fetch_and_sync_all_routers /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:531
+2016-01-29 15:38:26.710 21510 DEBUG neutron.agent.l3.agent [-] periodic_sync_routers_task successfully completed fetch_and_sync_all_routers /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:540
+2016-01-29 15:38:26.711 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8cbed587-f3c2-4f6b-a619-d548869357c7.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.711 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8cbed587-f3c2-4f6b-a619-d548869357c7.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.711 21510 DEBUG neutron.agent.linux.external_process [-] No process started for 8cbed587-f3c2-4f6b-a619-d548869357c7 disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:26.711 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:26.717 21510 INFO oslo_rootwrap.client [-] Spawned new rootwrap daemon process with pid=21595
+2016-01-29 15:38:26.798 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', 'qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:26.798 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/537d7acc-72e6-4e0e-b213-57d680f3b31e.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.799 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/537d7acc-72e6-4e0e-b213-57d680f3b31e.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.799 21510 DEBUG neutron.agent.linux.external_process [-] No process started for 537d7acc-72e6-4e0e-b213-57d680f3b31e disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:26.799 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:26.822 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', 'qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:26.823 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.823 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.823 21510 DEBUG neutron.agent.linux.external_process [-] No process started for ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:26.823 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:26.849 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', 'qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:26.850 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/1bd19f0c-3c9a-4d5e-86e2-860475800b92.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.850 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/1bd19f0c-3c9a-4d5e-86e2-860475800b92.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.850 21510 DEBUG neutron.agent.linux.external_process [-] No process started for 1bd19f0c-3c9a-4d5e-86e2-860475800b92 disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:26.850 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:26.873 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', 'qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:26.874 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/f37b623f-cebd-4ce2-905f-339ca6c328bb.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.874 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/f37b623f-cebd-4ce2-905f-339ca6c328bb.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:26.874 21510 DEBUG neutron.agent.linux.external_process [-] No process started for f37b623f-cebd-4ce2-905f-339ca6c328bb disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:26.874 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:26.901 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', 'qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:29.350 21510 DEBUG neutron.openstack.common.periodic_task [req-95c91a84-edfd-45fe-b542-1af59ee05353 ] Running periodic task L3NATAgentWithStateReport.periodic_sync_routers_task run_periodic_tasks /usr/lib/python2.7/site-packages/neutron/openstack/common/periodic_task.py:219
+2016-01-29 15:38:29.350 21510 DEBUG neutron.agent.l3.agent [req-95c91a84-edfd-45fe-b542-1af59ee05353 ] Starting periodic_sync_routers_task - fullsync:False periodic_sync_routers_task /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:497
+2016-01-29 15:38:36.304 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:38:36.304 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 4746d298c14349e0abe8b1e2a01488b3. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:36.310 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:38:42.300 21510 DEBUG oslo_messaging._drivers.amqp [-] unpacked context: {u'read_deleted': u'no', u'project_name': u'admin', u'user_id': u'dd3c83640b8542ffa5c781f6b9ca131c', u'roles': [u'admin'], u'tenant_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'auth_token': u'***', u'timestamp': u'2016-01-29 14:38:42.244390', u'is_admin': True, u'user': u'dd3c83640b8542ffa5c781f6b9ca131c', u'request_id': u'req-db88086d-f993-4f50-9ea5-e27e57dec5a3', u'tenant_name': u'admin', u'project_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'user_name': u'admin', u'tenant': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4'} unpack_context /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:203
+2016-01-29 15:38:42.301 21510 DEBUG neutron.agent.l3.agent [req-db88086d-f993-4f50-9ea5-e27e57dec5a3 ] Got routers updated notification :[u'8aa46528-5442-464a-9dbb-e60a461f94db'] routers_updated /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:363
+2016-01-29 15:38:42.302 21510 DEBUG neutron.agent.l3.agent [-] Starting router update for 8aa46528-5442-464a-9dbb-e60a461f94db, action None, priority 0 _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:434
+2016-01-29 15:38:42.302 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 65e5f865d04f4031a0e12ff60570917f _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:42.302 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 7f9a0e93397b4fbf96463ef477d7ce0b. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:42.829 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-ex'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:42.834 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 6: br-ex: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether b6:75:77:4c:c5:43 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.835 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is a33b2bd7fa4a471d95c3ae089e505902 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:42.836 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 7effa0dc8f4246e5a4bcd5291bf94f95. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:42.895 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, before_create
+2016-01-29 15:38:42.896 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', '-o', 'netns', 'list'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:42.900 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7
+qdhcp-6ca21ee3-7cd1-4612-b9f4-ce89f93fc711
+qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb
+qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf
+qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92
+qdhcp-3a14d134-92e0-468f-83e7-ad574f792f87
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.901 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'add', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:42.913 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'add', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.914 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv4.conf.all.promote_secondaries=1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:42.937 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv4.conf.all.promote_secondaries=1']
+Exit code: 0
+Stdin: 
+Stdout: net.ipv4.conf.all.promote_secondaries = 1
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.938 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', 'lo', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:42.958 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', 'lo', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.959 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv4.ip_forward=1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:42.982 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv4.ip_forward=1']
+Exit code: 0
+Stdin: 
+Stdout: net.ipv4.ip_forward = 1
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:42.983 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv6.conf.all.forwarding=1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.006 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'sysctl', '-w', 'net.ipv6.conf.all.forwarding=1']
+Exit code: 0
+Stdin: 
+Stdout: net.ipv6.conf.all.forwarding = 1
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.007 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'ha-f823a4e2-07'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.039 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'ha-f823a4e2-07']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-f823a4e2-07" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.039 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-int'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:43.044 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: 5: br-int: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether 5e:3e:b3:ee:e7:41 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.045 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'ha-f823a4e2-07', '--', 'add-port', 'br-int', 'ha-f823a4e2-07', '--', 'set', 'Interface', 'ha-f823a4e2-07', 'type=internal', 'external_ids:iface-id=f823a4e2-075f-48c9-bccb-e2fac4191279', 'external_ids:iface-status=active', 'external_ids:attached-mac=fa:16:3e:9a:32:a2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.058 21510 DEBUG oslo_messaging._drivers.amqp [-] unpacked context: {u'read_deleted': u'no', u'project_name': u'admin', u'user_id': u'dd3c83640b8542ffa5c781f6b9ca131c', u'roles': [u'admin'], u'tenant_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'auth_token': u'***', u'timestamp': u'2016-01-29 14:38:43.044748', u'is_admin': True, u'user': u'dd3c83640b8542ffa5c781f6b9ca131c', u'request_id': u'req-4104c545-e34c-43ea-8021-3c9a60a71600', u'tenant_name': u'admin', u'project_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'user_name': u'admin', u'tenant': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4'} unpack_context /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:203
+2016-01-29 15:38:43.059 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', u'ha-f823a4e2-07', '--', 'add-port', 'br-int', u'ha-f823a4e2-07', '--', 'set', 'Interface', u'ha-f823a4e2-07', 'type=internal', u'external_ids:iface-id=f823a4e2-075f-48c9-bccb-e2fac4191279', 'external_ids:iface-status=active', u'external_ids:attached-mac=fa:16:3e:9a:32:a2']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.060 21510 DEBUG neutron.agent.l3.agent [req-4104c545-e34c-43ea-8021-3c9a60a71600 ] Got routers updated notification :[u'8aa46528-5442-464a-9dbb-e60a461f94db'] routers_updated /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:363
+2016-01-29 15:38:43.060 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-f823a4e2-07'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.066 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-f823a4e2-07']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[20]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.066 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'ha-f823a4e2-07', 'address', 'fa:16:3e:9a:32:a2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.070 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'ha-f823a4e2-07', 'address', u'fa:16:3e:9a:32:a2']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.070 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', '-o', 'netns', 'list'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.073 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-8aa46528-5442-464a-9dbb-e60a461f94db
+qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7
+qdhcp-6ca21ee3-7cd1-4612-b9f4-ce89f93fc711
+qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb
+qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf
+qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92
+qdhcp-3a14d134-92e0-468f-83e7-ad574f792f87
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.073 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'ha-f823a4e2-07', 'netns', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.088 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'ha-f823a4e2-07', 'netns', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.088 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', 'ha-f823a4e2-07', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.111 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', u'ha-f823a4e2-07', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.112 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'addr', 'show', 'ha-f823a4e2-07', 'permanent', 'scope', 'global'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.132 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'addr', 'show', u'ha-f823a4e2-07', 'permanent', 'scope', 'global']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.133 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-4', 'addr', 'add', '169.254.192.158/18', 'scope', 'global', 'dev', 'ha-f823a4e2-07', 'brd', '169.254.255.255'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.156 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-4', 'addr', 'add', '169.254.192.158/18', 'scope', 'global', 'dev', u'ha-f823a4e2-07', 'brd', '169.254.255.255']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.157 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-4', 'route', 'list', 'dev', 'ha-f823a4e2-07', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.183 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-4', 'route', 'list', 'dev', u'ha-f823a4e2-07', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 169.254.192.0/18  proto kernel  src 169.254.192.158 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.184 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'route', 'list', 'dev', 'ha-f823a4e2-07', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.210 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'route', 'list', 'dev', u'ha-f823a4e2-07', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.211 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'addr', 'show', 'ha-f823a4e2-07'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.232 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'addr', 'show', u'ha-f823a4e2-07']
+Exit code: 0
+Stdin: 
+Stdout: 26: ha-f823a4e2-07: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
+    link/ether fa:16:3e:9a:32:a2 brd ff:ff:ff:ff:ff:ff
+    inet 169.254.192.158/18 brd 169.254.255.255 scope global ha-f823a4e2-07
+       valid_lft forever preferred_lft forever
+    inet6 fe80::f816:3eff:fe9a:32a2/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.233 21510 INFO neutron.agent.l3.ha [-] Router 8aa46528-5442-464a-9dbb-e60a461f94db transitioned to backup
+2016-01-29 15:38:43.233 21510 DEBUG neutron.agent.l3.ha [-] Closing metadata proxy for router 8aa46528-5442-464a-9dbb-e60a461f94db _update_metadata_proxy /usr/lib/python2.7/site-packages/neutron/agent/l3/ha.py:149
+2016-01-29 15:38:43.234 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.234 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.234 21510 DEBUG neutron.agent.linux.external_process [-] No process started for 8aa46528-5442-464a-9dbb-e60a461f94db disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:43.234 21510 DEBUG neutron.agent.l3.router_info [-] Terminating radvd daemon in router device: 8aa46528-5442-464a-9dbb-e60a461f94db disable_radvd /usr/lib/python2.7/site-packages/neutron/agent/l3/router_info.py:358
+2016-01-29 15:38:43.234 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.pid.radvd get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.235 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.pid.radvd get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.235 21510 DEBUG neutron.agent.linux.external_process [-] No process started for 8aa46528-5442-464a-9dbb-e60a461f94db disable /usr/lib/python2.7/site-packages/neutron/agent/linux/external_process.py:112
+2016-01-29 15:38:43.235 21510 DEBUG neutron.agent.linux.ra [-] radvd disabled for router 8aa46528-5442-464a-9dbb-e60a461f94db disable /usr/lib/python2.7/site-packages/neutron/agent/linux/ra.py:147
+2016-01-29 15:38:43.235 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.monitor.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.235 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'neutron-keepalived-state-change', '--router_id=8aa46528-5442-464a-9dbb-e60a461f94db', '--namespace=qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', '--conf_dir=/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db', '--monitor_interface=ha-f823a4e2-07', '--monitor_cidr=169.254.0.1/24', '--pid_file=/var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.monitor.pid', '--state_path=/var/lib/neutron', '--user=996', '--group=995'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.831 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'neutron-keepalived-state-change', u'--router_id=8aa46528-5442-464a-9dbb-e60a461f94db', u'--namespace=qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', u'--conf_dir=/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db', u'--monitor_interface=ha-f823a4e2-07', '--monitor_cidr=169.254.0.1/24', u'--pid_file=/var/lib/neutron/external/pids/8aa46528-5442-464a-9dbb-e60a461f94db.monitor.pid', '--state_path=/var/lib/neutron', '--user=996', '--group=995']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.832 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.859 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.859 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.883 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.884 21510 DEBUG oslo_concurrency.lockutils [-] Acquired semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:391
+2016-01-29 15:38:43.884 21510 DEBUG oslo_concurrency.lockutils [-] Acquired file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after waiting 0.000s acquire /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:212
+2016-01-29 15:38:43.884 21510 DEBUG neutron.agent.linux.iptables_manager [-] Got semaphore / lock "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:425
+2016-01-29 15:38:43.885 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.904 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*mangle
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*raw
+:PREROUTING ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.905 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.929 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*mangle
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[0:0] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[0:0] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+:neutron-postrouting-bottom - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+[0:0] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[0:0] -A POSTROUTING -j neutron-postrouting-bottom
+[0:0] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+[0:0] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*raw
+:PREROUTING ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[0:0] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A OUTPUT -j neutron-filter-top
+[0:0] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.929 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.959 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:256]
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.960 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:43.983 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:43 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:256]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A OUTPUT -j neutron-filter-top
+[0:0] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+COMMIT
+# Completed on Fri Jan 29 15:38:43 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:43.984 21510 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply_synchronized /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:482
+2016-01-29 15:38:43.984 21510 DEBUG oslo_concurrency.lockutils [-] Releasing file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after holding it for 0.100s release /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:227
+2016-01-29 15:38:43.984 21510 DEBUG oslo_concurrency.lockutils [-] Releasing semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:404
+2016-01-29 15:38:43.984 21510 DEBUG neutron.agent.linux.iptables_manager [-] Semaphore / lock released "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:428
+2016-01-29 15:38:43.985 21510 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db.pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:43.985 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'keepalived', '-P', '-f', '/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db/keepalived.conf', '-p', '/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db.pid', '-r', '/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db.pid-vrrp'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.005 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'keepalived', '-P', '-f', u'/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db/keepalived.conf', '-p', u'/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db.pid', '-r', u'/var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db.pid-vrrp']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.005 21510 DEBUG neutron.agent.linux.keepalived [-] Keepalived spawned with config /var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db/keepalived.conf spawn /usr/lib/python2.7/site-packages/neutron/agent/linux/keepalived.py:353
+2016-01-29 15:38:44.006 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, after_create
+2016-01-29 15:38:44.006 21510 INFO neutron.callbacks.manager [-] Calling callback neutron.agent.metadata.driver.after_router_added
+2016-01-29 15:38:44.006 21510 DEBUG oslo_concurrency.lockutils [-] Acquired semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:391
+2016-01-29 15:38:44.006 21510 DEBUG oslo_concurrency.lockutils [-] Acquired file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after waiting 0.000s acquire /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:212
+2016-01-29 15:38:44.007 21510 DEBUG neutron.agent.linux.iptables_manager [-] Got semaphore / lock "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:425
+2016-01-29 15:38:44.007 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.034 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*mangle
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*nat
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+:neutron-postrouting-bottom - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*raw
+:PREROUTING ACCEPT [1:40]
+:OUTPUT ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-filter-top
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A neutron-filter-top -j neutron-l3-agent-local
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.036 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.058 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*mangle
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j MARK --set-xmark 0x1/0xffffffff
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*nat
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-postrouting-bottom - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -i qr-+ -p tcp -m tcp --dport 80 -j REDIRECT --to-port 9697
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*raw
+:PREROUTING ACCEPT [1:40]
+:OUTPUT ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[1:40] -A OUTPUT -j neutron-filter-top
+[1:40] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[0:0] -A neutron-l3-agent-INPUT -m mark --mark 0x1 -j ACCEPT
+[0:0] -A neutron-l3-agent-INPUT -p tcp -m tcp --dport 9697 -j DROP
+:OUTPUT ACCEPT [1:40]
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.059 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.085 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:256]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[0:0] -A OUTPUT -j neutron-filter-top
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A neutron-filter-top -j neutron-l3-agent-local
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.086 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.109 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:44 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A OUTPUT -j neutron-filter-top
+[0:0] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+:OUTPUT ACCEPT [3:256]
+COMMIT
+# Completed on Fri Jan 29 15:38:44 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.110 21510 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply_synchronized /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:482
+2016-01-29 15:38:44.110 21510 DEBUG oslo_concurrency.lockutils [-] Releasing file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after holding it for 0.103s release /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:227
+2016-01-29 15:38:44.110 21510 DEBUG oslo_concurrency.lockutils [-] Releasing semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:404
+2016-01-29 15:38:44.110 21510 DEBUG neutron.agent.linux.iptables_manager [-] Semaphore / lock released "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:428
+2016-01-29 15:38:44.110 21510 DEBUG neutron.agent.l3.agent [-] Finished a router update for 8aa46528-5442-464a-9dbb-e60a461f94db _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:481
+2016-01-29 15:38:44.110 21510 DEBUG neutron.agent.l3.agent [-] Starting router update for 8aa46528-5442-464a-9dbb-e60a461f94db, action None, priority 0 _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:434
+2016-01-29 15:38:44.111 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 43b8e8c8b4da441782d62a434e0c1b65 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:44.111 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is cc0d345c4c174a18b3a7ebe7a2ce3a3a. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:44.128 21510 DEBUG oslo_messaging._drivers.amqp [-] unpacked context: {u'read_deleted': u'no', u'project_name': u'admin', u'user_id': u'dd3c83640b8542ffa5c781f6b9ca131c', u'roles': [u'admin'], u'tenant_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'auth_token': u'***', u'timestamp': u'2016-01-29 14:38:44.073226', u'is_admin': True, u'user': u'dd3c83640b8542ffa5c781f6b9ca131c', u'request_id': u'req-d0434bfa-f538-4560-b75c-6524093c81ac', u'tenant_name': u'admin', u'project_id': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4', u'user_name': u'admin', u'tenant': u'0c7fe42d8b9f4f7ebcf4cd563078dcb4'} unpack_context /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:203
+2016-01-29 15:38:44.129 21510 DEBUG neutron.agent.l3.agent [req-d0434bfa-f538-4560-b75c-6524093c81ac ] Got routers updated notification :[u'8aa46528-5442-464a-9dbb-e60a461f94db'] routers_updated /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:363
+2016-01-29 15:38:44.847 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-ex'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:44.851 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 6: br-ex: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether b6:75:77:4c:c5:43 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.852 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, before_update
+2016-01-29 15:38:44.852 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qr-12e68352-b3'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.885 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qr-12e68352-b3']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-12e68352-b3" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.885 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qr-12e68352-b3'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.912 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qr-12e68352-b3']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-12e68352-b3" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.913 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-int'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:44.918 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: 5: br-int: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether 5e:3e:b3:ee:e7:41 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.918 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'qr-12e68352-b3', '--', 'add-port', 'br-int', 'qr-12e68352-b3', '--', 'set', 'Interface', 'qr-12e68352-b3', 'type=internal', 'external_ids:iface-id=12e68352-b351-4bab-9fc9-e156a2579b2f', 'external_ids:iface-status=active', 'external_ids:attached-mac=fa:16:3e:64:80:82'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.930 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', u'qr-12e68352-b3', '--', 'add-port', 'br-int', u'qr-12e68352-b3', '--', 'set', 'Interface', u'qr-12e68352-b3', 'type=internal', u'external_ids:iface-id=12e68352-b351-4bab-9fc9-e156a2579b2f', 'external_ids:iface-status=active', u'external_ids:attached-mac=fa:16:3e:64:80:82']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.931 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-12e68352-b3'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.937 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-12e68352-b3']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[21]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.937 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'qr-12e68352-b3', 'address', 'fa:16:3e:64:80:82'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.940 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'qr-12e68352-b3', 'address', u'fa:16:3e:64:80:82']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.940 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', '-o', 'netns', 'list'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.943 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-8aa46528-5442-464a-9dbb-e60a461f94db
+qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7
+qdhcp-6ca21ee3-7cd1-4612-b9f4-ce89f93fc711
+qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb
+qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf
+qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92
+qdhcp-3a14d134-92e0-468f-83e7-ad574f792f87
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.943 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'qr-12e68352-b3', 'netns', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.957 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'qr-12e68352-b3', 'netns', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.958 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', 'qr-12e68352-b3', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:44.986 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', u'qr-12e68352-b3', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:44.987 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qr-12e68352-b3'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.010 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qr-12e68352-b3']
+Exit code: 0
+Stdin: 
+Stdout: 27: qr-12e68352-b3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT \    link/ether fa:16:3e:64:80:82 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.012 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'addr', 'flush', 'qr-12e68352-b3'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.038 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'addr', 'flush', u'qr-12e68352-b3']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.039 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.062 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo qr-12e68352-b3 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.063 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.089 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qg-afcd9f8f-68']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-afcd9f8f-68" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.090 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.116 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qg-afcd9f8f-68']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-afcd9f8f-68" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.117 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-ex'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:45.121 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 6: br-ex: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether b6:75:77:4c:c5:43 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.122 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'qg-afcd9f8f-68', '--', 'add-port', 'br-ex', 'qg-afcd9f8f-68', '--', 'set', 'Interface', 'qg-afcd9f8f-68', 'type=internal', 'external_ids:iface-id=afcd9f8f-68e3-4b9e-8d83-3a20a2cee051', 'external_ids:iface-status=active', 'external_ids:attached-mac=fa:16:3e:51:9d:c2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.134 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', u'qg-afcd9f8f-68', '--', 'add-port', 'br-ex', u'qg-afcd9f8f-68', '--', 'set', 'Interface', u'qg-afcd9f8f-68', 'type=internal', u'external_ids:iface-id=afcd9f8f-68e3-4b9e-8d83-3a20a2cee051', 'external_ids:iface-status=active', u'external_ids:attached-mac=fa:16:3e:51:9d:c2']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.134 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.140 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-afcd9f8f-68']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[6]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.140 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'qg-afcd9f8f-68', 'address', 'fa:16:3e:51:9d:c2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.142 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'qg-afcd9f8f-68', 'address', u'fa:16:3e:51:9d:c2']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.143 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', '-o', 'netns', 'list'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.145 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdin: 
+Stdout: qrouter-8aa46528-5442-464a-9dbb-e60a461f94db
+qrouter-8cbed587-f3c2-4f6b-a619-d548869357c7
+qdhcp-6ca21ee3-7cd1-4612-b9f4-ce89f93fc711
+qrouter-f37b623f-cebd-4ce2-905f-339ca6c328bb
+qrouter-ad9fe62e-f09c-40e0-89e9-e4e878f1ffdf
+qrouter-1bd19f0c-3c9a-4d5e-86e2-860475800b92
+qdhcp-3a14d134-92e0-468f-83e7-ad574f792f87
+qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905
+qrouter-537d7acc-72e6-4e0e-b213-57d680f3b31e
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.145 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'set', 'qg-afcd9f8f-68', 'netns', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.163 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'set', u'qg-afcd9f8f-68', 'netns', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.163 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', 'qg-afcd9f8f-68', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.189 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', 'link', 'set', u'qg-afcd9f8f-68', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.190 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.223 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qg-afcd9f8f-68']
+Exit code: 0
+Stdin: 
+Stdout: 28: qg-afcd9f8f-68: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT \    link/ether fa:16:3e:51:9d:c2 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.224 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'addr', 'flush', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.243 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-6', 'addr', 'flush', u'qg-afcd9f8f-68']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.244 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.264 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo qr-12e68352-b3 qg-afcd9f8f-68 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.266 21510 DEBUG oslo_concurrency.lockutils [-] Acquired semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:391
+2016-01-29 15:38:45.266 21510 DEBUG oslo_concurrency.lockutils [-] Acquired file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after waiting 0.000s acquire /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:212
+2016-01-29 15:38:45.266 21510 DEBUG neutron.agent.linux.iptables_manager [-] Got semaphore / lock "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:425
+2016-01-29 15:38:45.267 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.291 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*mangle
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j MARK --set-xmark 0x1/0xffffffff
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*nat
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+:neutron-postrouting-bottom - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -i qr-+ -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*raw
+:PREROUTING ACCEPT [1:40]
+:OUTPUT ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-filter-top
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A neutron-l3-agent-INPUT -m mark --mark 0x1 -j ACCEPT
+[0:0] -A neutron-l3-agent-INPUT -p tcp -m tcp --dport 9697 -j DROP
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.293 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.312 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*mangle
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j MARK --set-xmark 0x1/0xffffffff
+[0:0] -A neutron-l3-agent-mark -i qg-afcd9f8f-68 -j MARK --set-xmark 0x2/0xffffffff
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*nat
+:PREROUTING ACCEPT [1:40]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-postrouting-bottom - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -i qr-+ -p tcp -m tcp --dport 80 -j REDIRECT --to-port 9697
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[0:0] -A neutron-l3-agent-POSTROUTING ! -i qg-afcd9f8f-68 ! -o qg-afcd9f8f-68 -m conntrack ! --ctstate DNAT -j ACCEPT
+[0:0] -A neutron-l3-agent-snat -o qg-afcd9f8f-68 -j SNAT --to-source 172.24.4.236
+[0:0] -A neutron-l3-agent-snat -m mark ! --mark 0x2 -m conntrack --ctstate DNAT -j SNAT --to-source 172.24.4.236
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*raw
+:PREROUTING ACCEPT [1:40]
+:OUTPUT ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[1:40] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[1:40] -A OUTPUT -j neutron-filter-top
+[1:40] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[0:0] -A neutron-l3-agent-INPUT -m mark --mark 0x1 -j ACCEPT
+[0:0] -A neutron-l3-agent-INPUT -p tcp -m tcp --dport 9697 -j DROP
+:OUTPUT ACCEPT [1:40]
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.313 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.336 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [9:832]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[6:576] -A OUTPUT -j neutron-filter-top
+[6:576] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[6:576] -A neutron-filter-top -j neutron-l3-agent-local
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.337 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.357 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[6:576] -A OUTPUT -j neutron-filter-top
+[6:576] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[6:576] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+:OUTPUT ACCEPT [9:832]
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.357 21510 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply_synchronized /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:482
+2016-01-29 15:38:45.358 21510 DEBUG oslo_concurrency.lockutils [-] Releasing file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after holding it for 0.092s release /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:227
+2016-01-29 15:38:45.358 21510 DEBUG oslo_concurrency.lockutils [-] Releasing semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:404
+2016-01-29 15:38:45.358 21510 DEBUG neutron.agent.linux.iptables_manager [-] Semaphore / lock released "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:428
+2016-01-29 15:38:45.359 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['kill', '-HUP', '22039'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.363 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['kill', '-HUP', 22039]
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.364 21510 DEBUG neutron.agent.linux.keepalived [-] Keepalived spawned with config /var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db/keepalived.conf spawn /usr/lib/python2.7/site-packages/neutron/agent/linux/keepalived.py:353
+2016-01-29 15:38:45.364 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, after_update
+2016-01-29 15:38:45.364 21510 DEBUG neutron.agent.l3.agent [-] Finished a router update for 8aa46528-5442-464a-9dbb-e60a461f94db _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:481
+2016-01-29 15:38:45.364 21510 DEBUG neutron.agent.l3.agent [-] Starting router update for 8aa46528-5442-464a-9dbb-e60a461f94db, action None, priority 0 _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:434
+2016-01-29 15:38:45.364 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 4596176a92f143b197786ee64ae11054 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:45.365 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is a4dea36377a041f7aafcf18a0ea02e7f. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:45.615 21510 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-ex'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 15:38:45.621 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 6: br-ex: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT \    link/ether b6:75:77:4c:c5:43 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.622 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, before_update
+2016-01-29 15:38:45.622 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.643 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo qr-12e68352-b3 qg-afcd9f8f-68 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.643 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', 'qg-afcd9f8f-68'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.664 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip', '-o', 'link', 'show', u'qg-afcd9f8f-68']
+Exit code: 0
+Stdin: 
+Stdout: 28: qg-afcd9f8f-68: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT \    link/ether fa:16:3e:51:9d:c2 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.665 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f '] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.688 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'find', '/sys/class/net', '-maxdepth', '1', '-type', 'l', '-printf', '%f ']
+Exit code: 0
+Stdin: 
+Stdout: ha-f823a4e2-07 lo qr-12e68352-b3 qg-afcd9f8f-68 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.689 21510 DEBUG oslo_concurrency.lockutils [-] Acquired semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:391
+2016-01-29 15:38:45.689 21510 DEBUG oslo_concurrency.lockutils [-] Acquired file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after waiting 0.000s acquire /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:212
+2016-01-29 15:38:45.689 21510 DEBUG neutron.agent.linux.iptables_manager [-] Got semaphore / lock "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:425
+2016-01-29 15:38:45.690 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.709 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*mangle
+:PREROUTING ACCEPT [5:200]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:120]
+:POSTROUTING ACCEPT [3:120]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[3:120] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[5:200] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j MARK --set-xmark 0x1/0xffffffff
+[0:0] -A neutron-l3-agent-mark -i qg-afcd9f8f-68 -j MARK --set-xmark 0x2/0xffffffff
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*nat
+:PREROUTING ACCEPT [5:200]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+:neutron-postrouting-bottom - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[0:0] -A neutron-l3-agent-POSTROUTING ! -i qg-afcd9f8f-68 ! -o qg-afcd9f8f-68 -m conntrack ! --ctstate DNAT -j ACCEPT
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -i qr-+ -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[0:0] -A neutron-l3-agent-snat -o qg-afcd9f8f-68 -j SNAT --to-source 172.24.4.236
+[0:0] -A neutron-l3-agent-snat -m mark ! --mark 0x2 -m conntrack --ctstate DNAT -j SNAT --to-source 172.24.4.236
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*raw
+:PREROUTING ACCEPT [5:200]
+:OUTPUT ACCEPT [3:120]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:120]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[3:120] -A OUTPUT -j neutron-filter-top
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[3:120] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A neutron-l3-agent-INPUT -m mark --mark 0x1 -j ACCEPT
+[0:0] -A neutron-l3-agent-INPUT -p tcp -m tcp --dport 9697 -j DROP
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.711 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.730 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'iptables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*mangle
+:PREROUTING ACCEPT [5:200]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3:120]
+:POSTROUTING ACCEPT [3:120]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-mark - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[3:120] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[5:200] -A neutron-l3-agent-PREROUTING -j neutron-l3-agent-mark
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j MARK --set-xmark 0x1/0xffffffff
+[0:0] -A neutron-l3-agent-mark -i qg-afcd9f8f-68 -j MARK --set-xmark 0x2/0xffffffff
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*nat
+:PREROUTING ACCEPT [5:200]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [1:40]
+:POSTROUTING ACCEPT [1:40]
+:neutron-postrouting-bottom - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-POSTROUTING - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+:neutron-l3-agent-float-snat - [0:0]
+:neutron-l3-agent-snat - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[1:40] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[1:40] -A POSTROUTING -j neutron-l3-agent-POSTROUTING
+[1:40] -A POSTROUTING -j neutron-postrouting-bottom
+[1:40] -A neutron-postrouting-bottom -m comment --comment "Perform source NAT on outgoing traffic." -j neutron-l3-agent-snat
+[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -i qr-+ -p tcp -m tcp --dport 80 -j REDIRECT --to-port 9697
+[1:40] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat
+[0:0] -A neutron-l3-agent-POSTROUTING ! -i qg-afcd9f8f-68 ! -o qg-afcd9f8f-68 -m conntrack ! --ctstate DNAT -j ACCEPT
+[0:0] -A neutron-l3-agent-snat -o qg-afcd9f8f-68 -j SNAT --to-source 172.24.4.236
+[0:0] -A neutron-l3-agent-snat -m mark ! --mark 0x2 -m conntrack --ctstate DNAT -j SNAT --to-source 172.24.4.236
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*raw
+:PREROUTING ACCEPT [5:200]
+:OUTPUT ACCEPT [3:120]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-PREROUTING - [0:0]
+[5:200] -A PREROUTING -j neutron-l3-agent-PREROUTING
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+# Generated by iptables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[3:120] -A OUTPUT -j neutron-filter-top
+[3:120] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[3:120] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[0:0] -A neutron-l3-agent-INPUT -m mark --mark 0x1 -j ACCEPT
+[0:0] -A neutron-l3-agent-INPUT -p tcp -m tcp --dport 9697 -j DROP
+:OUTPUT ACCEPT [3:120]
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.731 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.751 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-save', '-c']
+Exit code: 0
+Stdin: 
+Stdout: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [9:832]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[0:0] -A FORWARD -j neutron-filter-top
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+[6:576] -A OUTPUT -j neutron-filter-top
+[6:576] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[6:576] -A neutron-filter-top -j neutron-l3-agent-local
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.752 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.776 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qrouter-8aa46528-5442-464a-9dbb-e60a461f94db', 'ip6tables-restore', '-c']
+Exit code: 0
+Stdin: # Generated by ip6tables-save v1.4.21 on Fri Jan 29 15:38:45 2016
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:neutron-filter-top - [0:0]
+:neutron-l3-agent-FORWARD - [0:0]
+:neutron-l3-agent-INPUT - [0:0]
+:neutron-l3-agent-OUTPUT - [0:0]
+:neutron-l3-agent-local - [0:0]
+[0:0] -A FORWARD -j neutron-filter-top
+[6:576] -A OUTPUT -j neutron-filter-top
+[6:576] -A neutron-filter-top -j neutron-l3-agent-local
+[0:0] -A INPUT -j neutron-l3-agent-INPUT
+[6:576] -A OUTPUT -j neutron-l3-agent-OUTPUT
+[0:0] -A FORWARD -j neutron-l3-agent-FORWARD
+:OUTPUT ACCEPT [9:832]
+COMMIT
+# Completed on Fri Jan 29 15:38:45 2016
+
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.776 21510 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply_synchronized /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:482
+2016-01-29 15:38:45.776 21510 DEBUG oslo_concurrency.lockutils [-] Releasing file lock "/var/lib/neutron/lock/neutron-iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" after holding it for 0.087s release /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:227
+2016-01-29 15:38:45.776 21510 DEBUG oslo_concurrency.lockutils [-] Releasing semaphore "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" lock /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:404
+2016-01-29 15:38:45.776 21510 DEBUG neutron.agent.linux.iptables_manager [-] Semaphore / lock released "iptables-qrouter-8aa46528-5442-464a-9dbb-e60a461f94db" _apply /usr/lib/python2.7/site-packages/neutron/agent/linux/iptables_manager.py:428
+2016-01-29 15:38:45.778 21510 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['kill', '-HUP', '22039'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:45.781 21510 DEBUG neutron.agent.linux.utils [-] 
+Command: ['kill', '-HUP', 22039]
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:45.781 21510 DEBUG neutron.agent.linux.keepalived [-] Keepalived spawned with config /var/lib/neutron/ha_confs/8aa46528-5442-464a-9dbb-e60a461f94db/keepalived.conf spawn /usr/lib/python2.7/site-packages/neutron/agent/linux/keepalived.py:353
+2016-01-29 15:38:45.781 21510 INFO neutron.callbacks.manager [-] Notify callbacks for router, after_update
+2016-01-29 15:38:45.781 21510 DEBUG neutron.agent.l3.agent [-] Finished a router update for 8aa46528-5442-464a-9dbb-e60a461f94db _process_router_update /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:481
+2016-01-29 15:38:46.304 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:38:46.305 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is a88336bbc9c74797aca192801f2c8c39. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:46.313 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:38:56.305 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:38:56.305 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 680421af633e4ace8f69b790c874076f. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:56.311 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:38:59.236 21510 DEBUG neutron.agent.l3.ha [-] Updating server with HA routers states {u'8aa46528-5442-464a-9dbb-e60a461f94db': 'standby'} notify_server /usr/lib/python2.7/site-packages/neutron/agent/l3/ha.py:168
+2016-01-29 15:38:59.237 21510 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 66d4680a4ac84d5d936376916959eaf3 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:59.237 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 9acdabdfce854b59b159078fac7645ba. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:06.305 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:39:06.306 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 22eb65c45c8c446b9ca8b401540cce26. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:06.317 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:39:09.350 21510 DEBUG neutron.openstack.common.periodic_task [req-95c91a84-edfd-45fe-b542-1af59ee05353 ] Running periodic task L3NATAgentWithStateReport.periodic_sync_routers_task run_periodic_tasks /usr/lib/python2.7/site-packages/neutron/openstack/common/periodic_task.py:219
+2016-01-29 15:39:09.350 21510 DEBUG neutron.agent.l3.agent [req-95c91a84-edfd-45fe-b542-1af59ee05353 ] Starting periodic_sync_routers_task - fullsync:False periodic_sync_routers_task /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:497
+2016-01-29 15:39:16.305 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:39:16.306 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 59c6b59cb25849c8a3a4211b7811afb4. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:16.311 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618
+2016-01-29 15:39:25.798 21510 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" acquired by "_check_child_processes" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:444
+2016-01-29 15:39:25.799 21510 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" released by "_check_child_processes" :: held 0.001s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:456
+2016-01-29 15:39:26.295 21510 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" acquired by "_check_child_processes" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:444
+2016-01-29 15:39:26.295 21510 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" released by "_check_child_processes" :: held 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:456
+2016-01-29 15:39:26.306 21510 DEBUG neutron.agent.l3.agent [-] Report state task started _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:594
+2016-01-29 15:39:26.306 21510 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 58d4d372799140e0a1ae9d8cf0a45428. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:26.317 21510 DEBUG neutron.agent.l3.agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/site-packages/neutron/agent/l3/agent.py:618

@@ -1,0 +1,2072 @@
+2015-11-24 19:13:23.538 1491 INFO neutron.common.config [-] Logging enabled!
+2015-11-24 19:13:23.542 1491 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2015.1.1-7.el7ost
+2015-11-24 19:13:23.542 1491 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-ovs-cleanup --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini --config-dir /etc/neutron/conf.d/common --config-dir /etc/neutron/conf.d/neutron-ovs-cleanup --log-file /var/log/neutron/ovs-cleanup.log setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2015-11-24 19:13:23.853 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:23.949 1491 INFO oslo_rootwrap.client [-] Spawned new rootwrap daemon process with pid=3837
+2015-11-24 19:13:26.909 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br']
+Exit code: 0
+Stdin: 
+Stdout: br-ex\nbr-int\nbr-tun
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:26.911 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:27.015 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: ha-289aa480-39\nha-80ce20ae-b1\nha-8e8730d0-45\nha-9c62ba68-d2\nha-a837f0fd-45\nha-b43fb51f-9f\nha-cd9ffc36-fa\nha-e2dc5947-eb\nha-f151d9d2-8c\npatch-tun\nqr-48093dc8-b6\nqr-5133f527-5c\nqr-6f5d1784-97\nqr-86189fbf-73\nqr-8f35376d-52\nqr-9287f2af-2e\nqr-988decd4-2e\nqr-c1c873e3-44\nqr-d2d9eedf-5d\nqvo1d7bda7b-be\nqvoc5bf41a3-43\nqvoca710d52-71\nqvoccd22729-b4\ntap0a5ed168-4e\ntap15de57fe-5c\ntapcb21bc69-06
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:27.016 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-289aa480-39'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:27.104 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-289aa480-39']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:89:46:19"],["iface-id","289aa480-391f-44dd-b893-06b488938d80"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:27.111 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-289aa480-39'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:27.209 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-289aa480-39']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[23]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:27.209 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-80ce20ae-b1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:27.406 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-80ce20ae-b1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:78:8f:c4"],["iface-id","80ce20ae-b1f0-4029-aa94-055166cc5d3c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:27.409 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-80ce20ae-b1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:28.067 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-80ce20ae-b1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[10]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:28.068 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-8e8730d0-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:28.376 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-8e8730d0-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:36:b3:1b"],["iface-id","8e8730d0-45dd-46ba-a314-299061e434bd"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:28.377 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-8e8730d0-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:28.569 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-8e8730d0-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[17]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:28.571 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-9c62ba68-d2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:28.681 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-9c62ba68-d2']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:48:16:2c"],["iface-id","9c62ba68-d2f9-4ef9-b69e-d4e17cc06dd5"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:28.682 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-9c62ba68-d2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:28.957 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-9c62ba68-d2']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[14]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:28.958 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-a837f0fd-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:29.498 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-a837f0fd-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:26:a4:d9"],["iface-id","a837f0fd-45fd-42ae-87f1-d6a940bc1d57"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:29.499 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-a837f0fd-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:29.740 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-a837f0fd-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[19]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:29.741 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-b43fb51f-9f'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:29.883 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-b43fb51f-9f']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f3:db:9b"],["iface-id","b43fb51f-9fbe-4e6f-b0c7-e85047a3af72"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:29.884 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-b43fb51f-9f'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:29.994 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-b43fb51f-9f']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[5]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:29.994 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-cd9ffc36-fa'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.061 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-cd9ffc36-fa']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:06:fa:44"],["iface-id","cd9ffc36-fa00-48e4-8a30-0be67d9f5407"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.062 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-cd9ffc36-fa'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.193 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-cd9ffc36-fa']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[21]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.195 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-e2dc5947-eb'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.432 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-e2dc5947-eb']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:b9:dc:e9"],["iface-id","e2dc5947-eb5b-4715-a7b3-edbab2b84f55"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.433 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-e2dc5947-eb'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.722 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-e2dc5947-eb']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[12]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.723 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-f151d9d2-8c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.789 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-f151d9d2-8c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:9b:87:94"],["iface-id","f151d9d2-8cf7-4438-a591-db754bf4e1ea"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.789 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-f151d9d2-8c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.865 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-f151d9d2-8c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[7]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.866 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.918 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.919 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-48093dc8-b6'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:30.993 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-48093dc8-b6']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:8a:08:c7"],["iface-id","48093dc8-b6a7-4b9c-998f-9301c413ce1c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:30.993 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-48093dc8-b6'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.074 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-48093dc8-b6']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[18]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.078 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-5133f527-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.149 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-5133f527-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:4a:72:3d"],["iface-id","5133f527-5cde-4d32-8c56-b5a6dd092c38"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.150 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-5133f527-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.241 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-5133f527-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[6]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.242 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-6f5d1784-97'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.339 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-6f5d1784-97']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:02:78:2c"],["iface-id","6f5d1784-9767-4e15-a95a-29e88d88b27a"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.340 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-6f5d1784-97'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.354 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-6f5d1784-97']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[24]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.355 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-86189fbf-73'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.399 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-86189fbf-73']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:96:d3:83"],["iface-id","86189fbf-7313-4835-8984-1688fb5eaef7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.400 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-86189fbf-73'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.513 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-86189fbf-73']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[22]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.513 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-8f35376d-52'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.573 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-8f35376d-52']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:0e:c2:11"],["iface-id","8f35376d-527a-482a-901b-3680357fd644"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.574 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-8f35376d-52'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.695 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-8f35376d-52']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[11]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.695 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-9287f2af-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.772 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-9287f2af-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:c4:19:cf"],["iface-id","9287f2af-2e11-40cc-9ee6-9844c76ffec5"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.772 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-9287f2af-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.853 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-9287f2af-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[13]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.853 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-988decd4-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.937 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-988decd4-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f2:63:ff"],["iface-id","988decd4-2eb0-4d9c-aad9-6a822f81981e"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.938 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-988decd4-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:31.987 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-988decd4-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[8]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:31.988 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-c1c873e3-44'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.022 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-c1c873e3-44']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:09:ca:65"],["iface-id","c1c873e3-44fd-4370-92da-d4b664889762"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.023 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-c1c873e3-44'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.056 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-c1c873e3-44']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[15]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.057 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-d2d9eedf-5d'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.104 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-d2d9eedf-5d']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:3b:c3:ae"],["iface-id","d2d9eedf-5dce-4ca5-af2c-935068cc4aa2"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.104 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-d2d9eedf-5d'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.195 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-d2d9eedf-5d']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[20]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.196 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvo1d7bda7b-be'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.311 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvo1d7bda7b-be']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:aa:65:b4"],["iface-id","1d7bda7b-be33-4b2e-baed-e24740a36820"],["iface-status","active"],["vm-uuid","0a0c4036-1e9b-4842-b743-c39c0662059d"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.312 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvo1d7bda7b-be'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.360 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvo1d7bda7b-be']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.360 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoc5bf41a3-43'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.411 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoc5bf41a3-43']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:58:af:6d"],["iface-id","c5bf41a3-4316-4bf4-8509-5c65a3d92669"],["iface-status","active"],["vm-uuid","f730a1bc-5972-48ab-9ca2-e9f178ca97f0"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.411 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoc5bf41a3-43'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.495 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoc5bf41a3-43']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.496 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoca710d52-71'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.540 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoca710d52-71']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:97:74:53"],["iface-id","ca710d52-71cd-48c5-8783-ca303a208747"],["iface-status","active"],["vm-uuid","832a516b-4f20-4475-9532-4cf3e9feb3e8"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.541 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoca710d52-71'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.650 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoca710d52-71']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.651 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoccd22729-b4'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:32.870 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoccd22729-b4']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f0:74:2e"],["iface-id","ccd22729-b4e2-4128-bb6d-10f9cae05853"],["iface-status","active"],["vm-uuid","f1854546-342b-4e15-b5d4-6287e97f9431"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:32.878 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoccd22729-b4'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.233 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoccd22729-b4']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.233 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap0a5ed168-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.415 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap0a5ed168-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:a0:50:a7"],["iface-id","0a5ed168-4e84-4b6d-80ca-b71e6e7cdfd7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.416 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap0a5ed168-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.472 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap0a5ed168-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[16]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.472 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.595 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:16:21:2d"],["iface-id","15de57fe-5c01-42df-8251-546cd5c43672"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.596 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.663 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[2]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.664 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tapcb21bc69-06'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.847 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tapcb21bc69-06']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:ff:c0:9e"],["iface-id","cb21bc69-0626-42b8-a4e3-2e339a6696b0"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.848 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tapcb21bc69-06'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.882 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tapcb21bc69-06']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[9]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.882 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:33.949 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: qg-13fa9efd-c9\nqg-150e41bd-f0\nqg-18133cec-0e\nqg-4330d6be-09\nqg-596c7f4b-0a\nqg-5e11c6f4-4e\nqg-9791f6c6-e5\nqg-e52079a2-d1\nqg-f78ef22b-d5
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:33.950 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-13fa9efd-c9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.074 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-13fa9efd-c9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f4:bf:d0"],["iface-id","13fa9efd-c9c5-4b7e-80ef-825b362f9766"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.074 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-13fa9efd-c9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.192 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-13fa9efd-c9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[4]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.192 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-150e41bd-f0'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.327 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-150e41bd-f0']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:83:e1:95"],["iface-id","150e41bd-f069-42e0-a843-72c2c8e1bf43"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.328 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-150e41bd-f0'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.454 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-150e41bd-f0']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[8]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.455 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-18133cec-0e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.560 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-18133cec-0e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:77:5b:56"],["iface-id","18133cec-0e10-485c-8958-bb9fe32bd9a7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.561 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-18133cec-0e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.813 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-18133cec-0e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[3]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.815 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-4330d6be-09'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.892 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-4330d6be-09']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:82:da:e4"],["iface-id","4330d6be-09ed-4a3e-8130-a3d3002ff49e"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.892 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-4330d6be-09'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:34.968 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-4330d6be-09']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:34.969 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-596c7f4b-0a'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.053 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-596c7f4b-0a']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:46:a1:98"],["iface-id","596c7f4b-0af1-40c5-b6a4-92b38e1da459"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.054 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-596c7f4b-0a'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.108 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-596c7f4b-0a']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[9]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.113 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-5e11c6f4-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.174 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-5e11c6f4-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:99:f7:28"],["iface-id","5e11c6f4-4e5f-4ef0-93ef-34a5c637159c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.177 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-5e11c6f4-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.235 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-5e11c6f4-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[2]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.235 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-9791f6c6-e5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.311 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-9791f6c6-e5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:5f:bd:eb"],["iface-id","9791f6c6-e513-4288-bb0c-92c81d20afba"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.312 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-9791f6c6-e5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.418 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-9791f6c6-e5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[5]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.419 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-e52079a2-d1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.474 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-e52079a2-d1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:66:29:33"],["iface-id","e52079a2-d1b2-4b9f-aba5-31c33fe7aec6"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.475 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-e52079a2-d1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.535 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-e52079a2-d1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[6]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.535 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-f78ef22b-d5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.634 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-f78ef22b-d5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:81:8f:f8"],["iface-id","f78ef22b-d506-4448-a297-3096ecd5a51d"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.635 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-f78ef22b-d5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.651 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-f78ef22b-d5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[7]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.652 1491 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-int
+2015-11-24 19:13:35.652 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.661 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: ha-289aa480-39\nha-80ce20ae-b1\nha-8e8730d0-45\nha-9c62ba68-d2\nha-a837f0fd-45\nha-b43fb51f-9f\nha-cd9ffc36-fa\nha-e2dc5947-eb\nha-f151d9d2-8c\npatch-tun\nqr-48093dc8-b6\nqr-5133f527-5c\nqr-6f5d1784-97\nqr-86189fbf-73\nqr-8f35376d-52\nqr-9287f2af-2e\nqr-988decd4-2e\nqr-c1c873e3-44\nqr-d2d9eedf-5d\nqvo1d7bda7b-be\nqvoc5bf41a3-43\nqvoca710d52-71\nqvoccd22729-b4\ntap0a5ed168-4e\ntap15de57fe-5c\ntapcb21bc69-06
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.662 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-289aa480-39'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.726 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-289aa480-39']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:89:46:19"],["iface-id","289aa480-391f-44dd-b893-06b488938d80"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.727 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-289aa480-39'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.788 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-289aa480-39']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[23]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.788 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-80ce20ae-b1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.863 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-80ce20ae-b1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:78:8f:c4"],["iface-id","80ce20ae-b1f0-4029-aa94-055166cc5d3c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.864 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-80ce20ae-b1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.893 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-80ce20ae-b1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[10]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.894 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-8e8730d0-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:35.961 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-8e8730d0-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:36:b3:1b"],["iface-id","8e8730d0-45dd-46ba-a314-299061e434bd"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:35.961 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-8e8730d0-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.093 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-8e8730d0-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[17]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.093 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-9c62ba68-d2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.157 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-9c62ba68-d2']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:48:16:2c"],["iface-id","9c62ba68-d2f9-4ef9-b69e-d4e17cc06dd5"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.158 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-9c62ba68-d2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.208 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-9c62ba68-d2']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[14]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.211 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-a837f0fd-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.224 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-a837f0fd-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:26:a4:d9"],["iface-id","a837f0fd-45fd-42ae-87f1-d6a940bc1d57"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.224 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-a837f0fd-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.333 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-a837f0fd-45']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[19]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.334 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-b43fb51f-9f'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.356 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-b43fb51f-9f']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f3:db:9b"],["iface-id","b43fb51f-9fbe-4e6f-b0c7-e85047a3af72"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.356 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-b43fb51f-9f'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.401 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-b43fb51f-9f']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[5]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.402 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-cd9ffc36-fa'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.409 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-cd9ffc36-fa']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:06:fa:44"],["iface-id","cd9ffc36-fa00-48e4-8a30-0be67d9f5407"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.409 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-cd9ffc36-fa'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.417 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-cd9ffc36-fa']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[21]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.417 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-e2dc5947-eb'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.424 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-e2dc5947-eb']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:b9:dc:e9"],["iface-id","e2dc5947-eb5b-4715-a7b3-edbab2b84f55"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.424 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-e2dc5947-eb'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.434 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-e2dc5947-eb']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[12]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.435 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-f151d9d2-8c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.445 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-f151d9d2-8c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:9b:87:94"],["iface-id","f151d9d2-8cf7-4438-a591-db754bf4e1ea"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.445 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-f151d9d2-8c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.453 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-f151d9d2-8c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[7]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.453 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.460 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.461 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-48093dc8-b6'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.468 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-48093dc8-b6']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:8a:08:c7"],["iface-id","48093dc8-b6a7-4b9c-998f-9301c413ce1c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.468 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-48093dc8-b6'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.498 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-48093dc8-b6']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[18]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.499 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-5133f527-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.508 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-5133f527-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:4a:72:3d"],["iface-id","5133f527-5cde-4d32-8c56-b5a6dd092c38"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.508 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-5133f527-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.516 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-5133f527-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[6]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.517 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-6f5d1784-97'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.522 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-6f5d1784-97']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:02:78:2c"],["iface-id","6f5d1784-9767-4e15-a95a-29e88d88b27a"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.522 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-6f5d1784-97'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.554 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-6f5d1784-97']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[24]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.554 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-86189fbf-73'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.563 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-86189fbf-73']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:96:d3:83"],["iface-id","86189fbf-7313-4835-8984-1688fb5eaef7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.563 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-86189fbf-73'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.587 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-86189fbf-73']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[22]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.588 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-8f35376d-52'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.662 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-8f35376d-52']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:0e:c2:11"],["iface-id","8f35376d-527a-482a-901b-3680357fd644"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.663 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-8f35376d-52'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.686 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-8f35376d-52']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[11]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.687 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-9287f2af-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.696 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-9287f2af-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:c4:19:cf"],["iface-id","9287f2af-2e11-40cc-9ee6-9844c76ffec5"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.697 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-9287f2af-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.749 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-9287f2af-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[13]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.749 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-988decd4-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.796 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-988decd4-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f2:63:ff"],["iface-id","988decd4-2eb0-4d9c-aad9-6a822f81981e"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.797 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-988decd4-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.842 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-988decd4-2e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[8]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.843 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-c1c873e3-44'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.885 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-c1c873e3-44']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:09:ca:65"],["iface-id","c1c873e3-44fd-4370-92da-d4b664889762"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.886 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-c1c873e3-44'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.933 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-c1c873e3-44']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[15]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.934 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-d2d9eedf-5d'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:36.997 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-d2d9eedf-5d']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:3b:c3:ae"],["iface-id","d2d9eedf-5dce-4ca5-af2c-935068cc4aa2"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:36.998 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-d2d9eedf-5d'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.075 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-d2d9eedf-5d']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[20]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.075 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvo1d7bda7b-be'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.122 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvo1d7bda7b-be']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:aa:65:b4"],["iface-id","1d7bda7b-be33-4b2e-baed-e24740a36820"],["iface-status","active"],["vm-uuid","0a0c4036-1e9b-4842-b743-c39c0662059d"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.122 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvo1d7bda7b-be'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.156 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvo1d7bda7b-be']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.156 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoc5bf41a3-43'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.176 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoc5bf41a3-43']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:58:af:6d"],["iface-id","c5bf41a3-4316-4bf4-8509-5c65a3d92669"],["iface-status","active"],["vm-uuid","f730a1bc-5972-48ab-9ca2-e9f178ca97f0"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.177 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoc5bf41a3-43'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.188 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoc5bf41a3-43']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.189 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoca710d52-71'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.202 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoca710d52-71']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:97:74:53"],["iface-id","ca710d52-71cd-48c5-8783-ca303a208747"],["iface-status","active"],["vm-uuid","832a516b-4f20-4475-9532-4cf3e9feb3e8"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.203 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoca710d52-71'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.209 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoca710d52-71']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.209 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvoccd22729-b4'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.218 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvoccd22729-b4']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f0:74:2e"],["iface-id","ccd22729-b4e2-4128-bb6d-10f9cae05853"],["iface-status","active"],["vm-uuid","f1854546-342b-4e15-b5d4-6287e97f9431"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.218 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvoccd22729-b4'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.231 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvoccd22729-b4']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[-1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.232 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap0a5ed168-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.243 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap0a5ed168-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:a0:50:a7"],["iface-id","0a5ed168-4e84-4b6d-80ca-b71e6e7cdfd7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.243 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap0a5ed168-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.251 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap0a5ed168-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[16]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.252 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.258 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:16:21:2d"],["iface-id","15de57fe-5c01-42df-8251-546cd5c43672"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.258 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.264 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[2]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.264 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tapcb21bc69-06'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.273 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tapcb21bc69-06']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:ff:c0:9e"],["iface-id","cb21bc69-0626-42b8-a4e3-2e339a6696b0"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.274 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tapcb21bc69-06'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.282 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tapcb21bc69-06']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[9]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.283 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-289aa480-39'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.375 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-289aa480-39']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.376 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-80ce20ae-b1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.491 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-80ce20ae-b1']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.492 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-8e8730d0-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.724 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-8e8730d0-45']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.724 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-9c62ba68-d2'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.812 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-9c62ba68-d2']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.813 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-a837f0fd-45'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.859 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-a837f0fd-45']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.859 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-b43fb51f-9f'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.942 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-b43fb51f-9f']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.942 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-cd9ffc36-fa'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:37.993 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-cd9ffc36-fa']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:37.993 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-e2dc5947-eb'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.153 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-e2dc5947-eb']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.153 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-f151d9d2-8c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.375 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-f151d9d2-8c']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.376 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-48093dc8-b6'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.422 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-48093dc8-b6']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.423 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-5133f527-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.495 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-5133f527-5c']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.495 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-6f5d1784-97'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.546 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-6f5d1784-97']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.546 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-86189fbf-73'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.593 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-86189fbf-73']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.593 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-8f35376d-52'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.640 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-8f35376d-52']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.640 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-9287f2af-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.696 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-9287f2af-2e']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.697 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-988decd4-2e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.753 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-988decd4-2e']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.758 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-c1c873e3-44'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.818 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-c1c873e3-44']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.819 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-d2d9eedf-5d'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.857 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-d2d9eedf-5d']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.857 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qvo1d7bda7b-be'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.876 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qvo1d7bda7b-be']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.876 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qvoc5bf41a3-43'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.906 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qvoc5bf41a3-43']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.906 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qvoca710d52-71'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:38.963 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qvoca710d52-71']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:38.963 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qvoccd22729-b4'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.023 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qvoccd22729-b4']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.023 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'tap0a5ed168-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.080 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'tap0a5ed168-4e']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.080 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.122 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.122 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'tapcb21bc69-06'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.159 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'tapcb21bc69-06']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.160 1491 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-ex
+2015-11-24 19:13:39.160 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.177 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: qg-13fa9efd-c9\nqg-150e41bd-f0\nqg-18133cec-0e\nqg-4330d6be-09\nqg-596c7f4b-0a\nqg-5e11c6f4-4e\nqg-9791f6c6-e5\nqg-e52079a2-d1\nqg-f78ef22b-d5
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.178 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-13fa9efd-c9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.195 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-13fa9efd-c9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:f4:bf:d0"],["iface-id","13fa9efd-c9c5-4b7e-80ef-825b362f9766"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.195 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-13fa9efd-c9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.214 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-13fa9efd-c9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[4]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.214 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-150e41bd-f0'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.255 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-150e41bd-f0']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:83:e1:95"],["iface-id","150e41bd-f069-42e0-a843-72c2c8e1bf43"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.255 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-150e41bd-f0'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.262 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-150e41bd-f0']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[8]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.263 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-18133cec-0e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.281 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-18133cec-0e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:77:5b:56"],["iface-id","18133cec-0e10-485c-8958-bb9fe32bd9a7"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.281 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-18133cec-0e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.296 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-18133cec-0e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[3]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.297 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-4330d6be-09'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.320 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-4330d6be-09']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:82:da:e4"],["iface-id","4330d6be-09ed-4a3e-8130-a3d3002ff49e"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.321 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-4330d6be-09'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.328 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-4330d6be-09']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[1]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.329 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-596c7f4b-0a'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.344 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-596c7f4b-0a']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:46:a1:98"],["iface-id","596c7f4b-0af1-40c5-b6a4-92b38e1da459"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.345 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-596c7f4b-0a'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.351 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-596c7f4b-0a']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[9]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.351 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-5e11c6f4-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.365 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-5e11c6f4-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:99:f7:28"],["iface-id","5e11c6f4-4e5f-4ef0-93ef-34a5c637159c"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.366 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-5e11c6f4-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.371 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-5e11c6f4-4e']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[2]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.371 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-9791f6c6-e5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.377 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-9791f6c6-e5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:5f:bd:eb"],["iface-id","9791f6c6-e513-4288-bb0c-92c81d20afba"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.377 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-9791f6c6-e5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.397 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-9791f6c6-e5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[5]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.398 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-e52079a2-d1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.405 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-e52079a2-d1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:66:29:33"],["iface-id","e52079a2-d1b2-4b9f-aba5-31c33fe7aec6"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.405 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-e52079a2-d1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.410 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-e52079a2-d1']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[6]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.410 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-f78ef22b-d5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.416 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-f78ef22b-d5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:81:8f:f8"],["iface-id","f78ef22b-d506-4448-a297-3096ecd5a51d"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.416 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-f78ef22b-d5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.421 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-f78ef22b-d5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[7]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.422 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-13fa9efd-c9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.460 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-13fa9efd-c9']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.461 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-150e41bd-f0'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.497 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-150e41bd-f0']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.498 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-18133cec-0e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.573 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-18133cec-0e']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.573 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-4330d6be-09'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.645 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-4330d6be-09']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.645 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-596c7f4b-0a'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.709 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-596c7f4b-0a']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.710 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-5e11c6f4-4e'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.791 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-5e11c6f4-4e']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.792 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-9791f6c6-e5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.845 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-9791f6c6-e5']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.846 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-e52079a2-d1'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.877 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-e52079a2-d1']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.877 1491 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-f78ef22b-d5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2015-11-24 19:13:39.900 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-f78ef22b-d5']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.900 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-289aa480-39'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.910 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-289aa480-39']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-289aa480-39" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.911 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-80ce20ae-b1'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.915 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-80ce20ae-b1']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-80ce20ae-b1" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.915 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-8e8730d0-45'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.919 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-8e8730d0-45']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-8e8730d0-45" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.920 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-9c62ba68-d2'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.923 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-9c62ba68-d2']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-9c62ba68-d2" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.924 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-a837f0fd-45'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.928 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-a837f0fd-45']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-a837f0fd-45" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.929 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-b43fb51f-9f'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.934 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-b43fb51f-9f']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-b43fb51f-9f" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.935 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-cd9ffc36-fa'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.942 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-cd9ffc36-fa']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-cd9ffc36-fa" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.943 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-e2dc5947-eb'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.949 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-e2dc5947-eb']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-e2dc5947-eb" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.949 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-f151d9d2-8c'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.956 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-f151d9d2-8c']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-f151d9d2-8c" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.956 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-48093dc8-b6'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.960 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-48093dc8-b6']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-48093dc8-b6" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.961 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-5133f527-5c'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.965 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-5133f527-5c']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-5133f527-5c" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.965 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-6f5d1784-97'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.970 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-6f5d1784-97']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-6f5d1784-97" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.970 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-86189fbf-73'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.974 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-86189fbf-73']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-86189fbf-73" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.975 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-8f35376d-52'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.987 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-8f35376d-52']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-8f35376d-52" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.988 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-9287f2af-2e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:39.998 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-9287f2af-2e']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-9287f2af-2e" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:39.998 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-988decd4-2e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.003 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-988decd4-2e']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-988decd4-2e" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.003 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-c1c873e3-44'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.008 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-c1c873e3-44']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-c1c873e3-44" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.008 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-d2d9eedf-5d'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.013 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-d2d9eedf-5d']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-d2d9eedf-5d" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.013 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qvo1d7bda7b-be'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.018 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qvo1d7bda7b-be']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qvo1d7bda7b-be" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.019 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qvoc5bf41a3-43'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.023 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qvoc5bf41a3-43']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qvoc5bf41a3-43" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.023 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qvoca710d52-71'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.027 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qvoca710d52-71']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qvoca710d52-71" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.028 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qvoccd22729-b4'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.033 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qvoccd22729-b4']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qvoccd22729-b4" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.033 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'tap0a5ed168-4e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.040 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'tap0a5ed168-4e']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "tap0a5ed168-4e" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.041 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'tap15de57fe-5c'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.050 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'tap15de57fe-5c']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "tap15de57fe-5c" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.051 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'tapcb21bc69-06'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.056 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'tapcb21bc69-06']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "tapcb21bc69-06" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.057 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-13fa9efd-c9'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.062 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-13fa9efd-c9']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-13fa9efd-c9" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.063 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-150e41bd-f0'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.068 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-150e41bd-f0']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-150e41bd-f0" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.069 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-18133cec-0e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.079 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-18133cec-0e']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-18133cec-0e" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.079 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-4330d6be-09'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.087 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-4330d6be-09']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-4330d6be-09" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.088 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-596c7f4b-0a'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.095 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-596c7f4b-0a']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-596c7f4b-0a" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.095 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-5e11c6f4-4e'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.100 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-5e11c6f4-4e']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-5e11c6f4-4e" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.101 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-9791f6c6-e5'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.106 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-9791f6c6-e5']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-9791f6c6-e5" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.107 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-e52079a2-d1'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.113 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-e52079a2-d1']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-e52079a2-d1" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.117 1491 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-f78ef22b-d5'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2015-11-24 19:13:40.124 1491 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-f78ef22b-d5']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-f78ef22b-d5" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2015-11-24 19:13:40.124 1491 INFO neutron.cmd.ovs_cleanup [-] OVS cleanup completed successfully
+2015-11-24 19:13:40.127 1491 INFO oslo_rootwrap.client [-] Stopping rootwrap daemon process with pid=3837
+2016-01-29 13:14:00.016 25082 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 13:14:00.016 25082 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2015.1.2-2.el7ost
+2016-01-29 13:14:00.017 25082 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-ovs-cleanup --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini --config-dir /etc/neutron/conf.d/common --config-dir /etc/neutron/conf.d/neutron-ovs-cleanup --log-file /var/log/neutron/ovs-cleanup.log setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 13:14:00.017 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.022 25082 INFO oslo_rootwrap.client [-] Spawned new rootwrap daemon process with pid=25100
+2016-01-29 13:14:00.076 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br']
+Exit code: 0
+Stdin: 
+Stdout: br-ex\nbr-int\nbr-tun
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.077 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.084 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: ha-1d2bf1d7-93\npatch-tun\nqr-5915904e-28\nqvo13ba1a02-f9\ntap15de57fe-5c
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.084 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-1d2bf1d7-93'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.089 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-1d2bf1d7-93']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:70:54:4f"],["iface-id","1d2bf1d7-93f0-4e18-9345-42c161042686"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.089 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-1d2bf1d7-93'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.094 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-1d2bf1d7-93']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[128]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.094 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.100 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.100 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-5915904e-28'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.106 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-5915904e-28']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:bd:f7:ea"],["iface-id","5915904e-2854-48a3-9db4-62f3ebc25322"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.106 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-5915904e-28'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.111 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-5915904e-28']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[129]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.112 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.117 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:5e:2f:5c"],["iface-id","13ba1a02-f955-4f84-afd3-d6a70fec1923"],["iface-status","active"],["vm-uuid","fa89b421-cbbd-44c5-9ed3-752e6304b1d4"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.117 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.122 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[130]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.123 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.128 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:16:21:2d"],["iface-id","15de57fe-5c01-42df-8251-546cd5c43672"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.128 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.134 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[115]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.135 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.140 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: qg-d5b3cdaa-b5
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.140 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-d5b3cdaa-b5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.146 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-d5b3cdaa-b5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:d8:17:48"],["iface-id","d5b3cdaa-b552-4980-9055-80ce9e1277b4"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.146 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-d5b3cdaa-b5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.151 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-d5b3cdaa-b5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[35]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.152 25082 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-int
+2016-01-29 13:14:00.152 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.157 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: ha-1d2bf1d7-93\npatch-tun\nqr-5915904e-28\nqvo13ba1a02-f9\ntap15de57fe-5c
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.157 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'ha-1d2bf1d7-93'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.163 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'ha-1d2bf1d7-93']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:70:54:4f"],["iface-id","1d2bf1d7-93f0-4e18-9345-42c161042686"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.163 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'ha-1d2bf1d7-93'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.169 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'ha-1d2bf1d7-93']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[128]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.169 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.174 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.174 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qr-5915904e-28'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.180 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qr-5915904e-28']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:bd:f7:ea"],["iface-id","5915904e-2854-48a3-9db4-62f3ebc25322"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.180 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qr-5915904e-28'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.186 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qr-5915904e-28']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[129]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.186 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.192 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:5e:2f:5c"],["iface-id","13ba1a02-f955-4f84-afd3-d6a70fec1923"],["iface-status","active"],["vm-uuid","fa89b421-cbbd-44c5-9ed3-752e6304b1d4"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.192 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.197 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[130]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.197 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.203 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:16:21:2d"],["iface-id","15de57fe-5c01-42df-8251-546cd5c43672"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.203 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.208 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[115]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.209 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'ha-1d2bf1d7-93'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.231 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'ha-1d2bf1d7-93']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.232 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qr-5915904e-28'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.257 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qr-5915904e-28']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.258 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.267 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.267 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.289 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-int', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.290 25082 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-ex
+2016-01-29 13:14:00.290 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.297 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: qg-d5b3cdaa-b5
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.297 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'qg-d5b3cdaa-b5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.303 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'qg-d5b3cdaa-b5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[["attached-mac","fa:16:3e:d8:17:48"],["iface-id","d5b3cdaa-b552-4980-9055-80ce9e1277b4"],["iface-status","active"]]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.303 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', 'qg-d5b3cdaa-b5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.308 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=ofport', 'list', 'Interface', u'qg-d5b3cdaa-b5']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[35]],"headings":["ofport"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.308 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', 'qg-d5b3cdaa-b5'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.328 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--if-exists', 'del-port', 'br-ex', u'qg-d5b3cdaa-b5']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.328 25082 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'ha-1d2bf1d7-93'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 13:14:00.334 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'ha-1d2bf1d7-93']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "ha-1d2bf1d7-93" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.335 25082 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qr-5915904e-28'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 13:14:00.338 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qr-5915904e-28']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qr-5915904e-28" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.339 25082 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qvo13ba1a02-f9'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 13:14:00.342 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: 208: qvo13ba1a02-f9: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT qlen 1000\    link/ether 86:e7:b7:2d:73:48 brd ff:ff:ff:ff:ff:ff
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.342 25082 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'link', 'delete', 'qvo13ba1a02-f9'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:00.356 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'link', 'delete', u'qvo13ba1a02-f9']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.357 25082 INFO neutron.cmd.ovs_cleanup [-] Deleting port: qvo13ba1a02-f9
+2016-01-29 13:14:00.357 25082 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'tap15de57fe-5c'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 13:14:00.363 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'tap15de57fe-5c']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "tap15de57fe-5c" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.363 25082 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'qg-d5b3cdaa-b5'] create_process /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:84
+2016-01-29 13:14:00.367 25082 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'qg-d5b3cdaa-b5']
+Exit code: 1
+Stdin: 
+Stdout: 
+Stderr: Device "qg-d5b3cdaa-b5" does not exist.
+ execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:00.368 25082 INFO neutron.cmd.ovs_cleanup [-] OVS cleanup completed successfully
+2016-01-29 13:14:00.369 25082 INFO oslo_rootwrap.client [-] Stopping rootwrap daemon process with pid=25100
+2016-01-29 13:14:30.653 1255 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 13:14:30.655 1255 INFO neutron.common.config [-] /usr/bin/neutron-ovs-cleanup version 2015.1.2-2.el7ost
+2016-01-29 13:14:30.655 1255 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-ovs-cleanup --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini --config-dir /etc/neutron/conf.d/common --config-dir /etc/neutron/conf.d/neutron-ovs-cleanup --log-file /var/log/neutron/ovs-cleanup.log setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 13:14:30.660 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:30.709 1255 INFO oslo_rootwrap.client [-] Spawned new rootwrap daemon process with pid=2206
+2016-01-29 13:14:31.348 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-br']
+Exit code: 0
+Stdin: 
+Stdout: br-ex\nbr-int\nbr-tun
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.350 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.368 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: patch-tun
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.368 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.404 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.404 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.436 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.436 1255 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-int
+2016-01-29 13:14:31.436 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.492 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-int']
+Exit code: 0
+Stdin: 
+Stdout: patch-tun
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.492 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', 'patch-tun'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.558 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', '--columns=external_ids', 'list', 'Interface', u'patch-tun']
+Exit code: 0
+Stdin: 
+Stdout: {"data":[[["map",[]]]],"headings":["external_ids"]}
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.558 1255 INFO neutron.cmd.ovs_cleanup [-] Cleaning bridge: br-ex
+2016-01-29 13:14:31.558 1255 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 13:14:31.596 1255 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ovs-vsctl', '--timeout=10', '--oneline', '--format=json', '--', 'list-ports', 'br-ex']
+Exit code: 0
+Stdin: 
+Stdout: 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 13:14:31.597 1255 INFO neutron.cmd.ovs_cleanup [-] OVS cleanup completed successfully
+2016-01-29 13:14:31.615 1255 INFO oslo_rootwrap.client [-] Stopping rootwrap daemon process with pid=2206

@@ -1,0 +1,675 @@
+2015-11-12 12:45:40.786 18511 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2015-11-12 12:45:40.789 18511 INFO nova.openstack.common.service [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Starting 3 workers
+2015-11-12 12:45:40.792 18511 INFO nova.openstack.common.service [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Started child 18518
+2015-11-12 12:45:40.797 18511 INFO nova.openstack.common.service [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Started child 18519
+2015-11-12 12:45:40.800 18518 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-12 12:45:40.803 18519 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-12 12:45:40.804 18518 WARNING oslo_config.cfg [req-f3f93dcd-b23a-48f8-829b-b0ed3ea99a55 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-12 12:45:40.801 18511 INFO nova.openstack.common.service [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Started child 18520
+2015-11-12 12:45:40.808 18519 WARNING oslo_config.cfg [req-fda3e8ed-9b10-42e2-911f-5a21dba08e64 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-12 12:45:40.820 18520 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-12 12:45:40.832 18511 WARNING oslo_config.cfg [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-12 12:45:40.834 18520 WARNING oslo_config.cfg [req-d68c11ef-7590-4fff-8c1d-f778efcf8db4 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-12 12:45:40.845 18511 WARNING oslo_config.cfg [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2015-11-12 12:45:40.847 18511 WARNING oslo_config.cfg [req-56814362-3328-460f-8b85-e90070cc490c - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2015-11-12 12:45:41.002 18519 INFO oslo_messaging._drivers.impl_rabbit [req-fda3e8ed-9b10-42e2-911f-5a21dba08e64 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:41.011 18518 INFO oslo_messaging._drivers.impl_rabbit [req-f3f93dcd-b23a-48f8-829b-b0ed3ea99a55 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:41.037 18520 INFO oslo_messaging._drivers.impl_rabbit [req-d68c11ef-7590-4fff-8c1d-f778efcf8db4 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:41.052 18520 INFO oslo_messaging._drivers.impl_rabbit [req-d68c11ef-7590-4fff-8c1d-f778efcf8db4 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:41.054 18518 INFO oslo_messaging._drivers.impl_rabbit [req-f3f93dcd-b23a-48f8-829b-b0ed3ea99a55 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:41.056 18519 INFO oslo_messaging._drivers.impl_rabbit [req-fda3e8ed-9b10-42e2-911f-5a21dba08e64 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:48.783 18520 INFO oslo_messaging._drivers.impl_rabbit [req-94ebcd5e-ba79-4094-aae0-f1eff7afbd53 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:48.834 18520 INFO oslo_messaging._drivers.impl_rabbit [req-94ebcd5e-ba79-4094-aae0-f1eff7afbd53 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:48.920 18519 INFO oslo_messaging._drivers.impl_rabbit [req-4c372228-fefa-47f3-a168-dec3adaeca8f - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:48.973 18519 INFO oslo_messaging._drivers.impl_rabbit [req-4c372228-fefa-47f3-a168-dec3adaeca8f - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:49.014 18518 INFO oslo_messaging._drivers.impl_rabbit [req-b1c5bf36-901b-4575-b2ed-a29099a314eb - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 12:45:49.062 18518 INFO oslo_messaging._drivers.impl_rabbit [req-b1c5bf36-901b-4575-b2ed-a29099a314eb - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:35.033 18519 INFO oslo_messaging._drivers.impl_rabbit [req-3659683e-40bd-43a5-a7d3-7d909fda70f5 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:35.083 18519 INFO oslo_messaging._drivers.impl_rabbit [req-3659683e-40bd-43a5-a7d3-7d909fda70f5 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:45.710 18518 INFO oslo_messaging._drivers.impl_rabbit [req-500d9595-26de-430c-b139-dc96c42416ff dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:45.762 18518 INFO oslo_messaging._drivers.impl_rabbit [req-500d9595-26de-430c-b139-dc96c42416ff dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:51.393 18520 INFO oslo_messaging._drivers.impl_rabbit [req-a8f2c406-a160-46a3-a66f-24389e2d0e45 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 13:14:51.452 18520 INFO oslo_messaging._drivers.impl_rabbit [req-a8f2c406-a160-46a3-a66f-24389e2d0e45 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:16:25.743 18518 INFO oslo_messaging._drivers.impl_rabbit [req-80a65cae-29cf-4324-b558-c33052095c79 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 13:16:25.847 18518 INFO oslo_messaging._drivers.impl_rabbit [req-80a65cae-29cf-4324-b558-c33052095c79 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:16:28.209 18519 INFO oslo_messaging._drivers.impl_rabbit [req-26a83dc2-7f08-4d1c-9ad9-7f2b6fb0fa80 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 13:16:28.298 18519 INFO oslo_messaging._drivers.impl_rabbit [req-26a83dc2-7f08-4d1c-9ad9-7f2b6fb0fa80 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 13:23:52.809 18519 INFO oslo_messaging._drivers.impl_rabbit [req-9ce0416b-caa0-471b-b8d4-a083a7fe2cfa - - - - -] The exchange Exchange reply_6a067cc51ce5442fb7b18a614437ee4c(direct) to send to reply_6a067cc51ce5442fb7b18a614437ee4c doesn't exist yet, retrying...
+2015-11-12 13:23:53.814 18519 INFO oslo_messaging._drivers.impl_rabbit [req-9ce0416b-caa0-471b-b8d4-a083a7fe2cfa - - - - -] The exchange Exchange reply_6a067cc51ce5442fb7b18a614437ee4c(direct) to send to reply_6a067cc51ce5442fb7b18a614437ee4c doesn't exist yet, retrying...
+2015-11-12 16:12:20.051 18519 ERROR nova.servicegroup.drivers.db [req-13f311f9-fb47-4faa-ac51-c3a583ef1f56 - - - - -] model server went away
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db Traceback (most recent call last):
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/servicegroup/drivers/db.py", line 112, in _report_state
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     service.service_ref, state_catalog)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/api.py", line 164, in service_update
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return self._manager.service_update(context, service, values)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/utils.py", line 895, in wrapper
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/server.py", line 142, in inner
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/manager.py", line 335, in service_update
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     svc = self.db.service_update(context, service['id'], values)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/api.py", line 153, in service_update
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return IMPL.service_update(context, service_id, values)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 271, in wrapped
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 555, in service_update
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     service_ref = _service_get(context, service_id, session=session)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 458, in _service_get
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     result = query.first()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2445, in first
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     ret = list(self[0:1])
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2281, in __getitem__
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return list(res)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2516, in __iter__
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return self._execute_and_instances(context)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2529, in _execute_and_instances
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     close_with_result=True)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2520, in _connection_from_session
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     **kw)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 882, in connection
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     execution_options=execution_options)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 887, in _connection_for_bind
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     engine, execution_options)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     conn = bind.contextual_connect()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     self._wrap_pool_connect(self.pool.connect, None),
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     e, dialect, self)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1401, in _handle_dbapi_exception_noconnection
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     util.raise_from_cause(newraise, exc_info)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return fn()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 376, in connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return _ConnectionFairy._checkout(self)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     fairy = _ConnectionRecord.checkout(pool)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 485, in checkout
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     rec.checkin()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     compat.reraise(exc_type, exc_value, exc_tb)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 482, in checkout
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     dbapi_connection = rec.get_connection()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 594, in get_connection
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     self.connection = self.__connect()
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 607, in __connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     connection = self.__pool._invoke_creator(self)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return dialect.connect(*cargs, **cparams)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return self.dbapi.connect(*cargs, **cparams)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     return Connection(*args, **kwargs)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 187, in __init__
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db     super(Connection, self).__init__(*args, **kwargs2)
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db DBConnectionError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '10.211.55.142' (101)")
+2015-11-12 16:12:20.051 18519 TRACE nova.servicegroup.drivers.db 
+2015-11-12 16:12:20.119 18518 ERROR nova.servicegroup.drivers.db [req-066156bb-8c86-417e-bac4-e42a7091a1c2 - - - - -] model server went away
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db Traceback (most recent call last):
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/servicegroup/drivers/db.py", line 112, in _report_state
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     service.service_ref, state_catalog)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/api.py", line 164, in service_update
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return self._manager.service_update(context, service, values)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/utils.py", line 895, in wrapper
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/server.py", line 142, in inner
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/manager.py", line 335, in service_update
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     svc = self.db.service_update(context, service['id'], values)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/api.py", line 153, in service_update
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return IMPL.service_update(context, service_id, values)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 271, in wrapped
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 555, in service_update
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     service_ref = _service_get(context, service_id, session=session)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 458, in _service_get
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     result = query.first()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2445, in first
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     ret = list(self[0:1])
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2281, in __getitem__
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return list(res)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2516, in __iter__
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return self._execute_and_instances(context)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2529, in _execute_and_instances
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     close_with_result=True)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2520, in _connection_from_session
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     **kw)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 882, in connection
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     execution_options=execution_options)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 887, in _connection_for_bind
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     engine, execution_options)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     conn = bind.contextual_connect()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     self._wrap_pool_connect(self.pool.connect, None),
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     e, dialect, self)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1401, in _handle_dbapi_exception_noconnection
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     util.raise_from_cause(newraise, exc_info)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return fn()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 376, in connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return _ConnectionFairy._checkout(self)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     fairy = _ConnectionRecord.checkout(pool)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 485, in checkout
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     rec.checkin()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     compat.reraise(exc_type, exc_value, exc_tb)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 482, in checkout
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     dbapi_connection = rec.get_connection()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 594, in get_connection
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     self.connection = self.__connect()
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 607, in __connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     connection = self.__pool._invoke_creator(self)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return dialect.connect(*cargs, **cparams)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return self.dbapi.connect(*cargs, **cparams)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     return Connection(*args, **kwargs)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 187, in __init__
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db     super(Connection, self).__init__(*args, **kwargs2)
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db DBConnectionError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '10.211.55.142' (101)")
+2015-11-12 16:12:20.119 18518 TRACE nova.servicegroup.drivers.db 
+2015-11-12 16:12:20.155 18520 ERROR nova.servicegroup.drivers.db [req-cff85e19-6dca-494e-8bf4-55ec4eb1d68a - - - - -] model server went away
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db Traceback (most recent call last):
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/servicegroup/drivers/db.py", line 112, in _report_state
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     service.service_ref, state_catalog)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/api.py", line 164, in service_update
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return self._manager.service_update(context, service, values)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/utils.py", line 895, in wrapper
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/server.py", line 142, in inner
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/manager.py", line 335, in service_update
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     svc = self.db.service_update(context, service['id'], values)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/api.py", line 153, in service_update
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return IMPL.service_update(context, service_id, values)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 271, in wrapped
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 555, in service_update
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     service_ref = _service_get(context, service_id, session=session)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 458, in _service_get
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     result = query.first()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2445, in first
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     ret = list(self[0:1])
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2281, in __getitem__
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return list(res)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2516, in __iter__
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return self._execute_and_instances(context)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2529, in _execute_and_instances
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     close_with_result=True)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2520, in _connection_from_session
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     **kw)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 882, in connection
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     execution_options=execution_options)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 887, in _connection_for_bind
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     engine, execution_options)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     conn = bind.contextual_connect()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     self._wrap_pool_connect(self.pool.connect, None),
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     e, dialect, self)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1401, in _handle_dbapi_exception_noconnection
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     util.raise_from_cause(newraise, exc_info)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return fn()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 376, in connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return _ConnectionFairy._checkout(self)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     fairy = _ConnectionRecord.checkout(pool)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 485, in checkout
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     rec.checkin()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     compat.reraise(exc_type, exc_value, exc_tb)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 482, in checkout
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     dbapi_connection = rec.get_connection()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 594, in get_connection
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     self.connection = self.__connect()
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 607, in __connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     connection = self.__pool._invoke_creator(self)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return dialect.connect(*cargs, **cparams)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return self.dbapi.connect(*cargs, **cparams)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     return Connection(*args, **kwargs)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 187, in __init__
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db     super(Connection, self).__init__(*args, **kwargs2)
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db DBConnectionError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '10.211.55.142' (101)")
+2015-11-12 16:12:20.155 18520 TRACE nova.servicegroup.drivers.db 
+2015-11-12 16:12:30.053 18519 ERROR nova.servicegroup.drivers.db [req-13f311f9-fb47-4faa-ac51-c3a583ef1f56 - - - - -] Recovered model server connection!
+2015-11-12 16:12:30.118 18518 ERROR nova.servicegroup.drivers.db [req-066156bb-8c86-417e-bac4-e42a7091a1c2 - - - - -] Recovered model server connection!
+2015-11-12 16:12:30.152 18520 ERROR nova.servicegroup.drivers.db [req-cff85e19-6dca-494e-8bf4-55ec4eb1d68a - - - - -] Recovered model server connection!
+2015-11-12 16:12:47.066 18520 INFO oslo_messaging._drivers.impl_rabbit [req-f94690bb-4ed7-4972-bd97-c64e9f72cc7f - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 16:12:47.083 18520 INFO oslo_messaging._drivers.impl_rabbit [req-0581aad5-955a-4849-bfa3-6855045d9c2b - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-12 16:12:47.120 18520 INFO oslo_messaging._drivers.impl_rabbit [req-f94690bb-4ed7-4972-bd97-c64e9f72cc7f - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-12 16:12:47.121 18520 INFO oslo_messaging._drivers.impl_rabbit [req-0581aad5-955a-4849-bfa3-6855045d9c2b - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:36.860 1437 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2015-11-24 19:13:36.874 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Starting 3 workers
+2015-11-24 19:13:36.878 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Started child 5015
+2015-11-24 19:13:36.924 5015 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-24 19:13:36.897 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Started child 5019
+2015-11-24 19:13:36.939 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Started child 5033
+2015-11-24 19:13:36.990 5019 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-24 19:13:37.009 5015 WARNING oslo_config.cfg [req-40c8c76a-a61d-44cd-bad9-c3a514d7e9d1 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-24 19:13:37.020 5019 WARNING oslo_config.cfg [req-7b10c8d6-23a9-4f62-b477-702a4fe235d7 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-24 19:13:37.049 5033 INFO nova.service [-] Starting conductor node (version 2015.1.1-3.el7ost)
+2015-11-24 19:13:37.067 5033 WARNING oslo_config.cfg [req-ed68c091-9a27-4c20-acb0-01e3c1b070dd - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-24 19:13:37.089 1437 WARNING oslo_config.cfg [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-24 19:13:37.093 1437 WARNING oslo_config.cfg [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2015-11-24 19:13:37.095 1437 WARNING oslo_config.cfg [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2015-11-24 19:13:37.123 5019 WARNING oslo_db.sqlalchemy.session [req-7b10c8d6-23a9-4f62-b477-702a4fe235d7 - - - - -] SQL connection failed. -1 attempts left.
+2015-11-24 19:13:37.138 5033 WARNING oslo_db.sqlalchemy.session [req-ed68c091-9a27-4c20-acb0-01e3c1b070dd - - - - -] SQL connection failed. -1 attempts left.
+2015-11-24 19:13:37.166 5015 WARNING oslo_db.sqlalchemy.session [req-40c8c76a-a61d-44cd-bad9-c3a514d7e9d1 - - - - -] SQL connection failed. -1 attempts left.
+2015-11-24 19:13:48.147 5033 INFO oslo_messaging._drivers.impl_rabbit [req-ed68c091-9a27-4c20-acb0-01e3c1b070dd - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:48.228 5019 INFO oslo_messaging._drivers.impl_rabbit [req-7b10c8d6-23a9-4f62-b477-702a4fe235d7 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:48.585 5015 INFO oslo_messaging._drivers.impl_rabbit [req-40c8c76a-a61d-44cd-bad9-c3a514d7e9d1 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:51.619 5015 INFO oslo_messaging._drivers.impl_rabbit [req-40c8c76a-a61d-44cd-bad9-c3a514d7e9d1 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:51.645 5033 INFO oslo_messaging._drivers.impl_rabbit [req-ed68c091-9a27-4c20-acb0-01e3c1b070dd - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:51.659 5019 INFO oslo_messaging._drivers.impl_rabbit [req-7b10c8d6-23a9-4f62-b477-702a4fe235d7 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:54.754 5015 INFO oslo_messaging._drivers.impl_rabbit [req-8bade901-8262-4aa9-ab1d-982b8cd9c673 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:56.062 5033 INFO oslo_messaging._drivers.impl_rabbit [req-90b04383-e643-4737-9e61-8722d8ae7c7c - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:56.996 5015 INFO oslo_messaging._drivers.impl_rabbit [req-8bade901-8262-4aa9-ab1d-982b8cd9c673 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:57.000 5033 INFO oslo_messaging._drivers.impl_rabbit [req-90b04383-e643-4737-9e61-8722d8ae7c7c - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:57.253 5019 INFO oslo_messaging._drivers.impl_rabbit [req-96ed52d8-88aa-45ac-9527-25609210e176 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:13:57.493 5019 INFO oslo_messaging._drivers.impl_rabbit [req-25ecfe2b-e050-4fcf-a353-37f5753e6e8e - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:14:01.852 5019 INFO oslo_messaging._drivers.impl_rabbit [req-1e82ab7e-fa3f-4e0f-869e-853db9de904b - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:14:02.320 5019 INFO oslo_messaging._drivers.impl_rabbit [req-25ecfe2b-e050-4fcf-a353-37f5753e6e8e - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:14:02.323 5019 INFO oslo_messaging._drivers.impl_rabbit [req-1e82ab7e-fa3f-4e0f-869e-853db9de904b - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:14:02.324 5019 INFO oslo_messaging._drivers.impl_rabbit [req-96ed52d8-88aa-45ac-9527-25609210e176 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:15:47.761 5015 INFO oslo_messaging._drivers.impl_rabbit [req-f1c24ed4-a19a-4c19-afe4-43d18db6847c - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:15:47.833 5015 INFO oslo_messaging._drivers.impl_rabbit [req-f1c24ed4-a19a-4c19-afe4-43d18db6847c - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-24 19:15:47.891 5033 INFO oslo_messaging._drivers.impl_rabbit [req-f1c24ed4-a19a-4c19-afe4-43d18db6847c - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-24 19:15:47.997 5033 INFO oslo_messaging._drivers.impl_rabbit [req-f1c24ed4-a19a-4c19-afe4-43d18db6847c - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:42.632 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Caught SIGTERM, stopping children
+2015-11-30 18:47:42.638 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Waiting on 3 children to exit
+2015-11-30 18:47:42.638 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Child 5015 killed by signal 15
+2015-11-30 18:47:42.639 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Child 5019 killed by signal 15
+2015-11-30 18:47:42.639 1437 INFO nova.openstack.common.service [req-9f519a81-be7d-4503-aa6d-09ca2f2cfcd6 - - - - -] Child 5033 killed by signal 15
+2015-11-30 18:47:44.037 2465 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2015-11-30 18:47:44.040 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Starting 3 workers
+2015-11-30 18:47:44.042 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Started child 2473
+2015-11-30 18:47:44.045 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Started child 2474
+2015-11-30 18:47:44.047 2473 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2015-11-30 18:47:44.049 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Started child 2475
+2015-11-30 18:47:44.050 2474 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2015-11-30 18:47:44.051 2473 WARNING oslo_config.cfg [req-4c98bdc0-ec08-42e3-943b-1da20446c355 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-30 18:47:44.053 2474 WARNING oslo_config.cfg [req-1c8a0404-8493-4af9-b6aa-c6529ca0b0b1 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-30 18:47:44.062 2465 WARNING oslo_config.cfg [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-30 18:47:44.064 2465 WARNING oslo_config.cfg [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2015-11-30 18:47:44.066 2465 WARNING oslo_config.cfg [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2015-11-30 18:47:44.071 2475 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2015-11-30 18:47:44.073 2475 WARNING oslo_config.cfg [req-0809bd35-1d65-4133-bb8b-2fa50f1f0667 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2015-11-30 18:47:44.264 2473 INFO oslo_messaging._drivers.impl_rabbit [req-4c98bdc0-ec08-42e3-943b-1da20446c355 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.273 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1c8a0404-8493-4af9-b6aa-c6529ca0b0b1 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.282 2475 INFO oslo_messaging._drivers.impl_rabbit [req-0809bd35-1d65-4133-bb8b-2fa50f1f0667 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.321 2475 INFO oslo_messaging._drivers.impl_rabbit [req-0809bd35-1d65-4133-bb8b-2fa50f1f0667 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.321 2473 INFO oslo_messaging._drivers.impl_rabbit [req-4c98bdc0-ec08-42e3-943b-1da20446c355 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.343 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1c8a0404-8493-4af9-b6aa-c6529ca0b0b1 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.346 2475 INFO oslo_messaging._drivers.impl_rabbit [req-51bb8418-805e-489f-89ab-c57da7769b1a - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:44.422 2475 INFO oslo_messaging._drivers.impl_rabbit [req-51bb8418-805e-489f-89ab-c57da7769b1a - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.146 2474 INFO oslo_messaging._drivers.impl_rabbit [req-fc6a9aa4-57a8-4b91-bb38-401344a6b24b - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.178 2473 INFO oslo_messaging._drivers.impl_rabbit [req-7fcdfd34-de5e-4d30-8445-67060f122b61 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.199 2473 INFO oslo_messaging._drivers.impl_rabbit [req-7fcdfd34-de5e-4d30-8445-67060f122b61 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.201 2474 INFO oslo_messaging._drivers.impl_rabbit [req-fc6a9aa4-57a8-4b91-bb38-401344a6b24b - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.256 2473 INFO oslo_messaging._drivers.impl_rabbit [req-7fcdfd34-de5e-4d30-8445-67060f122b61 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:47:48.313 2473 INFO oslo_messaging._drivers.impl_rabbit [req-7fcdfd34-de5e-4d30-8445-67060f122b61 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:57:48.108 2474 INFO oslo_messaging._drivers.impl_rabbit [req-9a26ae5c-daab-47b7-b7f2-a36da223bcb6 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:57:48.169 2474 INFO oslo_messaging._drivers.impl_rabbit [req-9a26ae5c-daab-47b7-b7f2-a36da223bcb6 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-11-30 18:59:11.316 2475 INFO oslo_messaging._drivers.impl_rabbit [req-d18df50d-07dc-4bd1-80a5-44eac9220fa1 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2015-11-30 18:59:11.373 2475 INFO oslo_messaging._drivers.impl_rabbit [req-d18df50d-07dc-4bd1-80a5-44eac9220fa1 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2015-12-02 14:49:56.972 2475 ERROR nova.servicegroup.drivers.db [req-80751e2f-9d9c-4e7d-a896-6e5fd84fb35c - - - - -] model server went away
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db Traceback (most recent call last):
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/servicegroup/drivers/db.py", line 112, in _report_state
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     service.service_ref, state_catalog)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/api.py", line 164, in service_update
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return self._manager.service_update(context, service, values)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/utils.py", line 919, in wrapper
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/server.py", line 142, in inner
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/conductor/manager.py", line 335, in service_update
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     svc = self.db.service_update(context, service['id'], values)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/api.py", line 153, in service_update
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return IMPL.service_update(context, service_id, values)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 271, in wrapped
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 555, in service_update
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     service_ref = _service_get(context, service_id, session=session)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/site-packages/nova/db/sqlalchemy/api.py", line 458, in _service_get
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     result = query.first()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2445, in first
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     ret = list(self[0:1])
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2281, in __getitem__
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return list(res)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2516, in __iter__
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return self._execute_and_instances(context)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2529, in _execute_and_instances
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     close_with_result=True)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/query.py", line 2520, in _connection_from_session
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     **kw)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 882, in connection
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     execution_options=execution_options)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 887, in _connection_for_bind
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     engine, execution_options)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     conn = bind.contextual_connect()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     self._wrap_pool_connect(self.pool.connect, None),
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     e, dialect, self)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1401, in _handle_dbapi_exception_noconnection
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     util.raise_from_cause(newraise, exc_info)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return fn()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 376, in connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return _ConnectionFairy._checkout(self)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     fairy = _ConnectionRecord.checkout(pool)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 485, in checkout
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     rec.checkin()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     compat.reraise(exc_type, exc_value, exc_tb)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 482, in checkout
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     dbapi_connection = rec.get_connection()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 594, in get_connection
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     self.connection = self.__connect()
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/pool.py", line 607, in __connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     connection = self.__pool._invoke_creator(self)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return dialect.connect(*cargs, **cparams)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return self.dbapi.connect(*cargs, **cparams)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     return Connection(*args, **kwargs)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db   File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 187, in __init__
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db     super(Connection, self).__init__(*args, **kwargs2)
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db DBConnectionError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '10.211.55.142' (101)")
+2015-12-02 14:49:56.972 2475 TRACE nova.servicegroup.drivers.db 
+2015-12-02 14:50:06.974 2475 ERROR nova.servicegroup.drivers.db [req-80751e2f-9d9c-4e7d-a896-6e5fd84fb35c - - - - -] Recovered model server connection!
+2016-01-21 12:04:06.148 2474 INFO oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-21 12:04:07.151 2474 INFO oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-21 12:04:08.153 2474 INFO oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 07:41:28.941 2474 ERROR oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] Failed to publish message to topic 'reply_38dd7da232194aaaaa2eeba909538934': Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 07:41:28.943 2474 ERROR oslo_messaging.rpc.dispatcher [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] Exception during message handling: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher Traceback (most recent call last):
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     executor_callback))
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self._send_reply(conn, reply, failure, log_failure=log_failure)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self.publisher_send(p, msg)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self.ensure(_publish, retry=retry, error_callback=_error_callback)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     ret, channel = autoretry_method()
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, **kwargs)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, channel=channels[0], **kwargs), channels[0]
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     method()
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     publisher.send(self, msg, timeout)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     timeout)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     routing_key=self.routing_key)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self.revive(self._channel)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self.declare()
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     self.exchange.declare()
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     nowait=nowait, passive=passive,
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     (40, 11),  # Channel.exchange_declare_ok
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     return self.dispatch_method(method_sig, args, content)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     return amqp_method(self, args)
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher     reply_code, reply_text, (class_id, method_id), ChannelError,
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 07:41:28.943 2474 TRACE oslo_messaging.rpc.dispatcher 
+2016-01-29 07:41:28.948 2474 ERROR oslo_messaging._drivers.common [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] Returning exception Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/' to caller
+2016-01-29 07:41:28.948 2474 ERROR oslo_messaging._drivers.common [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] ['Traceback (most recent call last):\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply\n    executor_callback))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply\n    self._send_reply(conn, reply, failure, log_failure=log_failure)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply\n    conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send\n    self.publisher_send(p, msg)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send\n    self.ensure(_publish, retry=retry, error_callback=_error_callback)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure\n    ret, channel = autoretry_method()\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured\n    return fun(*args, **kwargs)\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__\n    return fun(*args, channel=channels[0], **kwargs), channels[0]\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method\n    method()\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish\n    publisher.send(self, msg, timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send\n    timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send\n    routing_key=self.routing_key)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__\n    self.revive(self._channel)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive\n    self.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare\n    self.exchange.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare\n    nowait=nowait, passive=passive,\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare\n    (40, 11),  # Channel.exchange_declare_ok\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait\n    return self.dispatch_method(method_sig, args, content)\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method\n    return amqp_method(self, args)\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close\n    reply_code, reply_text, (class_id, method_id), ChannelError,\n', "NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'\n"]
+2016-01-29 07:41:28.950 2474 INFO oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 07:41:29.952 2474 INFO oslo_messaging._drivers.impl_rabbit [req-72312133-4b9b-4614-8f6b-d0d479b0d390 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 07:41:30.480 2474 INFO oslo_messaging._drivers.impl_rabbit [req-0b7c6c7a-02c3-4e2d-960f-74e3736f9aa4 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 07:47:41.678 2474 INFO oslo_messaging._drivers.impl_rabbit [req-4ee4bbfc-ca44-4ad2-b86e-f30323a9c02b - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:42.682 2474 INFO oslo_messaging._drivers.impl_rabbit [req-4ee4bbfc-ca44-4ad2-b86e-f30323a9c02b - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:43.132 2475 INFO oslo_messaging._drivers.impl_rabbit [req-5c3c2e0e-7734-4111-8461-daf801f95fb1 - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:43.685 2474 INFO oslo_messaging._drivers.impl_rabbit [req-4ee4bbfc-ca44-4ad2-b86e-f30323a9c02b - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:44.135 2475 INFO oslo_messaging._drivers.impl_rabbit [req-5c3c2e0e-7734-4111-8461-daf801f95fb1 - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:44.688 2474 INFO oslo_messaging._drivers.impl_rabbit [req-4ee4bbfc-ca44-4ad2-b86e-f30323a9c02b - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:45.138 2475 INFO oslo_messaging._drivers.impl_rabbit [req-5c3c2e0e-7734-4111-8461-daf801f95fb1 - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:45.691 2474 INFO oslo_messaging._drivers.impl_rabbit [req-4ee4bbfc-ca44-4ad2-b86e-f30323a9c02b - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 07:47:46.140 2475 INFO oslo_messaging._drivers.impl_rabbit [req-5c3c2e0e-7734-4111-8461-daf801f95fb1 - - - - -] The exchange Exchange reply_810582f1f87e4307ace67c6e523961d6(direct) to send to reply_810582f1f87e4307ace67c6e523961d6 doesn't exist yet, retrying...
+2016-01-29 08:16:39.213 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 08:16:43.150 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 08:16:43.158 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 08:16:43.272 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:21.026 2474 ERROR oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] Failed to publish message to topic 'reply_38dd7da232194aaaaa2eeba909538934': Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.029 2474 ERROR oslo_messaging.rpc.dispatcher [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] Exception during message handling: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher Traceback (most recent call last):
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     executor_callback))
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self._send_reply(conn, reply, failure, log_failure=log_failure)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self.publisher_send(p, msg)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self.ensure(_publish, retry=retry, error_callback=_error_callback)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     ret, channel = autoretry_method()
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, **kwargs)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, channel=channels[0], **kwargs), channels[0]
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     method()
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     publisher.send(self, msg, timeout)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     timeout)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     routing_key=self.routing_key)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self.revive(self._channel)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self.declare()
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     self.exchange.declare()
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     nowait=nowait, passive=passive,
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     (40, 11),  # Channel.exchange_declare_ok
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     return self.dispatch_method(method_sig, args, content)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     return amqp_method(self, args)
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher     reply_code, reply_text, (class_id, method_id), ChannelError,
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.029 2474 TRACE oslo_messaging.rpc.dispatcher 
+2016-01-29 09:39:21.030 2474 ERROR oslo_messaging._drivers.common [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] Returning exception Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/' to caller
+2016-01-29 09:39:21.030 2474 ERROR oslo_messaging._drivers.common [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] ['Traceback (most recent call last):\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply\n    executor_callback))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply\n    self._send_reply(conn, reply, failure, log_failure=log_failure)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply\n    conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send\n    self.publisher_send(p, msg)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send\n    self.ensure(_publish, retry=retry, error_callback=_error_callback)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure\n    ret, channel = autoretry_method()\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured\n    return fun(*args, **kwargs)\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__\n    return fun(*args, channel=channels[0], **kwargs), channels[0]\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method\n    method()\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish\n    publisher.send(self, msg, timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send\n    timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send\n    routing_key=self.routing_key)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__\n    self.revive(self._channel)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive\n    self.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare\n    self.exchange.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare\n    nowait=nowait, passive=passive,\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare\n    (40, 11),  # Channel.exchange_declare_ok\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait\n    return self.dispatch_method(method_sig, args, content)\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method\n    return amqp_method(self, args)\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close\n    reply_code, reply_text, (class_id, method_id), ChannelError,\n', "NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'\n"]
+2016-01-29 09:39:21.060 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:21.093 2475 ERROR oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Failed to publish message to topic 'reply_38dd7da232194aaaaa2eeba909538934': Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.094 2475 ERROR oslo_messaging.rpc.dispatcher [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Exception during message handling: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher Traceback (most recent call last):
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     executor_callback))
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self._send_reply(conn, reply, failure, log_failure=log_failure)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self.publisher_send(p, msg)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self.ensure(_publish, retry=retry, error_callback=_error_callback)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     ret, channel = autoretry_method()
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, **kwargs)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, channel=channels[0], **kwargs), channels[0]
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     method()
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     publisher.send(self, msg, timeout)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     timeout)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     routing_key=self.routing_key)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self.revive(self._channel)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self.declare()
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     self.exchange.declare()
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     nowait=nowait, passive=passive,
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     (40, 11),  # Channel.exchange_declare_ok
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     return self.dispatch_method(method_sig, args, content)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     return amqp_method(self, args)
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher     reply_code, reply_text, (class_id, method_id), ChannelError,
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.094 2475 TRACE oslo_messaging.rpc.dispatcher 
+2016-01-29 09:39:21.096 2475 ERROR oslo_messaging._drivers.common [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Returning exception Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/' to caller
+2016-01-29 09:39:21.096 2475 ERROR oslo_messaging._drivers.common [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] ['Traceback (most recent call last):\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply\n    executor_callback))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply\n    self._send_reply(conn, reply, failure, log_failure=log_failure)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply\n    conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send\n    self.publisher_send(p, msg)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send\n    self.ensure(_publish, retry=retry, error_callback=_error_callback)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure\n    ret, channel = autoretry_method()\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured\n    return fun(*args, **kwargs)\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__\n    return fun(*args, channel=channels[0], **kwargs), channels[0]\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method\n    method()\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish\n    publisher.send(self, msg, timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send\n    timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send\n    routing_key=self.routing_key)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__\n    self.revive(self._channel)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive\n    self.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare\n    self.exchange.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare\n    nowait=nowait, passive=passive,\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare\n    (40, 11),  # Channel.exchange_declare_ok\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait\n    return self.dispatch_method(method_sig, args, content)\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method\n    return amqp_method(self, args)\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close\n    reply_code, reply_text, (class_id, method_id), ChannelError,\n', "NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'\n"]
+2016-01-29 09:39:21.098 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:21.099 2473 ERROR oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Failed to publish message to topic 'reply_38dd7da232194aaaaa2eeba909538934': Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.103 2473 ERROR oslo_messaging.rpc.dispatcher [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Exception during message handling: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher Traceback (most recent call last):
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     executor_callback))
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self._send_reply(conn, reply, failure, log_failure=log_failure)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self.publisher_send(p, msg)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self.ensure(_publish, retry=retry, error_callback=_error_callback)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     ret, channel = autoretry_method()
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, **kwargs)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     return fun(*args, channel=channels[0], **kwargs), channels[0]
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     method()
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     publisher.send(self, msg, timeout)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     timeout)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     routing_key=self.routing_key)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self.revive(self._channel)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self.declare()
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     self.exchange.declare()
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     nowait=nowait, passive=passive,
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     (40, 11),  # Channel.exchange_declare_ok
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     return self.dispatch_method(method_sig, args, content)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     return amqp_method(self, args)
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher   File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher     reply_code, reply_text, (class_id, method_id), ChannelError,
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'
+2016-01-29 09:39:21.103 2473 TRACE oslo_messaging.rpc.dispatcher 
+2016-01-29 09:39:21.105 2473 ERROR oslo_messaging._drivers.common [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] Returning exception Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/' to caller
+2016-01-29 09:39:21.105 2473 ERROR oslo_messaging._drivers.common [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] ['Traceback (most recent call last):\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/rpc/dispatcher.py", line 142, in _dispatch_and_reply\n    executor_callback))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 74, in reply\n    self._send_reply(conn, reply, failure, log_failure=log_failure)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py", line 63, in _send_reply\n    conn.direct_send(self.reply_q, rpc_common.serialize_msg(msg))\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1130, in direct_send\n    self.publisher_send(p, msg)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1098, in publisher_send\n    self.ensure(_publish, retry=retry, error_callback=_error_callback)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 870, in ensure\n    ret, channel = autoretry_method()\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 436, in _ensured\n    return fun(*args, **kwargs)\n', '  File "/usr/lib/python2.7/site-packages/kombu/connection.py", line 508, in __call__\n    return fun(*args, channel=channels[0], **kwargs), channels[0]\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 856, in execute_method\n    method()\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 1095, in _publish\n    publisher.send(self, msg, timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 464, in send\n    timeout)\n', '  File "/usr/lib/python2.7/site-packages/oslo_messaging/_drivers/impl_rabbit.py", line 393, in send\n    routing_key=self.routing_key)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 85, in __init__\n    self.revive(self._channel)\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 218, in revive\n    self.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/messaging.py", line 105, in declare\n    self.exchange.declare()\n', '  File "/usr/lib/python2.7/site-packages/kombu/entity.py", line 166, in declare\n    nowait=nowait, passive=passive,\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 620, in exchange_declare\n    (40, 11),  # Channel.exchange_declare_ok\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 69, in wait\n    return self.dispatch_method(method_sig, args, content)\n', '  File "/usr/lib/python2.7/site-packages/amqp/abstract_channel.py", line 87, in dispatch_method\n    return amqp_method(self, args)\n', '  File "/usr/lib/python2.7/site-packages/amqp/channel.py", line 241, in _close\n    reply_code, reply_text, (class_id, method_id), ChannelError,\n', "NotFound: Exchange.declare: (404) NOT_FOUND - no exchange 'reply_38dd7da232194aaaaa2eeba909538934' in vhost '/'\n"]
+2016-01-29 09:39:21.120 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:22.079 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:22.101 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:22.123 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:23.081 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:23.103 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:23.130 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:24.085 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:24.106 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:24.132 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:25.088 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:25.109 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:25.135 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:26.091 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:26.112 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:26.138 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:27.095 2474 INFO oslo_messaging._drivers.impl_rabbit [req-1ee9f7b4-7ba0-4fa4-bcf1-874e701bebba - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:27.114 2475 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:39:27.142 2473 INFO oslo_messaging._drivers.impl_rabbit [req-a0af12ab-8064-4f7e-aaf1-31a30bdb4db9 - - - - -] The exchange Exchange reply_38dd7da232194aaaaa2eeba909538934(direct) to send to reply_38dd7da232194aaaaa2eeba909538934 doesn't exist yet, retrying...
+2016-01-29 09:46:06.262 2475 INFO oslo_messaging._drivers.impl_rabbit [req-ba0029b5-e65d-4afe-acb7-1be83d53f433 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 09:46:06.682 2475 INFO oslo_messaging._drivers.impl_rabbit [req-ba0029b5-e65d-4afe-acb7-1be83d53f433 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 09:46:11.251 2474 INFO oslo_messaging._drivers.impl_rabbit [req-0c114a13-ce9d-4709-aad9-2e3384a219ad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 09:46:11.306 2474 INFO oslo_messaging._drivers.impl_rabbit [req-0c114a13-ce9d-4709-aad9-2e3384a219ad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 09:46:16.227 2473 INFO oslo_messaging._drivers.impl_rabbit [req-ba6684ea-9697-4ddf-89bb-01ff9343498b dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 09:46:21.525 2473 INFO oslo_messaging._drivers.impl_rabbit [req-ba6684ea-9697-4ddf-89bb-01ff9343498b dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 10:22:05.108 2475 INFO oslo_messaging._drivers.impl_rabbit [req-d0f287fe-155c-47f8-8c06-b9fd2101f756 - - - - -] The exchange Exchange reply_6004ac83bd3a4c89a42cff3a424e67e9(direct) to send to reply_6004ac83bd3a4c89a42cff3a424e67e9 doesn't exist yet, retrying...
+2016-01-29 13:13:58.401 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Caught SIGTERM, stopping children
+2016-01-29 13:13:58.405 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Waiting on 3 children to exit
+2016-01-29 13:13:58.405 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Child 2473 killed by signal 15
+2016-01-29 13:13:58.405 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Child 2474 killed by signal 15
+2016-01-29 13:13:58.405 2465 INFO nova.openstack.common.service [req-6295d437-f170-46be-8f2f-48c71b4cf0fd - - - - -] Child 2475 killed by signal 15
+2016-01-29 13:14:35.628 1225 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2016-01-29 13:14:35.635 1225 INFO nova.openstack.common.service [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Starting 3 workers
+2016-01-29 13:14:35.637 1225 INFO nova.openstack.common.service [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Started child 2934
+2016-01-29 13:14:35.644 1225 INFO nova.openstack.common.service [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Started child 2937
+2016-01-29 13:14:35.648 1225 INFO nova.openstack.common.service [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Started child 2938
+2016-01-29 13:14:35.660 2934 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2016-01-29 13:14:35.664 2937 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2016-01-29 13:14:35.665 2934 WARNING oslo_config.cfg [req-2053d82c-f7af-4d5c-9c24-fcf670482a5f - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 13:14:35.667 2937 WARNING oslo_config.cfg [req-c1b7f304-98e8-4a0f-8318-78f0b78c8170 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 13:14:35.684 2938 INFO nova.service [-] Starting conductor node (version 2015.1.2-4.el7ost)
+2016-01-29 13:14:35.687 2938 WARNING oslo_config.cfg [req-beb87695-c0ad-4ba5-a39a-e59e57d23641 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 13:14:35.692 1225 WARNING oslo_config.cfg [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 13:14:35.695 1225 WARNING oslo_config.cfg [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 13:14:35.696 1225 WARNING oslo_config.cfg [req-3a030b2c-8ef6-4c29-880a-74c0a715c79c - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 13:14:35.725 2938 WARNING oslo_db.sqlalchemy.session [req-beb87695-c0ad-4ba5-a39a-e59e57d23641 - - - - -] SQL connection failed. -1 attempts left.
+2016-01-29 13:14:35.729 2937 WARNING oslo_db.sqlalchemy.session [req-c1b7f304-98e8-4a0f-8318-78f0b78c8170 - - - - -] SQL connection failed. -1 attempts left.
+2016-01-29 13:14:35.733 2934 WARNING oslo_db.sqlalchemy.session [req-2053d82c-f7af-4d5c-9c24-fcf670482a5f - - - - -] SQL connection failed. -1 attempts left.
+2016-01-29 13:14:45.932 2938 INFO oslo_messaging._drivers.impl_rabbit [req-beb87695-c0ad-4ba5-a39a-e59e57d23641 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:46.029 2937 INFO oslo_messaging._drivers.impl_rabbit [req-c1b7f304-98e8-4a0f-8318-78f0b78c8170 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:46.042 2934 INFO oslo_messaging._drivers.impl_rabbit [req-2053d82c-f7af-4d5c-9c24-fcf670482a5f - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:50.452 2938 INFO oslo_messaging._drivers.impl_rabbit [req-beb87695-c0ad-4ba5-a39a-e59e57d23641 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:50.455 2937 INFO oslo_messaging._drivers.impl_rabbit [req-c1b7f304-98e8-4a0f-8318-78f0b78c8170 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:50.464 2934 INFO oslo_messaging._drivers.impl_rabbit [req-2053d82c-f7af-4d5c-9c24-fcf670482a5f - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:58.521 2938 INFO oslo_messaging._drivers.impl_rabbit [req-14ff91b1-917d-4cdf-b859-0e0063d4e3f6 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:58.529 2934 INFO oslo_messaging._drivers.impl_rabbit [req-6d99a862-de99-48d1-897e-71d9dc53ce1a - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:14:58.544 2937 INFO oslo_messaging._drivers.impl_rabbit [req-fc6580d4-a7e2-4de3-aec8-b76692647cd7 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:15:00.512 2938 INFO oslo_messaging._drivers.impl_rabbit [req-14ff91b1-917d-4cdf-b859-0e0063d4e3f6 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:15:00.513 2934 INFO oslo_messaging._drivers.impl_rabbit [req-6d99a862-de99-48d1-897e-71d9dc53ce1a - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:15:00.513 2937 INFO oslo_messaging._drivers.impl_rabbit [req-fc6580d4-a7e2-4de3-aec8-b76692647cd7 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:16:09.154 2934 INFO oslo_messaging._drivers.impl_rabbit [req-3f65dfc3-be7c-4c2f-a212-2099780a1b4e dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:16:09.329 2934 INFO oslo_messaging._drivers.impl_rabbit [req-3f65dfc3-be7c-4c2f-a212-2099780a1b4e dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 13:25:33.891 2938 INFO oslo_messaging._drivers.impl_rabbit [req-d9ecc458-007a-4a14-88e7-472053bd6b81 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 13:25:33.952 2938 INFO oslo_messaging._drivers.impl_rabbit [req-d9ecc458-007a-4a14-88e7-472053bd6b81 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 14:05:17.786 2938 INFO oslo_messaging._drivers.impl_rabbit [req-74fa7b5f-e48f-4b1c-a442-17b486b1abae dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 14:05:17.823 2938 INFO oslo_messaging._drivers.impl_rabbit [req-74fa7b5f-e48f-4b1c-a442-17b486b1abae dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672

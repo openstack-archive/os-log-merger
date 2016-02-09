@@ -88,7 +88,7 @@ def help():
     print ("""oslogmerger tool
 
 usage instructions:
-    oslogmerger /path/log_file1[:ALIAS] /path/log_file2[:ALIAS2] ..
+    os-log-merger /path/log_file1[:ALIAS] /path/log_file2[:ALIAS2] ..
 
     The tool will read all the log files, sort entries based on datetime,
 and output the ordered sequence of log lines via stdout. A new column is

@@ -1,0 +1,374 @@
+2016-01-29 11:34:21.225 19956 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 11:34:21.225 19956 INFO neutron.common.config [-] /usr/bin/neutron-netns-cleanup version 2015.1.2-2.el7ost
+2016-01-29 11:34:23.235 19956 WARNING oslo_config.cfg [-] Option "use_namespaces" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+2016-01-29 11:34:24.272 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-14d5b00b-fa62-4a7b-b3fa-b55ddbf4c486', 'ip', 'link', 'delete', 'ha-e473ca2b-17']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:26.768 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'qr-8c11395d-b8']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:26.971 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'qg-37f68089-03']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:27.167 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e9402ffd-9b41-4bd3-9675-5bbd096029de', 'ip', 'link', 'delete', 'ha-5ebec6a7-c5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:27.649 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'ha-e5421798-b5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:27.846 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'qr-325b2192-ab']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:28.042 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-3c39627e-2375-4357-81df-ce0c6e35c4a2', 'ip', 'link', 'delete', 'qg-e0bbc4de-6f']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:28.528 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'qg-6e9d316d-47']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:28.732 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'ha-38db8527-63']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:28.937 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b0b90347-ff84-4100-a7c4-d51bdd1bc6d9', 'ip', 'link', 'delete', 'qr-650d690e-0b']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:29.416 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-4ad4a520-0b1a-4b5b-9e77-c0a3af9b6a2a', 'ip', 'link', 'delete', 'ha-f2a2071a-54']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:29.900 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'qg-c7684c9c-92']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:30.102 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'ha-6e5027ab-d0']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:30.304 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-a18ed770-3f91-4e59-b2b0-8c653c42c899', 'ip', 'link', 'delete', 'qr-39c06a96-7f']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:30.779 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'qg-f90c23e0-e3']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:30.978 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'qr-e5534556-b8']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:31.174 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9e3630d1-95dc-43c7-ae4f-600fe693557e', 'ip', 'link', 'delete', 'ha-3931e844-e1']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:31.648 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'ha-36e5f5f9-3c']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:31.855 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'qr-62e3bc7f-48']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:32.043 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-40414692-dc23-48c2-a632-c4f3d620cd1a', 'ip', 'link', 'delete', 'qg-31302469-1d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:32.529 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'qg-6e6a1faf-d2']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:32.726 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'ha-146cf4a0-b7']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:32.919 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-c5d77e0f-b959-4d7e-a13e-e3c5a80e81e4', 'ip', 'link', 'delete', 'qr-ed1ba3c0-2c']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:33.399 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-2ef9674a-7ea6-4336-b318-416d0b526c65', 'ip', 'link', 'delete', 'ha-2dd77df2-39']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:34.763 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'ha-4d5ff060-e0']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:34.969 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'qr-988decd4-2e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:35.176 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-f37e35fa-e3b9-4bed-b956-018446bf133a', 'ip', 'link', 'delete', 'qg-5e11c6f4-4e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:35.657 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'qg-13fa9efd-c9']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:35.867 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'ha-dddb15e8-36']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:36.066 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-fdd84fe3-e3a1-42bd-a174-2341011ba536', 'ip', 'link', 'delete', 'qr-9287f2af-2e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:36.555 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'qr-8f35376d-52']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:36.757 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'qg-18133cec-0e']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:36.954 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-e1ef94e0-bd14-4623-a6f4-cf4c9a51b67a', 'ip', 'link', 'delete', 'ha-0a0ce57e-ab']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:37.455 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'qr-86189fbf-73']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:37.649 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'ha-9277a282-29']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:37.854 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1399ac22-78c7-455c-9913-e470ed30b567', 'ip', 'link', 'delete', 'qg-150e41bd-f0']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:38.327 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'qg-4330d6be-09']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:38.523 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'qr-5133f527-5c']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:38.719 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-1bce0a94-15cc-46a8-812c-9296624c5ec7', 'ip', 'link', 'delete', 'ha-0303941b-30']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:39.203 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-22ef48a9-c440-46ac-994c-75ad7527328f', 'ip', 'link', 'delete', 'qg-d3059017-87']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:39.412 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-22ef48a9-c440-46ac-994c-75ad7527328f', 'ip', 'link', 'delete', 'qr-9ef0038a-64']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:39.880 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'qr-c1c873e3-44']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:40.069 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'ha-8cd70f35-23']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:40.265 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-6683cc8d-5b4a-4b12-84b6-0b6003dc14d8', 'ip', 'link', 'delete', 'qg-9791f6c6-e5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:40.744 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'qg-f78ef22b-d5']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:40.953 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'ha-fdfb7a5a-ae']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:41.143 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-b506a0e0-95fa-494b-863a-faacd745b8d7', 'ip', 'link', 'delete', 'qr-d2d9eedf-5d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:41.618 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'qr-48093dc8-b6']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:41.832 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'qg-e52079a2-d1']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:42.034 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-9b43a3f9-b353-4ff9-bc7a-987cc948d35c', 'ip', 'link', 'delete', 'ha-f060d15c-35']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:42.514 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'qr-6f5d1784-97']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:42.705 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'qg-596c7f4b-0a']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+
+2016-01-29 11:34:42.903 19956 ERROR neutron.agent.linux.utils [-] 
+Command: ['sudo', 'neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-eb9f1564-f845-4ce7-8963-4ebfffe6bbbd', 'ip', 'link', 'delete', 'ha-e94ed085-4d']
+Exit code: 2
+Stdin: 
+Stdout: 
+Stderr: RTNETLINK answers: Operation not supported
+

@@ -9,14 +9,14 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='oslogmerger',
+    name='os-log-merger',
 
     version='1.0.3',
-    description='Openstack Log merge tool',
+    description='OpenStack Log merge tool',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/mangelajo/oslogmerger',
+    url='https://github.com/mangelajo/os-log-merger',
 
     # Author details
     author='Miguel Angel Ajo',

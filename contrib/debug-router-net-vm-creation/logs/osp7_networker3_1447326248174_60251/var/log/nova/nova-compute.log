@@ -1,0 +1,169 @@
+2016-01-29 15:38:29.896 18886 INFO nova.openstack.common.service [req-3e29461b-f31e-4093-b7e2-245d5ed83554 - - - - -] Caught SIGTERM, exiting
+2016-01-29 15:38:30.040 18886 ERROR oslo_messaging._drivers.impl_rabbit [-] Failed to consume message from queue: 
+2016-01-29 15:38:31.121 21773 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2016-01-29 15:38:31.137 21773 INFO nova.virt.driver [-] Loading compute driver 'libvirt.LibvirtDriver'
+2016-01-29 15:38:31.186 21773 INFO oslo_messaging._drivers.impl_rabbit [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.169 21773 INFO oslo_messaging._drivers.impl_rabbit [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.176 21773 INFO oslo_messaging._drivers.impl_rabbit [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.303 21773 INFO oslo_messaging._drivers.impl_rabbit [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.335 21773 WARNING oslo_config.cfg [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:38:35.340 21773 WARNING oslo_config.cfg [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 15:38:35.342 21773 WARNING oslo_config.cfg [req-18e3e805-c809-4efd-be20-1a9b9a431b89 - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:38:35.343 21773 INFO nova.service [-] Starting compute node (version 2015.1.2-4.el7ost)
+2016-01-29 15:38:35.385 21773 INFO nova.virt.libvirt.driver [-] Connection event '1' reason 'None'
+2016-01-29 15:38:35.442 21773 INFO nova.virt.libvirt.host [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Libvirt host capabilities <capabilities>
+
+  <host>
+    <uuid>e7e658e2-a113-4ebf-89cb-a23c28fd0413</uuid>
+    <cpu>
+      <arch>x86_64</arch>
+      <model>SandyBridge</model>
+      <vendor>Intel</vendor>
+      <topology sockets='1' cores='3' threads='1'/>
+      <feature name='invtsc'/>
+      <feature name='invpcid'/>
+      <feature name='erms'/>
+      <feature name='bmi2'/>
+      <feature name='smep'/>
+      <feature name='avx2'/>
+      <feature name='bmi1'/>
+      <feature name='fsgsbase'/>
+      <feature name='abm'/>
+      <feature name='hypervisor'/>
+      <feature name='rdrand'/>
+      <feature name='f16c'/>
+      <feature name='osxsave'/>
+      <feature name='movbe'/>
+      <feature name='pcid'/>
+      <feature name='fma'/>
+      <feature name='vmx'/>
+      <feature name='ht'/>
+      <feature name='ss'/>
+      <feature name='vme'/>
+      <pages unit='KiB' size='4'/>
+      <pages unit='KiB' size='2048'/>
+    </cpu>
+    <power_management>
+      <suspend_mem/>
+      <suspend_disk/>
+      <suspend_hybrid/>
+    </power_management>
+    <migration_features>
+      <live/>
+      <uri_transports>
+        <uri_transport>tcp</uri_transport>
+        <uri_transport>rdma</uri_transport>
+      </uri_transports>
+    </migration_features>
+    <topology>
+      <cells num='1'>
+        <cell id='0'>
+          <memory unit='KiB'>3071528</memory>
+          <pages unit='KiB' size='4'>767882</pages>
+          <pages unit='KiB' size='2048'>0</pages>
+          <distances>
+            <sibling id='0' value='10'/>
+          </distances>
+          <cpus num='3'>
+            <cpu id='0' socket_id='0' core_id='0' siblings='0'/>
+            <cpu id='1' socket_id='0' core_id='1' siblings='1'/>
+            <cpu id='2' socket_id='0' core_id='2' siblings='2'/>
+          </cpus>
+        </cell>
+      </cells>
+    </topology>
+    <secmodel>
+      <model>selinux</model>
+      <doi>0</doi>
+      <baselabel type='kvm'>system_u:system_r:svirt_t:s0</baselabel>
+      <baselabel type='qemu'>system_u:system_r:svirt_tcg_t:s0</baselabel>
+    </secmodel>
+    <secmodel>
+      <model>dac</model>
+      <doi>0</doi>
+      <baselabel type='kvm'>+107:+107</baselabel>
+      <baselabel type='qemu'>+107:+107</baselabel>
+    </secmodel>
+  </host>
+
+  <guest>
+    <os_type>hvm</os_type>
+    <arch name='i686'>
+      <wordsize>32</wordsize>
+      <emulator>/usr/libexec/qemu-kvm</emulator>
+      <machine maxCpus='240'>pc-i440fx-rhel7.2.0</machine>
+      <machine canonical='pc-i440fx-rhel7.2.0' maxCpus='240'>pc</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.0.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.3.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.2.0</machine>
+      <machine canonical='pc-q35-rhel7.2.0' maxCpus='240'>q35</machine>
+      <machine maxCpus='240'>rhel6.4.0</machine>
+      <machine maxCpus='240'>rhel6.0.0</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.5.0</machine>
+      <machine maxCpus='240'>rhel6.6.0</machine>
+      <machine maxCpus='240'>rhel6.1.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.0.0</machine>
+      <machine maxCpus='240'>rhel6.2.0</machine>
+      <domain type='qemu'>
+      </domain>
+      <domain type='kvm'>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+      </domain>
+    </arch>
+    <features>
+      <cpuselection/>
+      <deviceboot/>
+      <disksnapshot default='on' toggle='no'/>
+      <acpi default='on' toggle='yes'/>
+      <apic default='on' toggle='no'/>
+      <pae/>
+      <nonpae/>
+    </features>
+  </guest>
+
+  <guest>
+    <os_type>hvm</os_type>
+    <arch name='x86_64'>
+      <wordsize>64</wordsize>
+      <emulator>/usr/libexec/qemu-kvm</emulator>
+      <machine maxCpus='240'>pc-i440fx-rhel7.2.0</machine>
+      <machine canonical='pc-i440fx-rhel7.2.0' maxCpus='240'>pc</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.0.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.3.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.2.0</machine>
+      <machine canonical='pc-q35-rhel7.2.0' maxCpus='240'>q35</machine>
+      <machine maxCpus='240'>rhel6.4.0</machine>
+      <machine maxCpus='240'>rhel6.0.0</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.5.0</machine>
+      <machine maxCpus='240'>rhel6.6.0</machine>
+      <machine maxCpus='240'>rhel6.1.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.0.0</machine>
+      <machine maxCpus='240'>rhel6.2.0</machine>
+      <domain type='qemu'>
+      </domain>
+      <domain type='kvm'>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+      </domain>
+    </arch>
+    <features>
+      <cpuselection/>
+      <deviceboot/>
+      <disksnapshot default='on' toggle='no'/>
+      <acpi default='on' toggle='yes'/>
+      <apic default='on' toggle='no'/>
+    </features>
+  </guest>
+
+</capabilities>
+
+2016-01-29 15:38:35.702 21773 INFO nova.compute.resource_tracker [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Auditing locally available compute resources for node osp7_networker3_1447326248174_60251
+2016-01-29 15:38:35.969 21773 INFO nova.compute.resource_tracker [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Total usable vcpus: 3, total allocated vcpus: 0
+2016-01-29 15:38:35.969 21773 INFO nova.compute.resource_tracker [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Final resource view: name=osp7_networker3_1447326248174_60251 phys_ram=2708MB used_ram=512MB phys_disk=41GB used_disk=0GB total_vcpus=3 used_vcpus=0 pci_stats=<nova.pci.stats.PciDeviceStats object at 0x530f7d0>
+2016-01-29 15:38:36.008 21773 INFO nova.scheduler.client.report [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Compute_service record updated for ('osp7_networker3_1447326248174_60251', 'osp7_networker3_1447326248174_60251')
+2016-01-29 15:38:36.009 21773 INFO nova.compute.resource_tracker [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Compute_service record updated for osp7_networker3_1447326248174_60251:osp7_networker3_1447326248174_60251
+2016-01-29 15:38:36.028 21773 INFO oslo_messaging._drivers.impl_rabbit [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:40.478 21773 INFO oslo_messaging._drivers.impl_rabbit [req-c9d9e270-0fc4-46ca-ad66-89dfc71d7e52 - - - - -] Connected to AMQP server on 10.211.55.142:5672

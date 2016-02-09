@@ -1,0 +1,12 @@
+[controller]
+controller1 ansible_ssh_host=10.211.55.142
+
+[networker]
+controller1 ansible_ssh_host=10.211.55.142
+networker2 ansible_ssh_host=10.211.55.141
+networker3 ansible_ssh_host=10.211.55.140
+
+[controller:vars]
+networks=['net-a', 'net-b', 'net-c', 'net-d', 'net-e', 'net-f', 'net-g', 'net-h', 'net-i']
+vms=['vm-a', 'vm-b', 'vm-c', 'vm-d', 'vm-e', 'vm-f', 'vm-g', 'vm-h', 'vm-i']
+

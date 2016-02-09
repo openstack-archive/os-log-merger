@@ -1,0 +1,131 @@
+2016-01-29 15:38:20.964 26985 INFO nova.openstack.common.service [-] Caught SIGTERM, stopping children
+2016-01-29 15:38:20.965 26985 INFO nova.wsgi [-] Stopping WSGI server.
+2016-01-29 15:38:20.965 26985 INFO nova.wsgi [-] Stopping WSGI server.
+2016-01-29 15:38:20.965 26985 INFO nova.wsgi [-] Stopping WSGI server.
+2016-01-29 15:38:20.965 26985 INFO nova.openstack.common.service [-] Waiting on 9 children to exit
+2016-01-29 15:38:20.965 26985 INFO nova.openstack.common.service [-] Child 26994 killed by signal 15
+2016-01-29 15:38:20.966 26985 INFO nova.openstack.common.service [-] Child 26996 killed by signal 15
+2016-01-29 15:38:20.966 26985 INFO nova.openstack.common.service [-] Child 26998 killed by signal 15
+2016-01-29 15:38:20.966 26985 INFO nova.openstack.common.service [-] Child 27009 killed by signal 15
+2016-01-29 15:38:20.967 26985 INFO nova.openstack.common.service [-] Child 26999 killed by signal 15
+2016-01-29 15:38:20.968 26985 INFO nova.openstack.common.service [-] Child 27000 killed by signal 15
+2016-01-29 15:38:20.970 26985 INFO nova.openstack.common.service [-] Child 26995 killed by signal 15
+2016-01-29 15:38:20.973 26985 INFO nova.openstack.common.service [-] Child 27007 killed by signal 15
+2016-01-29 15:38:20.979 26985 INFO nova.openstack.common.service [-] Child 27008 killed by signal 15
+2016-01-29 15:38:22.161 1271 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2016-01-29 15:38:22.163 1271 WARNING nova.api.ec2.cloud [-] Deprecated: The in tree EC2 API is deprecated as of Kilo release and may be removed in a future release. The stackforge ec2-api project http://git.openstack.org/cgit/stackforge/ec2-api/ is the target replacement for this functionality.
+2016-01-29 15:38:22.219 1271 INFO nova.wsgi [-] ec2 listening on 0.0.0.0:8773
+2016-01-29 15:38:22.219 1271 INFO nova.openstack.common.service [-] Starting 3 workers
+2016-01-29 15:38:22.221 1271 INFO nova.openstack.common.service [-] Started child 1280
+2016-01-29 15:38:22.224 1280 INFO nova.ec2.wsgi.server [-] (1280) wsgi starting up on http://0.0.0.0:8773/
+2016-01-29 15:38:22.224 1271 INFO nova.openstack.common.service [-] Started child 1281
+2016-01-29 15:38:22.227 1281 INFO nova.ec2.wsgi.server [-] (1281) wsgi starting up on http://0.0.0.0:8773/
+2016-01-29 15:38:22.227 1271 INFO nova.openstack.common.service [-] Started child 1282
+2016-01-29 15:38:22.229 1282 INFO nova.ec2.wsgi.server [-] (1282) wsgi starting up on http://0.0.0.0:8773/
+2016-01-29 15:38:22.573 1271 INFO nova.api.openstack [-] V3 API has been disabled by configuration
+2016-01-29 15:38:22.658 1271 INFO nova.api.openstack [-] V3 API has been disabled by configuration
+2016-01-29 15:38:22.660 1271 INFO nova.wsgi [-] osapi_compute listening on 0.0.0.0:8774
+2016-01-29 15:38:22.660 1271 INFO nova.openstack.common.service [-] Starting 3 workers
+2016-01-29 15:38:22.663 1271 INFO nova.openstack.common.service [-] Started child 1283
+2016-01-29 15:38:22.666 1283 INFO nova.osapi_compute.wsgi.server [-] (1283) wsgi starting up on http://0.0.0.0:8774/
+2016-01-29 15:38:22.666 1271 INFO nova.openstack.common.service [-] Started child 1295
+2016-01-29 15:38:22.669 1271 INFO nova.openstack.common.service [-] Started child 1296
+2016-01-29 15:38:22.670 1295 INFO nova.osapi_compute.wsgi.server [-] (1295) wsgi starting up on http://0.0.0.0:8774/
+2016-01-29 15:38:22.672 1271 INFO nova.network.driver [-] Loading network driver 'nova.network.linux_net'
+2016-01-29 15:38:22.673 1271 WARNING oslo_config.cfg [-] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 15:38:22.673 1296 INFO nova.osapi_compute.wsgi.server [-] (1296) wsgi starting up on http://0.0.0.0:8774/
+2016-01-29 15:38:22.798 1271 INFO nova.wsgi [-] metadata listening on 0.0.0.0:8775
+2016-01-29 15:38:22.799 1271 INFO nova.openstack.common.service [-] Starting 3 workers
+2016-01-29 15:38:22.801 1271 INFO nova.openstack.common.service [-] Started child 1306
+2016-01-29 15:38:22.804 1306 INFO nova.metadata.wsgi.server [-] (1306) wsgi starting up on http://0.0.0.0:8775/
+2016-01-29 15:38:22.805 1271 INFO nova.openstack.common.service [-] Started child 1307
+2016-01-29 15:38:22.807 1307 INFO nova.metadata.wsgi.server [-] (1307) wsgi starting up on http://0.0.0.0:8775/
+2016-01-29 15:38:22.808 1271 INFO nova.openstack.common.service [-] Started child 1310
+2016-01-29 15:38:22.810 1310 INFO nova.metadata.wsgi.server [-] (1310) wsgi starting up on http://0.0.0.0:8775/
+2016-01-29 15:38:22.823 1271 WARNING oslo_config.cfg [-] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:38:22.827 1271 WARNING oslo_config.cfg [-] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:38:46.158 1295 INFO nova.osapi_compute.wsgi.server [req-3d15bc5c-4c24-4b98-b316-752a96d6631f dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/images HTTP/1.1" status: 200 len: 701 time: 0.8132491
+2016-01-29 15:38:46.344 1295 INFO nova.osapi_compute.wsgi.server [req-aced9d8c-98b8-4f99-997c-6b14b82cedb9 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/images/f66190af-f146-48d7-80ad-b4c8e304dad7 HTTP/1.1" status: 200 len: 882 time: 0.1788242
+2016-01-29 15:38:46.348 1295 WARNING oslo_config.cfg [req-b924d658-7590-4905-8593-9974d964afad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:38:46.467 1295 INFO nova.api.openstack.wsgi [req-b924d658-7590-4905-8593-9974d964afad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] HTTP exception thrown: The resource could not be found.
+2016-01-29 15:38:46.468 1295 INFO nova.osapi_compute.wsgi.server [req-b924d658-7590-4905-8593-9974d964afad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/flavors/m1.tiny HTTP/1.1" status: 404 len: 296 time: 0.1214800
+2016-01-29 15:38:46.481 1295 INFO nova.osapi_compute.wsgi.server [req-610fda99-69f9-49b1-b013-d1e3ec2799c5 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/flavors?is_public=None HTTP/1.1" status: 200 len: 1437 time: 0.0115681
+2016-01-29 15:38:46.495 1295 INFO nova.osapi_compute.wsgi.server [req-784fbf64-ad0c-44f8-9e64-2557e7867126 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/flavors/1 HTTP/1.1" status: 200 len: 621 time: 0.0113549
+2016-01-29 15:38:46.537 1295 WARNING oslo_config.cfg [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:38:46.784 1295 INFO oslo_messaging._drivers.impl_rabbit [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:46.811 1295 INFO oslo_messaging._drivers.impl_rabbit [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:46.824 1295 INFO nova.osapi_compute.wsgi.server [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "POST /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers HTTP/1.1" status: 202 len: 763 time: 0.3269749
+2016-01-29 15:38:46.902 1295 INFO nova.osapi_compute.wsgi.server [req-aa574786-4d1f-40a8-9559-abeabe3f98b1 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/773327e7-6d3b-43e9-aff0-643bbba36b04 HTTP/1.1" status: 200 len: 1624 time: 0.0763609
+2016-01-29 15:38:46.921 1295 INFO nova.osapi_compute.wsgi.server [req-f0d3a5bd-d85e-43f1-af11-4a75591bc431 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/flavors/1 HTTP/1.1" status: 200 len: 621 time: 0.0168960
+2016-01-29 15:38:46.944 1295 INFO nova.osapi_compute.wsgi.server [req-01487e28-54a5-41c6-8a6f-b47870767558 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/images/f66190af-f146-48d7-80ad-b4c8e304dad7 HTTP/1.1" status: 200 len: 882 time: 0.0210471
+2016-01-29 15:38:47.956 1295 INFO nova.osapi_compute.wsgi.server [req-cc2e2d14-566d-4af4-92eb-2d297693f7ad dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.2020919
+2016-01-29 15:38:49.558 1295 INFO nova.osapi_compute.wsgi.server [req-db95e14e-b0cb-4ed1-b41f-7d7a10f6ec34 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1349750
+2016-01-29 15:38:51.208 1295 INFO nova.osapi_compute.wsgi.server [req-ff72e3a9-bb06-433d-b0fb-989c0e628c18 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1662359
+2016-01-29 15:38:52.883 1295 INFO nova.osapi_compute.wsgi.server [req-dcac2781-02b7-41a1-b285-891df3c758e6 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.2042022
+2016-01-29 15:38:54.489 1295 INFO nova.osapi_compute.wsgi.server [req-1904de03-ee58-4f9e-b35d-db970749c3dd dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1373260
+2016-01-29 15:38:56.444 1296 WARNING oslo_config.cfg [req-60ce08cb-87cc-4470-a2df-a78c2fe8114a dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:38:56.606 1296 WARNING oslo_config.cfg [req-60ce08cb-87cc-4470-a2df-a78c2fe8114a dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:38:56.696 1296 INFO nova.osapi_compute.wsgi.server [req-60ce08cb-87cc-4470-a2df-a78c2fe8114a dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.7276549
+2016-01-29 15:38:58.294 1296 INFO nova.osapi_compute.wsgi.server [req-0bd4a8a6-8ee1-4058-bf69-b38015fe0db5 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1324968
+2016-01-29 15:38:59.165 1296 INFO nova.api.openstack.compute.contrib.server_external_events [req-b18f8d5e-b62d-4d24-a55c-327b90412641 4d25d60bb81b486588e308c599227308 d8198f0b982742d0825018545be88282 - - -] Creating event network-vif-plugged:4bb68693-d95f-4692-89f7-43f1a6f6bdfc for instance 773327e7-6d3b-43e9-aff0-643bbba36b04
+2016-01-29 15:38:59.170 1296 INFO oslo_messaging._drivers.impl_rabbit [req-b18f8d5e-b62d-4d24-a55c-327b90412641 4d25d60bb81b486588e308c599227308 d8198f0b982742d0825018545be88282 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:59.893 1296 INFO nova.osapi_compute.wsgi.server [req-d4cb073f-fe43-4b0b-8621-fb891cbfa282 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1251330
+2016-01-29 15:39:01.026 1283 WARNING oslo_config.cfg [req-ce69bcb3-ec69-46d9-b194-e413e9ab49e6 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:39:01.175 1283 INFO nova.osapi_compute.wsgi.server [req-ce69bcb3-ec69-46d9-b194-e413e9ab49e6 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.141 "GET /v2/d8198f0b982742d0825018545be88282/servers/detail?all_tenants=True&host=osp7_networker2_1447326248297_70074 HTTP/1.1" status: 200 len: 211 time: 0.6410010
+2016-01-29 15:39:01.495 1296 INFO nova.osapi_compute.wsgi.server [req-2151b5d7-7e2f-4a40-adfb-4a51f9a22502 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1285532
+2016-01-29 15:39:03.092 1295 INFO nova.osapi_compute.wsgi.server [req-6f772126-ccd3-499d-b022-ff296378e26e dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1916 time: 0.1270981
+2016-01-29 15:39:04.202 1296 INFO oslo_messaging._drivers.impl_rabbit [req-b18f8d5e-b62d-4d24-a55c-327b90412641 4d25d60bb81b486588e308c599227308 d8198f0b982742d0825018545be88282 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:04.219 1296 INFO nova.osapi_compute.wsgi.server [req-b18f8d5e-b62d-4d24-a55c-327b90412641 4d25d60bb81b486588e308c599227308 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "POST /v2/d8198f0b982742d0825018545be88282/os-server-external-events HTTP/1.1" status: 200 len: 380 time: 5.0935080
+2016-01-29 15:39:04.709 1295 INFO nova.osapi_compute.wsgi.server [req-80b38d50-ff54-426c-967d-593429281789 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] 10.211.55.142 "GET /v2/0c7fe42d8b9f4f7ebcf4cd563078dcb4/servers/detail HTTP/1.1" status: 200 len: 1933 time: 0.1303730
+2016-01-29 15:39:07.561 1296 INFO nova.osapi_compute.wsgi.server [req-22590b3f-6b44-4b9f-8897-a448ffbda1f9 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "GET /v2/d8198f0b982742d0825018545be88282/servers/detail?all_tenants=True&host=osp7_controller1_1447326246805_93065 HTTP/1.1" status: 200 len: 1933 time: 0.1389489
+2016-01-29 15:39:07.580 1296 INFO nova.osapi_compute.wsgi.server [req-3173c9ee-7d34-434d-9e2e-7c31da87dc8c e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "GET /v2/d8198f0b982742d0825018545be88282/flavors/1 HTTP/1.1" status: 200 len: 621 time: 0.0166268
+2016-01-29 15:39:07.707 1296 INFO nova.osapi_compute.wsgi.server [req-d04d9464-756c-4f91-b97f-95e34429d6a5 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "GET /v2/d8198f0b982742d0825018545be88282/images/f66190af-f146-48d7-80ad-b4c8e304dad7 HTTP/1.1" status: 200 len: 882 time: 0.1245999
+2016-01-29 15:39:07.925 1296 INFO nova.osapi_compute.wsgi.server [req-1365540a-2243-47f9-9dc7-0f0ec0b14c1c e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "GET /v2/d8198f0b982742d0825018545be88282/servers/detail?all_tenants=True HTTP/1.1" status: 200 len: 1933 time: 0.1460090
+2016-01-29 15:39:08.103 1283 WARNING oslo_config.cfg [req-8f96cd5e-54ed-4339-acf6-6047efb70882 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:39:08.197 1283 INFO nova.osapi_compute.wsgi.server [req-8f96cd5e-54ed-4339-acf6-6047efb70882 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.142 "GET /v2/d8198f0b982742d0825018545be88282/os-floating-ips HTTP/1.1" status: 200 len: 216 time: 0.1105528
+2016-01-29 15:39:10.984 1310 WARNING oslo_config.cfg [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:39:11.260 1310 INFO oslo_messaging._drivers.impl_rabbit [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:11.749 1310 INFO oslo_messaging._drivers.impl_rabbit [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:11.753 1310 INFO oslo_messaging._drivers.impl_rabbit [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:12.040 1310 INFO oslo_messaging._drivers.impl_rabbit [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:12.134 1310 INFO nova.api.ec2 [-] 1.153056s 10.211.55.142 GET /2009-04-04/meta-data/instance-id None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:12.135 1310 INFO nova.metadata.wsgi.server [req-76600b16-0f01-4975-a810-4aa05990af72 - - - - -] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/instance-id HTTP/1.1" status: 200 len: 127 time: 1.1540051
+2016-01-29 15:39:12.921 1310 INFO nova.api.ec2 [-] 0.567s 10.211.55.142 GET /2009-04-04/meta-data/public-keys None:None 404 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:12.922 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/public-keys HTTP/1.1" status: 404 len: 176 time: 0.0010760
+2016-01-29 15:39:13.474 1307 WARNING oslo_config.cfg [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:39:13.766 1307 INFO oslo_messaging._drivers.impl_rabbit [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:13.797 1307 INFO oslo_messaging._drivers.impl_rabbit [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:13.801 1307 INFO oslo_messaging._drivers.impl_rabbit [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:13.831 1307 INFO oslo_messaging._drivers.impl_rabbit [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:13.927 1307 INFO nova.api.ec2 [-] 0.455622s 10.211.55.142 GET /2009-04-04/meta-data/instance-id None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:13.927 1307 INFO nova.metadata.wsgi.server [req-7983d4d9-444a-4584-bb43-2de6b7357845 - - - - -] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/instance-id HTTP/1.1" status: 200 len: 127 time: 0.4565959
+2016-01-29 15:39:14.044 1310 INFO nova.api.ec2 [-] 0.526s 10.211.55.142 GET /2009-04-04/meta-data/ami-launch-index None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:14.044 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/ami-launch-index HTTP/1.1" status: 200 len: 117 time: 0.0010269
+2016-01-29 15:39:14.097 1283 INFO nova.osapi_compute.wsgi.server [req-dca736ff-60f7-44c2-9383-c8588f672cb8 e75fdba5ff464c80b1c016b634285e49 d8198f0b982742d0825018545be88282 - - -] 10.211.55.140 "GET /v2/d8198f0b982742d0825018545be88282/servers/detail?all_tenants=True&host=osp7_networker3_1447326248174_60251 HTTP/1.1" status: 200 len: 211 time: 0.0479410
+2016-01-29 15:39:14.172 1310 INFO nova.api.ec2 [-] 0.377s 10.211.55.142 GET /2009-04-04/meta-data/instance-type None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:14.173 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/instance-type HTTP/1.1" status: 200 len: 123 time: 0.0008950
+2016-01-29 15:39:14.290 1310 INFO nova.api.ec2 [-] 0.365s 10.211.55.142 GET /2009-04-04/meta-data/local-ipv4 None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:14.291 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/local-ipv4 HTTP/1.1" status: 200 len: 124 time: 0.0008719
+2016-01-29 15:39:14.408 1306 WARNING oslo_config.cfg [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:39:14.704 1306 INFO oslo_messaging._drivers.impl_rabbit [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:14.896 1306 INFO oslo_messaging._drivers.impl_rabbit [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:14.900 1306 INFO oslo_messaging._drivers.impl_rabbit [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:15.358 1306 INFO oslo_messaging._drivers.impl_rabbit [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:15.456 1306 INFO nova.api.ec2 [-] 1.50894s 10.211.55.142 GET /2009-04-04/meta-data/public-ipv4 None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:15.457 1306 INFO nova.metadata.wsgi.server [req-bb42d858-df48-45d6-bcff-297a0510af44 - - - - -] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/public-ipv4 HTTP/1.1" status: 200 len: 116 time: 1.0518942
+2016-01-29 15:39:15.577 1310 INFO nova.api.ec2 [-] 0.340s 10.211.55.142 GET /2009-04-04/meta-data/hostname None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:15.577 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/hostname HTTP/1.1" status: 200 len: 134 time: 0.0008328
+2016-01-29 15:39:15.700 1307 INFO nova.api.ec2 [-] 0.414s 10.211.55.142 GET /2009-04-04/meta-data/local-hostname None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:15.700 1307 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/local-hostname HTTP/1.1" status: 200 len: 134 time: 0.0008600
+2016-01-29 15:39:15.819 1310 INFO nova.api.ec2 [-] 0.486s 10.211.55.142 GET /2009-04-04/user-data None:None 404 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:15.819 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/user-data HTTP/1.1" status: 404 len: 176 time: 0.0009470
+2016-01-29 15:39:15.940 1307 INFO nova.api.ec2 [-] 0.419s 10.211.55.142 GET /2009-04-04/meta-data/block-device-mapping None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:15.940 1307 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/block-device-mapping HTTP/1.1" status: 200 len: 124 time: 0.0009780
+2016-01-29 15:39:16.072 1310 INFO nova.api.ec2 [-] 0.420s 10.211.55.142 GET /2009-04-04/meta-data/block-device-mapping/ami None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:16.072 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/block-device-mapping/ami HTTP/1.1" status: 200 len: 119 time: 0.0009861
+2016-01-29 15:39:16.166 1310 INFO nova.api.ec2 [-] 0.328s 10.211.55.142 GET /2009-04-04/meta-data/block-device-mapping/root None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:16.166 1310 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/block-device-mapping/root HTTP/1.1" status: 200 len: 124 time: 0.0008509
+2016-01-29 15:39:16.290 1306 INFO nova.api.ec2 [-] 0.562s 10.211.55.142 GET /2009-04-04/meta-data/public-hostname None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:16.290 1306 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/public-hostname HTTP/1.1" status: 200 len: 134 time: 0.0011101
+2016-01-29 15:39:16.417 1306 INFO nova.api.ec2 [-] 0.390s 10.211.55.142 GET /2009-04-04/meta-data/placement/availability-zone None:None 200 [Python-httplib2/0.7.7 (gzip)] text/plain text/plain
+2016-01-29 15:39:16.417 1306 INFO nova.metadata.wsgi.server [-] 10.0.0.3,10.211.55.142 "GET /2009-04-04/meta-data/placement/availability-zone HTTP/1.1" status: 200 len: 120 time: 0.0009499

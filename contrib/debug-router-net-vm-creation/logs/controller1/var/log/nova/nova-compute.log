@@ -1,0 +1,191 @@
+2016-01-29 15:38:30.116 27293 INFO nova.openstack.common.service [req-c48cb8d5-22b5-4889-9742-2d81967a8c52 - - - - -] Caught SIGTERM, exiting
+2016-01-29 15:38:30.781 27293 ERROR oslo_messaging._drivers.impl_rabbit [-] Failed to consume message from queue: 
+2016-01-29 15:38:31.930 1620 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2016-01-29 15:38:31.946 1620 INFO nova.virt.driver [-] Loading compute driver 'libvirt.LibvirtDriver'
+2016-01-29 15:38:31.992 1620 INFO oslo_messaging._drivers.impl_rabbit [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.368 1620 INFO oslo_messaging._drivers.impl_rabbit [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.376 1620 INFO oslo_messaging._drivers.impl_rabbit [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.502 1620 INFO oslo_messaging._drivers.impl_rabbit [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:35.547 1620 WARNING oslo_config.cfg [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Option "sql_connection" from group "DEFAULT" is deprecated. Use option "connection" from group "database".
+2016-01-29 15:38:35.555 1620 WARNING oslo_config.cfg [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 15:38:35.557 1620 WARNING oslo_config.cfg [req-c864f831-3983-4d71-aad9-87ba4ba3fa8e - - - - -] Option "url_timeout" from group "neutron" is deprecated. Use option "timeout" from group "neutron".
+2016-01-29 15:38:35.558 1620 INFO nova.service [-] Starting compute node (version 2015.1.2-4.el7ost)
+2016-01-29 15:38:35.612 1620 INFO nova.virt.libvirt.driver [-] Connection event '1' reason 'None'
+2016-01-29 15:38:35.644 1620 INFO nova.virt.libvirt.host [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Libvirt host capabilities <capabilities>
+
+  <host>
+    <uuid>aa487fe2-411e-4311-a43a-c05d18592445</uuid>
+    <cpu>
+      <arch>x86_64</arch>
+      <model>SandyBridge</model>
+      <vendor>Intel</vendor>
+      <topology sockets='1' cores='3' threads='1'/>
+      <feature name='invtsc'/>
+      <feature name='invpcid'/>
+      <feature name='erms'/>
+      <feature name='bmi2'/>
+      <feature name='smep'/>
+      <feature name='avx2'/>
+      <feature name='bmi1'/>
+      <feature name='fsgsbase'/>
+      <feature name='abm'/>
+      <feature name='hypervisor'/>
+      <feature name='rdrand'/>
+      <feature name='f16c'/>
+      <feature name='osxsave'/>
+      <feature name='movbe'/>
+      <feature name='pcid'/>
+      <feature name='fma'/>
+      <feature name='vmx'/>
+      <feature name='ht'/>
+      <feature name='ss'/>
+      <feature name='vme'/>
+      <pages unit='KiB' size='4'/>
+      <pages unit='KiB' size='2048'/>
+    </cpu>
+    <power_management>
+      <suspend_mem/>
+      <suspend_disk/>
+      <suspend_hybrid/>
+    </power_management>
+    <migration_features>
+      <live/>
+      <uri_transports>
+        <uri_transport>tcp</uri_transport>
+        <uri_transport>rdma</uri_transport>
+      </uri_transports>
+    </migration_features>
+    <topology>
+      <cells num='1'>
+        <cell id='0'>
+          <memory unit='KiB'>6143528</memory>
+          <pages unit='KiB' size='4'>1535882</pages>
+          <pages unit='KiB' size='2048'>0</pages>
+          <distances>
+            <sibling id='0' value='10'/>
+          </distances>
+          <cpus num='3'>
+            <cpu id='0' socket_id='0' core_id='0' siblings='0'/>
+            <cpu id='1' socket_id='0' core_id='1' siblings='1'/>
+            <cpu id='2' socket_id='0' core_id='2' siblings='2'/>
+          </cpus>
+        </cell>
+      </cells>
+    </topology>
+    <secmodel>
+      <model>selinux</model>
+      <doi>0</doi>
+      <baselabel type='kvm'>system_u:system_r:svirt_t:s0</baselabel>
+      <baselabel type='qemu'>system_u:system_r:svirt_tcg_t:s0</baselabel>
+    </secmodel>
+    <secmodel>
+      <model>dac</model>
+      <doi>0</doi>
+      <baselabel type='kvm'>+107:+107</baselabel>
+      <baselabel type='qemu'>+107:+107</baselabel>
+    </secmodel>
+  </host>
+
+  <guest>
+    <os_type>hvm</os_type>
+    <arch name='i686'>
+      <wordsize>32</wordsize>
+      <emulator>/usr/libexec/qemu-kvm</emulator>
+      <machine maxCpus='240'>pc-i440fx-rhel7.2.0</machine>
+      <machine canonical='pc-i440fx-rhel7.2.0' maxCpus='240'>pc</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.0.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.3.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.2.0</machine>
+      <machine canonical='pc-q35-rhel7.2.0' maxCpus='240'>q35</machine>
+      <machine maxCpus='240'>rhel6.4.0</machine>
+      <machine maxCpus='240'>rhel6.0.0</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.5.0</machine>
+      <machine maxCpus='240'>rhel6.6.0</machine>
+      <machine maxCpus='240'>rhel6.1.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.0.0</machine>
+      <machine maxCpus='240'>rhel6.2.0</machine>
+      <domain type='qemu'>
+      </domain>
+      <domain type='kvm'>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+      </domain>
+    </arch>
+    <features>
+      <cpuselection/>
+      <deviceboot/>
+      <disksnapshot default='on' toggle='no'/>
+      <acpi default='on' toggle='yes'/>
+      <apic default='on' toggle='no'/>
+      <pae/>
+      <nonpae/>
+    </features>
+  </guest>
+
+  <guest>
+    <os_type>hvm</os_type>
+    <arch name='x86_64'>
+      <wordsize>64</wordsize>
+      <emulator>/usr/libexec/qemu-kvm</emulator>
+      <machine maxCpus='240'>pc-i440fx-rhel7.2.0</machine>
+      <machine canonical='pc-i440fx-rhel7.2.0' maxCpus='240'>pc</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.0.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.3.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.2.0</machine>
+      <machine canonical='pc-q35-rhel7.2.0' maxCpus='240'>q35</machine>
+      <machine maxCpus='240'>rhel6.4.0</machine>
+      <machine maxCpus='240'>rhel6.0.0</machine>
+      <machine maxCpus='240'>pc-i440fx-rhel7.1.0</machine>
+      <machine maxCpus='240'>rhel6.5.0</machine>
+      <machine maxCpus='240'>rhel6.6.0</machine>
+      <machine maxCpus='240'>rhel6.1.0</machine>
+      <machine maxCpus='240'>pc-q35-rhel7.0.0</machine>
+      <machine maxCpus='240'>rhel6.2.0</machine>
+      <domain type='qemu'>
+      </domain>
+      <domain type='kvm'>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+      </domain>
+    </arch>
+    <features>
+      <cpuselection/>
+      <deviceboot/>
+      <disksnapshot default='on' toggle='no'/>
+      <acpi default='on' toggle='yes'/>
+      <apic default='on' toggle='no'/>
+    </features>
+  </guest>
+
+</capabilities>
+
+2016-01-29 15:38:40.915 1620 INFO nova.compute.resource_tracker [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Auditing locally available compute resources for node osp7_controller1_1447326246805_93065
+2016-01-29 15:38:41.082 1620 INFO nova.compute.resource_tracker [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Total usable vcpus: 3, total allocated vcpus: 0
+2016-01-29 15:38:41.082 1620 INFO nova.compute.resource_tracker [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Final resource view: name=osp7_controller1_1447326246805_93065 phys_ram=5662MB used_ram=512MB phys_disk=41GB used_disk=0GB total_vcpus=3 used_vcpus=0 pci_stats=<nova.pci.stats.PciDeviceStats object at 0x4b89090>
+2016-01-29 15:38:41.101 1620 INFO nova.scheduler.client.report [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Compute_service record updated for ('osp7_controller1_1447326246805_93065', 'osp7_controller1_1447326246805_93065')
+2016-01-29 15:38:41.102 1620 INFO nova.compute.resource_tracker [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Compute_service record updated for osp7_controller1_1447326246805_93065:osp7_controller1_1447326246805_93065
+2016-01-29 15:38:41.116 1620 INFO oslo_messaging._drivers.impl_rabbit [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:41.171 1620 INFO oslo_messaging._drivers.impl_rabbit [req-8e79efdf-55e5-4e48-a883-4d1052b95c0d - - - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:46.925 1620 INFO nova.compute.manager [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Starting instance...
+2016-01-29 15:38:46.997 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Attempting claim: memory 512 MB, disk 1 GB
+2016-01-29 15:38:46.997 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Total memory: 5662 MB, used: 512.00 MB
+2016-01-29 15:38:46.997 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] memory limit: 8493.00 MB, free: 7981.00 MB
+2016-01-29 15:38:46.998 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Total disk: 41 GB, used: 0.00 GB
+2016-01-29 15:38:46.998 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] disk limit not specified, defaulting to unlimited
+2016-01-29 15:38:47.035 1620 INFO nova.compute.claims [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Claim successful
+2016-01-29 15:38:47.162 1620 INFO nova.scheduler.client.report [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Compute_service record updated for ('osp7_controller1_1447326246805_93065', 'osp7_controller1_1447326246805_93065')
+2016-01-29 15:38:47.302 1620 INFO nova.scheduler.client.report [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Compute_service record updated for ('osp7_controller1_1447326246805_93065', 'osp7_controller1_1447326246805_93065')
+2016-01-29 15:38:47.555 1620 INFO nova.virt.libvirt.driver [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Creating image
+2016-01-29 15:38:52.209 1620 WARNING nova.compute.manager [req-d83f55f3-d990-487e-a77a-5bfcefbc02ad - - - - -] While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.
+2016-01-29 15:38:55.489 1620 INFO nova.compute.manager [-] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] VM Started (Lifecycle Event)
+2016-01-29 15:38:55.564 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] During sync_power_state the instance has a pending task (spawning). Skip.
+2016-01-29 15:38:55.564 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] VM Paused (Lifecycle Event)
+2016-01-29 15:38:55.635 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] During sync_power_state the instance has a pending task (spawning). Skip.
+2016-01-29 15:39:04.213 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] VM Resumed (Lifecycle Event)
+2016-01-29 15:39:04.216 1620 INFO nova.virt.libvirt.driver [-] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] Instance spawned successfully.
+2016-01-29 15:39:04.219 1620 INFO oslo_messaging._drivers.impl_rabbit [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:04.271 1620 INFO oslo_messaging._drivers.impl_rabbit [req-9e29b33e-72d3-40bd-a3a1-9658c5ad3416 dd3c83640b8542ffa5c781f6b9ca131c 0c7fe42d8b9f4f7ebcf4cd563078dcb4 - - -] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:39:04.297 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] During sync_power_state the instance has a pending task (spawning). Skip.
+2016-01-29 15:39:04.297 1620 INFO nova.compute.manager [req-747054fb-d3e0-42f8-864e-0886d4f70023 - - - - -] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] VM Resumed (Lifecycle Event)
+2016-01-29 15:39:04.401 1620 INFO nova.compute.manager [-] [instance: 773327e7-6d3b-43e9-aff0-643bbba36b04] During sync_power_state the instance has a pending task (spawning). Skip.

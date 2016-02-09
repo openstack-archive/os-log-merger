@@ -1,0 +1,370 @@
+2016-01-29 15:38:26.664 18727 INFO neutron.openstack.common.service [req-788a53f7-4c5e-4e8c-ae9b-a12d55dab73e ] Caught SIGTERM, exiting
+2016-01-29 15:38:27.639 18727 ERROR oslo_messaging._drivers.impl_rabbit [-] Failed to consume message from queue: 
+2016-01-29 15:38:27.644 18727 INFO oslo_rootwrap.client [req-788a53f7-4c5e-4e8c-ae9b-a12d55dab73e ] Stopping rootwrap daemon process with pid=18865
+2016-01-29 15:38:28.183 21617 INFO neutron.common.config [-] Logging enabled!
+2016-01-29 15:38:28.183 21617 INFO neutron.common.config [-] /usr/bin/neutron-dhcp-agent version 2015.1.2-2.el7ost
+2016-01-29 15:38:28.183 21617 DEBUG neutron.common.config [-] command line: /usr/bin/neutron-dhcp-agent --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/dhcp_agent.ini --config-dir /etc/neutron/conf.d/common --config-dir /etc/neutron/conf.d/neutron-dhcp-agent --log-file /var/log/neutron/dhcp-agent.log setup_logging /usr/lib/python2.7/site-packages/neutron/common/config.py:208
+2016-01-29 15:38:28.187 21617 DEBUG neutron.openstack.common.fileutils [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Reloading cached file /etc/neutron/policy.json read_cached_file /usr/lib/python2.7/site-packages/neutron/openstack/common/fileutils.py:64
+2016-01-29 15:38:28.190 21617 DEBUG neutron.openstack.common.policy [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Reloaded policy file: /etc/neutron/policy.json _load_policy_file /usr/lib/python2.7/site-packages/neutron/openstack/common/policy.py:296
+2016-01-29 15:38:28.191 21617 WARNING oslo_config.cfg [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Option "use_namespaces" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+2016-01-29 15:38:28.192 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Full set of CONF: _wait_for_exit_or_signal /usr/lib/python2.7/site-packages/neutron/openstack/common/service.py:164
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2178
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Configuration options gathered from: log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2179
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] command line args: ['--config-file', '/usr/share/neutron/neutron-dist.conf', '--config-file', '/etc/neutron/neutron.conf', '--config-file', '/etc/neutron/dhcp_agent.ini', '--config-dir', '/etc/neutron/conf.d/common', '--config-dir', '/etc/neutron/conf.d/neutron-dhcp-agent', '--log-file', '/var/log/neutron/dhcp-agent.log'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2180
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] config files: ['/usr/share/neutron/neutron-dist.conf', '/etc/neutron/neutron.conf', '/etc/neutron/dhcp_agent.ini'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2181
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ================================================================================ log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2182
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] admin_password                 = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.193 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] admin_tenant_name              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] admin_user                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] advertise_mtu                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] allow_bulk                     = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] allow_overlapping_ips          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] allow_pagination               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] allow_sorting                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] api_extensions_path            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.194 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] api_paste_config               = /usr/share/neutron/api-paste.ini log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] api_workers                    = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] auth_region                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] auth_url                       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] backdoor_port                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] backlog                        = 4096 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.195 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] client_socket_timeout          = 900 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] config_dir                     = /etc/neutron/conf.d/neutron-dhcp-agent log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] config_file                    = ['/usr/share/neutron/neutron-dist.conf', '/etc/neutron/neutron.conf', '/etc/neutron/dhcp_agent.ini'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] control_exchange               = neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.196 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] core_plugin                    = neutron.plugins.ml2.plugin.Ml2Plugin log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.197 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] debug                          = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.197 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] default_ipv4_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.197 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] default_ipv6_subnet_pool       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.197 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'requests.packages.urllib3.util.retry=WARN', 'urllib3.util.retry=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.197 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_broadcast_reply           = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_confs                     = /var/lib/neutron/dhcp log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_delete_namespaces         = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_domain                    = openstacklocal log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_driver                    = neutron.agent.linux.dhcp.Dnsmasq log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.198 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dnsmasq_config_file            = /etc/neutron/dnsmasq-neutron.conf log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dnsmasq_dns_servers            = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] dnsmasq_lease_max              = 16777216 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] enable_isolated_metadata       = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] enable_metadata_network        = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] endpoint_type                  = publicURL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] external_pids                  = /var/lib/neutron/external/pids log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.199 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] force_gateway_on_subnet        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] force_metadata                 = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] host                           = osp7_networker3_1447326248174_60251 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] interface_driver               = neutron.agent.linux.interface.OVSInterfaceDriver log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] log_config_append              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.200 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] log_dir                        = /var/log/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] log_file                       = /var/log/neutron/dhcp-agent.log log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] log_format                     = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.201 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] meta_flavor_driver_mappings    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] metadata_proxy_group           =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] metadata_proxy_user            =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] metadata_proxy_watch_log       = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.202 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] network_device_mtu             = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] notification_driver            = ['neutron.openstack.common.notifier.rpc_notifier'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] notification_topics            = ['notifications'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] notify_nova_on_port_data_changes = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] notify_nova_on_port_status_changes = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_admin_auth_url            = http://localhost:5000/v2.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_admin_password            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_admin_tenant_id           = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.203 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_admin_tenant_name         = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_admin_username            = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova_url                       = http://127.0.0.1:8774/v2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] num_sync_threads               = 4 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ovs_integration_bridge         = br-int log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ovs_use_veth                   = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ovs_vsctl_timeout              = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] periodic_fuzzy_delay           = 5 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.204 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] periodic_interval              = 40 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] policy_default_rule            = default log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] policy_dirs                    = ['policy.d'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] publish_errors                 = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] resync_interval                = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] rpc_backend                    = neutron.openstack.common.rpc.impl_kombu log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.205 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] rpc_workers                    = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] send_events_interval           = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] service_plugins                = ['neutron.services.l3_router.l3_router_plugin.L3RouterPlugin'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.206 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] transport_url                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] use_namespaces                 = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] use_ssl                        = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] use_stderr                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] use_syslog                     = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.207 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] verbose                        = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] vlan_transparent               = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2191
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] OVS.ovsdb_interface            = vsctl log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.amqp_auto_delete = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.amqp_durable_queues = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.fake_rabbit = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.heartbeat_rate = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.208 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.heartbeat_timeout_threshold = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.kombu_reconnect_delay = 1.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.kombu_ssl_ca_certs =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.kombu_ssl_certfile =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.kombu_ssl_keyfile =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.kombu_ssl_version =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_ha_queues = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_host = 10.211.55.142 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.209 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_hosts = ['10.211.55.142:5672'] log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_login_method = AMQPLAIN log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_max_retries = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_password = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_port = 5672 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_retry_backoff = 2 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_retry_interval = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.210 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_use_ssl = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_userid = guest log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rabbit_virtual_host = / log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_messaging_rabbit.rpc_conn_pool_size = 30 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.auth_plugin               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.auth_section              = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.cafile                    = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.certfile                  = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.211 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.insecure                  = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.keyfile                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.region_name               = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] nova.timeout                   = None log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.connection            = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.212 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.connection_trace      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.213 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.214 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.sqlite_db             =  log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.check_child_processes_action = respawn log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.check_child_processes_interval = 60 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.report_interval          = 10.0 log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.root_helper              = sudo neutron-rootwrap /etc/neutron/rootwrap.conf log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.root_helper_daemon       = sudo neutron-rootwrap-daemon /etc/neutron/rootwrap.conf log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.215 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] AGENT.use_helper_for_ns_read   = True log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.216 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_concurrency.disable_process_locking = False log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.216 21617 WARNING oslo_config.cfg [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] Option "lock_path" from group "DEFAULT" is deprecated. Use option "lock_path" from group "oslo_concurrency".
+2016-01-29 15:38:28.216 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] oslo_concurrency.lock_path     = /var/lib/neutron/lock log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2199
+2016-01-29 15:38:28.216 21617 DEBUG neutron.openstack.common.service [req-5f5f4506-583f-4d19-8db5-bf3fa3239a0b ] ******************************************************************************** log_opt_values /usr/lib/python2.7/site-packages/oslo_config/cfg.py:2201
+2016-01-29 15:38:28.217 21617 DEBUG oslo_messaging._drivers.amqpdriver [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] MSG_ID is 9c9a2aef121f4b6db8443c72228e1a34 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:28.217 21617 DEBUG oslo_messaging._drivers.amqp [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:28.219 21617 INFO oslo_messaging._drivers.impl_rabbit [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.225 21617 DEBUG oslo_concurrency.lockutils [-] Lock "dhcp-agent" acquired by "sync_state" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:444
+2016-01-29 15:38:28.225 21617 INFO neutron.agent.dhcp.agent [-] Synchronizing state
+2016-01-29 15:38:28.225 21617 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 2fa754f52f0d41a280a371c050c951f6 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:28.323 21617 INFO oslo_messaging._drivers.impl_rabbit [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.329 21617 DEBUG oslo_messaging._drivers.amqp [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] UNIQUE_ID is 260bc571ba514ea497d45fec57a0b374. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:28.330 21617 DEBUG oslo_messaging._drivers.amqp [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:28.330 21617 INFO oslo_messaging._drivers.impl_rabbit [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.337 21617 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 0d4904d15fcd4eca915ce5b57d6c7ff4. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:28.337 21617 DEBUG oslo_messaging._drivers.amqp [-] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:28.338 21617 INFO oslo_messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.380 21617 INFO oslo_messaging._drivers.impl_rabbit [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.381 21617 INFO oslo_messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.504 21617 DEBUG neutron.agent.dhcp.agent [-] Calling driver for network: ec721b5f-7db5-4c8f-882b-a6a17c566905 action: enable call_driver /usr/lib/python2.7/site-packages/neutron/agent/dhcp/agent.py:106
+2016-01-29 15:38:28.505 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['kill', '-9', '18903'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.509 21617 INFO oslo_rootwrap.client [-] Spawned new rootwrap daemon process with pid=21655
+2016-01-29 15:38:28.555 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['kill', '-9', 18903]
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.555 21617 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:28.556 21617 DEBUG neutron.agent.linux.dhcp [-] DHCP port dhcpacdc2bd0-fc8f-5b9f-934e-db2395dce371-ec721b5f-7db5-4c8f-882b-a6a17c566905 on network ec721b5f-7db5-4c8f-882b-a6a17c566905 does not yet exist. Checking for a reserved port. setup_dhcp_port /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:994
+2016-01-29 15:38:28.556 21617 DEBUG oslo_messaging._drivers.amqpdriver [-] MSG_ID is 2782b52ce38741a582f52516ce7586ab _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:28.556 21617 DEBUG oslo_messaging._drivers.amqp [-] UNIQUE_ID is 4f6a6f09a54b40ae906029e14b1e45b6. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:28.610 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'link', 'set', 'tap15de57fe-5c', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.629 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'link', 'set', u'tap15de57fe-5c', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.629 21617 DEBUG neutron.agent.linux.dhcp [-] Reusing existing device: tap15de57fe-5c. setup /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:1040
+2016-01-29 15:38:28.630 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'addr', 'show', 'tap15de57fe-5c', 'permanent', 'scope', 'global'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.656 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'addr', 'show', u'tap15de57fe-5c', 'permanent', 'scope', 'global']
+Exit code: 0
+Stdin: 
+Stdout: 11: tap15de57fe-5c: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
+    link/ether fa:16:3e:16:21:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.2/24 brd 10.0.0.255 scope global tap15de57fe-5c
+       valid_lft forever preferred_lft forever
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.657 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-4', 'route', 'list', 'dev', 'tap15de57fe-5c', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.677 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-4', 'route', 'list', 'dev', u'tap15de57fe-5c', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 10.0.0.0/24  proto kernel  src 10.0.0.2 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.678 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-6', 'route', 'list', 'dev', 'tap15de57fe-5c', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.701 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-6', 'route', 'list', 'dev', u'tap15de57fe-5c', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.702 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'route', 'list', 'dev', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.731 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'route', 'list', 'dev', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: default via 10.0.0.1 
+10.0.0.0/24  proto kernel  scope link  src 10.0.0.2 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.732 21617 DEBUG neutron.agent.linux.dhcp [-] Building initial lease file: /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases _output_init_lease_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:524
+2016-01-29 15:38:28.733 21617 DEBUG neutron.agent.linux.dhcp [-] Done building initial lease file /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases with contents:
+1454164708 fa:16:3e:16:21:2d 10.0.0.2 * *
+1454164708 fa:16:3e:77:d8:64 10.0.0.1 * *
+ _output_init_lease_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:551
+2016-01-29 15:38:28.733 21617 DEBUG neutron.agent.linux.dhcp [-] Building host file: /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host _output_hosts_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:582
+2016-01-29 15:38:28.733 21617 DEBUG neutron.agent.linux.dhcp [-] Done building host file /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host with contents:
+fa:16:3e:16:21:2d,host-10-0-0-2.openstacklocal,10.0.0.2
+fa:16:3e:77:d8:64,host-10-0-0-1.openstacklocal,10.0.0.1
+ _output_hosts_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:611
+2016-01-29 15:38:28.735 21617 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:28.735 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'dnsmasq', '--no-hosts', '--no-resolv', '--strict-order', '--bind-interfaces', '--interface=tap15de57fe-5c', '--except-interface=lo', '--pid-file=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid', '--dhcp-hostsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host', '--addn-hosts=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/addn_hosts', '--dhcp-optsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/opts', '--dhcp-leasefile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases', '--dhcp-range=set:tag0,10.0.0.0,static,86400s', '--dhcp-lease-max=256', '--conf-file=/etc/neutron/dnsmasq-neutron.conf', '--domain=openstacklocal'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.759 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'dnsmasq', '--no-hosts', '--no-resolv', '--strict-order', '--bind-interfaces', '--interface=tap15de57fe-5c', '--except-interface=lo', u'--pid-file=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid', u'--dhcp-hostsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host', u'--addn-hosts=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/addn_hosts', u'--dhcp-optsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/opts', u'--dhcp-leasefile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases', '--dhcp-range=set:tag0,10.0.0.0,static,86400s', '--dhcp-lease-max=256', '--conf-file=/etc/neutron/dnsmasq-neutron.conf', '--domain=openstacklocal']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.760 21617 INFO neutron.agent.dhcp.agent [-] Synchronizing state complete
+2016-01-29 15:38:28.760 21617 DEBUG oslo_concurrency.lockutils [-] Lock "dhcp-agent" released by "sync_state" :: held 0.535s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:456
+2016-01-29 15:38:28.760 21617 DEBUG neutron.common.rpc [-] Creating Consumer connection for Service dhcp_agent start /usr/lib/python2.7/site-packages/neutron/common/rpc.py:157
+2016-01-29 15:38:28.761 21617 DEBUG oslo_messaging._drivers.amqp [-] Pool creating new connection create /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:92
+2016-01-29 15:38:28.762 21617 INFO oslo_messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.771 21617 DEBUG oslo_concurrency.lockutils [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Lock "dhcp-agent" acquired by "sync_state" :: waited 0.351s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:444
+2016-01-29 15:38:28.771 21617 INFO neutron.agent.dhcp.agent [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Synchronizing state
+2016-01-29 15:38:28.772 21617 DEBUG oslo_messaging._drivers.amqpdriver [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] MSG_ID is e15d2e67e6d74bbaadd83ce025d02e32 _send /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqpdriver.py:311
+2016-01-29 15:38:28.772 21617 DEBUG oslo_messaging._drivers.amqp [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] UNIQUE_ID is d51e1f99af2a47d08e20c6d6eef07292. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:28.818 21617 INFO oslo_messaging._drivers.impl_rabbit [-] Connected to AMQP server on 10.211.55.142:5672
+2016-01-29 15:38:28.825 21617 INFO neutron.agent.dhcp.agent [-] DHCP agent started
+2016-01-29 15:38:28.839 21617 DEBUG neutron.agent.dhcp.agent [-] Calling driver for network: ec721b5f-7db5-4c8f-882b-a6a17c566905 action: enable call_driver /usr/lib/python2.7/site-packages/neutron/agent/dhcp/agent.py:106
+2016-01-29 15:38:28.840 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['kill', '-9', '21673'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.843 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['kill', '-9', 21673]
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.844 21617 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:28.844 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'link', 'set', 'tap15de57fe-5c', 'up'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.869 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'link', 'set', u'tap15de57fe-5c', 'up']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.869 21617 DEBUG neutron.agent.linux.dhcp [-] Reusing existing device: tap15de57fe-5c. setup /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:1040
+2016-01-29 15:38:28.870 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'addr', 'show', 'tap15de57fe-5c', 'permanent', 'scope', 'global'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.896 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'addr', 'show', u'tap15de57fe-5c', 'permanent', 'scope', 'global']
+Exit code: 0
+Stdin: 
+Stdout: 11: tap15de57fe-5c: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
+    link/ether fa:16:3e:16:21:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.2/24 brd 10.0.0.255 scope global tap15de57fe-5c
+       valid_lft forever preferred_lft forever
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.896 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-4', 'route', 'list', 'dev', 'tap15de57fe-5c', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.921 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-4', 'route', 'list', 'dev', u'tap15de57fe-5c', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 10.0.0.0/24  proto kernel  src 10.0.0.2 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.921 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-6', 'route', 'list', 'dev', 'tap15de57fe-5c', 'scope', 'link'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.953 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', '-6', 'route', 'list', 'dev', u'tap15de57fe-5c', 'scope', 'link']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.953 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'route', 'list', 'dev', 'tap15de57fe-5c'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.978 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'ip', 'route', 'list', 'dev', u'tap15de57fe-5c']
+Exit code: 0
+Stdin: 
+Stdout: default via 10.0.0.1 
+10.0.0.0/24  proto kernel  scope link  src 10.0.0.2 
+
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.979 21617 DEBUG neutron.agent.linux.dhcp [-] Building initial lease file: /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases _output_init_lease_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:524
+2016-01-29 15:38:28.980 21617 DEBUG neutron.agent.linux.dhcp [-] Done building initial lease file /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases with contents:
+1454164708 fa:16:3e:16:21:2d 10.0.0.2 * *
+1454164708 fa:16:3e:77:d8:64 10.0.0.1 * *
+ _output_init_lease_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:551
+2016-01-29 15:38:28.980 21617 DEBUG neutron.agent.linux.dhcp [-] Building host file: /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host _output_hosts_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:582
+2016-01-29 15:38:28.981 21617 DEBUG neutron.agent.linux.dhcp [-] Done building host file /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host with contents:
+fa:16:3e:16:21:2d,host-10-0-0-2.openstacklocal,10.0.0.2
+fa:16:3e:77:d8:64,host-10-0-0-1.openstacklocal,10.0.0.1
+ _output_hosts_file /usr/lib/python2.7/site-packages/neutron/agent/linux/dhcp.py:611
+2016-01-29 15:38:28.981 21617 DEBUG neutron.agent.linux.utils [-] Unable to access /var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid get_value_from_file /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:222
+2016-01-29 15:38:28.982 21617 DEBUG neutron.agent.linux.utils [-] Running command (rootwrap daemon): ['ip', 'netns', 'exec', 'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'dnsmasq', '--no-hosts', '--no-resolv', '--strict-order', '--bind-interfaces', '--interface=tap15de57fe-5c', '--except-interface=lo', '--pid-file=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid', '--dhcp-hostsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host', '--addn-hosts=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/addn_hosts', '--dhcp-optsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/opts', '--dhcp-leasefile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases', '--dhcp-range=set:tag0,10.0.0.0,static,86400s', '--dhcp-lease-max=256', '--conf-file=/etc/neutron/dnsmasq-neutron.conf', '--domain=openstacklocal'] execute_rootwrap_daemon /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:100
+2016-01-29 15:38:28.998 21617 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', 'netns', 'exec', u'qdhcp-ec721b5f-7db5-4c8f-882b-a6a17c566905', 'dnsmasq', '--no-hosts', '--no-resolv', '--strict-order', '--bind-interfaces', '--interface=tap15de57fe-5c', '--except-interface=lo', u'--pid-file=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/pid', u'--dhcp-hostsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/host', u'--addn-hosts=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/addn_hosts', u'--dhcp-optsfile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/opts', u'--dhcp-leasefile=/var/lib/neutron/dhcp/ec721b5f-7db5-4c8f-882b-a6a17c566905/leases', '--dhcp-range=set:tag0,10.0.0.0,static,86400s', '--dhcp-lease-max=256', '--conf-file=/etc/neutron/dnsmasq-neutron.conf', '--domain=openstacklocal']
+Exit code: 0
+Stdin: 
+Stdout: 
+Stderr:  execute /usr/lib/python2.7/site-packages/neutron/agent/linux/utils.py:134
+2016-01-29 15:38:28.999 21617 INFO neutron.agent.dhcp.agent [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Synchronizing state complete
+2016-01-29 15:38:28.999 21617 DEBUG oslo_concurrency.lockutils [req-485740c2-a008-4e9c-9a2a-acc01e28a7da ] Lock "dhcp-agent" released by "sync_state" :: held 0.228s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:456
+2016-01-29 15:38:38.219 21617 DEBUG oslo_messaging._drivers.amqp [req-56781342-cd5a-43fc-8690-fd6226202564 ] UNIQUE_ID is 5aa8251dd9b647a8a3345d58a51dd715. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:48.219 21617 DEBUG oslo_messaging._drivers.amqp [req-b3c0dbe7-2c10-41f2-8b48-8d51e91a0797 ] UNIQUE_ID is e770a5473de64eb7bd16cb8e77701913. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:38:58.219 21617 DEBUG oslo_messaging._drivers.amqp [req-a1bd2ce1-9ff5-4a6c-88dc-d9e8a40b6091 ] UNIQUE_ID is 5117347b43b84f76a18827cb9c1c1827. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:08.219 21617 DEBUG oslo_messaging._drivers.amqp [req-d87fecc8-8e33-4736-9d1b-6b2c49ea11cb ] UNIQUE_ID is 254e1ef81416499d9223794259d5da38. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:18.219 21617 DEBUG oslo_messaging._drivers.amqp [req-9171b8b3-f620-4466-bf14-704a4ffca12e ] UNIQUE_ID is 6524d3c071f6429ead4f4fd9af238806. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258
+2016-01-29 15:39:28.216 21617 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" acquired by "_check_child_processes" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:444
+2016-01-29 15:39:28.217 21617 DEBUG oslo_concurrency.lockutils [-] Lock "_check_child_processes" released by "_check_child_processes" :: held 0.001s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:456
+2016-01-29 15:39:28.219 21617 DEBUG oslo_messaging._drivers.amqp [req-196635a3-e763-4b13-9c56-1abbb708a31a ] UNIQUE_ID is be5a8ce8003e4fc2954b72488685ead7. _add_unique_id /usr/lib/python2.7/site-packages/oslo_messaging/_drivers/amqp.py:258

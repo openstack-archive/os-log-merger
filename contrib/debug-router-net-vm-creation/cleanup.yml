@@ -1,0 +1,28 @@
+---
+- name: Cleanup resources
+  hosts: controller
+  tasks:
+    - name: cleanup old vms
+      shell: |
+        source ~/keystonerc_admin
+        nova delete vm{{ item }} ; exit 0
+      with_items:
+        - "{{ networks }}"
+
+    - name: setup quotas
+      shell: |
+        source ~/keystonerc_admin
+        neutron quota-update --network 100 --router 100 --subnet 100
+
+    - name: cleanup old networks
+      shell: |
+        source ~/keystonerc_admin
+        neutron router-interface-delete router-{{ item }} sub{{ item }}
+        neutron router-delete router-{{ item }}
+        neutron subnet-delete sub{{ item }}
+        neutron net-delete {{ item }}
+
+        exit 0
+      with_items:
+        - "{{ networks }}"
+
