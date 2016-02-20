@@ -53,8 +53,8 @@ setup(
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
-    py_modules=["oslogmerger"],
-    # install_requires=['peppercorn'],
+    py_modules=['oslogmerger'],
+    install_requires=['oslo.config'],
     # extras_require={
     #    'dev': ['check-manifest'],
     #    'test': ['coverage'],

@@ -6,9 +6,20 @@ import sys
 import tempfile
 import urllib2
 
+from oslo_config import cfg
+
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
+CMDLINE_OPTS = [
+    cfg.StrOpt('log-base',
+               help='Base path for all the log files',
+               default=''),
+    cfg.StrOpt('log-postfix',
+               help='Append to all the log files path',
+               default=''),
+    cfg.MultiStrOpt('logfiles', positional=True, required=True)
+   ]
 
 
 class OpenStackLog:
@@ -46,11 +57,15 @@ class OpenStackLog:
 
     def _extract_with_date(self, line):
         try:
+            # TODO(mangelajo): We support the default log format
+            #                  so far, but we may need to discover
+            #                  different ones.
             chunks = line.split(" ")
             datetime_str = ' '.join(chunks[:2])
             # this is likely to be not necessary, we can just compare
             # strings, and that's going to be faster than parsing
-            # and regenerating later
+            # and regenerating later, but, could be useful when mixing
+            # log and date formats.
             date_object = datetime.strptime(
                   datetime_str, "%Y-%m-%d %H:%M:%S.%f")
             pid, level = chunks[2], chunks[3]
@@ -85,7 +100,7 @@ class OpenStackLog:
 
 
 def help():
-    print ("""oslogmerger tool
+    print ("""os-log-merger tool
 
 usage instructions:
     os-log-merger /path/log_file1[:ALIAS] /path/log_file2[:ALIAS2] ..
@@ -103,18 +118,19 @@ Y-m-d H:M:S.mmm PID LOG-LEVEL ............
 """)
 
 
-def process_logs(files):
-    if len(files) == 0:
+def process_logs(log_base, files, log_postfix):
+    if not files:
         help()
         return 1
+    if log_base and not log_base.endswith('/'):
+        log_base += '/'
     all_entries = []
     filename_alias = {}
     for filename in files:
-
         # check if filename has an alias for log output, in the form of
         # /path/filename:alias
         filename_and_alias = filename.split(':')
-        filename = filename_and_alias[0]
+        filename = log_base + filename_and_alias[0] + log_postfix
         alias = filename_and_alias[1:]
 
         if filename == 'http' and alias and alias[0].startswith('//'):
@@ -142,7 +158,11 @@ def process_logs(files):
 
 
 def main():
-    sys.exit(process_logs(sys.argv[1:]))
+    cfg.CONF.register_cli_opts(CMDLINE_OPTS)
+    cfg.CONF(project='os-log-merger', default_config_files=[])
+    sys.exit(process_logs(cfg.CONF.log_base,
+                          cfg.CONF.logfiles,
+                          cfg.CONF.log_postfix))
 
 if __name__ == "__main__":
     main()
