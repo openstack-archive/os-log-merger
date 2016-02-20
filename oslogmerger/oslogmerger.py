@@ -122,8 +122,6 @@ def process_logs(log_base, files, log_postfix):
     if not files:
         help()
         return 1
-    if log_base and not log_base.endswith('/'):
-        log_base += '/'
     all_entries = []
     filename_alias = {}
     for filename in files:
