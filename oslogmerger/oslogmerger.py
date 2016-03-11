@@ -1,4 +1,5 @@
 from __future__ import print_function
+import argparse
 from datetime import datetime
 import hashlib
 import os
@@ -6,20 +7,11 @@ import sys
 import tempfile
 import urllib2
 
-from oslo_config import cfg
 
+__version__ = '1.0.3'
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
-CMDLINE_OPTS = [
-    cfg.StrOpt('log-base',
-               help='Base path for all the log files',
-               default=''),
-    cfg.StrOpt('log-postfix',
-               help='Append to all the log files path',
-               default=''),
-    cfg.MultiStrOpt('logfiles', positional=True, required=True)
-   ]
 
 
 class OpenStackLog:
@@ -99,29 +91,7 @@ class OpenStackLog:
             yield entry
 
 
-def help():
-    print ("""os-log-merger tool
-
-usage instructions:
-    os-log-merger /path/log_file1[:ALIAS] /path/log_file2[:ALIAS2] ..
-
-    The tool will read all the log files, sort entries based on datetime,
-and output the ordered sequence of log lines via stdout. A new column is
-appended after datetime containing the file path of the log line, or the
-alias. Use the aliases if you want shorter line lengths.
-
-    Logs are expected to contain lines in the following format:
-
-Y-m-d H:M:S.mmm PID LOG-LEVEL ............
-Y-m-d H:M:S.mmm PID LOG-LEVEL ............
-[  extra line info .....      ]
-""")
-
-
 def process_logs(log_base, files, log_postfix):
-    if not files:
-        help()
-        return 1
     all_entries = []
     filename_alias = {}
     for filename in files:
@@ -152,15 +122,48 @@ def process_logs(log_base, files, log_postfix):
                 [date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
                  filename_alias[filename], pid,
                  level, rest]).rstrip('\n'))
-    return 0
+
+
+def parse_args():
+    class MyParser(argparse.ArgumentParser):
+        """Class to print verbose help on error."""
+        def error(self, message):
+            self.print_help()
+            sys.stderr.write('\nerror: %s\n' % message)
+            sys.exit(2)
+
+    general_description = """os-log-merger tool
+
+    The tool will read all the log files, sort entries based on datetime,
+and output the ordered sequence of log lines via stdout. A new column is
+appended after datetime containing the file path of the log line, or the
+alias. Use the aliases if you want shorter line lengths.
+
+    Logs are expected to contain lines in the following format:
+
+Y-m-d H:M:S.mmm PID LOG-LEVEL ............
+Y-m-d H:M:S.mmm PID LOG-LEVEL ............
+[  extra line info .....      ]
+"""
+
+    parser = MyParser(description=general_description, version=__version__,
+                      argument_default='',
+                      formatter_class=argparse.RawTextHelpFormatter)
+    parser.add_argument('--log-base ', '-b', dest='log_base',
+                        help='Base path for all the log files')
+    parser.add_argument('--log-postfix ', '-p', dest='log_postfix',
+                        help='Append to all the log files path')
+    parser.add_argument('logfiles', nargs='+', metavar='log_file',
+                        help='File in the format of log_file[:ALIAS]')
+    return parser.parse_args()
 
 
 def main():
-    cfg.CONF.register_cli_opts(CMDLINE_OPTS)
-    cfg.CONF(project='os-log-merger', default_config_files=[])
-    sys.exit(process_logs(cfg.CONF.log_base,
-                          cfg.CONF.logfiles,
-                          cfg.CONF.log_postfix))
+    cfg = parse_args()
+    process_logs(cfg.log_base,
+                 cfg.logfiles,
+                 cfg.log_postfix)
+
 
 if __name__ == "__main__":
     main()

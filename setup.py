@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
+from oslogmerger.oslogmerger import __version__
 
 here = path.abspath(path.dirname(__file__))
 
@@ -11,7 +12,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='os-log-merger',
 
-    version='1.0.3',
+    version=__version__,
     description='OpenStack Log merge tool',
     long_description=long_description,
 
@@ -54,7 +55,7 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     py_modules=['oslogmerger'],
-    install_requires=['oslo.config'],
+    install_requires=[],
     # extras_require={
     #    'dev': ['check-manifest'],
     #    'test': ['coverage'],
