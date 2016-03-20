@@ -122,7 +122,8 @@ class OpenStackLog:
                 datetime_str, "%Y-%m-%d %H:%M:%S.%f")
             pid, level = chunks[2], chunks[3]
             rest = ' '.join(chunks[4:])
-            return (date_object, self._filename, pid, level, rest)
+            return (date_object, datetime_str, self._filename, pid, level,
+                    rest)
         except IndexError:
             return None
 
@@ -149,8 +150,8 @@ class OpenStackLog:
                 # it's a non-dated line, just append to the entry
                 # extra info
                 if entry:
-                    (date_object, filename, pid, level, rest) = entry
-                    entry = (date_object, filename, pid, level,
+                    (date_object, date_str, filename, pid, level, rest) = entry
+                    entry = (date_object, date_str, filename, pid, level,
                              rest + EXTRALINES_PADDING + line)
 
     def __next__(self):
@@ -229,11 +230,9 @@ def process_logs(cfg):
         method = process_logs_memory_hog
 
     for entry in method(logs):
-        (date_object, filename, pid, level, rest) = entry
-        print (' '.join(
-               [date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
-                '[%s]' % alias[filename], pid,
-                level, rest]).rstrip('\n'))
+        (date_object, date_str, filename, pid, level, rest) = entry
+        print (' '.join([date_str, '[%s]' % alias[filename], pid,
+                         level, rest]).rstrip('\n'))
 
 
 def get_path_and_alias(filename, log_base, log_postfix):
@@ -415,12 +414,12 @@ one has not been provided:'
     - 0: means disabled, and will return the full file.
          Ex:
             $ oslogmerger -b /var/log/cinder -p .log api scheduler
-                2016-02-01 10:23:34.680000 [/var/log/cinder/api.log] ...
-                2016-02-01 10:24:34.680000 [/var/log/cinder/scheduler.log] ...
+                2016-02-01 10:23:34.680 [/var/log/cinder/api.log] ...
+                2016-02-01 10:24:34.680 [/var/log/cinder/scheduler.log] ...
     - 1: use filename without prefix or postfix.
             $ oslogmerger -a1 -b /var/log/cinder -p .log api scheduler
-                2016-02-01 10:23:34.680000 [api] ...
-                2016-02-01 10:24:34.680000 [scheduler] ...
+                2016-02-01 10:23:34.680 [api] ...
+                2016-02-01 10:24:34.680 [scheduler] ...
     - 2: same as level 1, but it will also remove filename extensions if they
          have not been defined with the postfix, will reduce log filenames
          (volume=VOL, scheduler=SCH, backup=BAK, ...) and immediate directory
@@ -428,19 +427,19 @@ one has not been provided:'
          directories.
          Ex:
             $ oslogmerger -a2 node?/var/log/{cinder,nova}/*.log
-                2016-02-01 10:23:34.680000 [node1/C-API] ...
-                2016-02-01 10:24:34.680000 [node1/C-SCH]
-                2016-02-01 10:25:34.680000 [node1/C-VOL]
-                2016-02-01 10:26:34.680000 [node1/N-API]
-                2016-02-01 10:27:34.680000 [node2/N-CPU]
+                2016-02-01 10:23:34.680 [node1/C-API] ...
+                2016-02-01 10:24:34.680 [node1/C-SCH]
+                2016-02-01 10:25:34.680 [node1/C-VOL]
+                2016-02-01 10:26:34.680 [node1/N-API]
+                2016-02-01 10:27:34.680 [node2/N-CPU]
     - 3: same as level 2, plus reduce directory names
          Ex:
             $ oslogmerger -a3 node?/var/log/{cinder,nova}/*.log
-                2016-02-01 10:23:34.680000 [1/C-API] ...
-                2016-02-01 10:24:34.680000 [1/C-SCH]
-                2016-02-01 10:25:34.680000 [1/C-VOL]
-                2016-02-01 10:26:34.680000 [1/N-API]
-                2016-02-01 10:27:34.680000 [2/N-CPU]
+                2016-02-01 10:23:34.680 [1/C-API] ...
+                2016-02-01 10:24:34.680 [1/C-SCH]
+                2016-02-01 10:25:34.680 [1/C-VOL]
+                2016-02-01 10:26:34.680 [1/N-API]
+                2016-02-01 10:27:34.680 [2/N-CPU]
 """
 
     parser = MyParser(description=general_description, version=__version__,
