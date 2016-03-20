@@ -1,6 +1,16 @@
 os-log-merger
 =============
 
+.. image:: https://img.shields.io/pypi/v/os-log-merger.svg
+        :target: https://pypi.python.org/pypi/os-log-merger
+
+.. image:: https://img.shields.io/pypi/pyversions/os-log-merger.svg
+         :target: https://pypi.python.org/pypi/os-log-merger
+
+.. image:: https://img.shields.io/:license-apache-blue.svg
+         :target: http://www.apache.org/licenses/LICENSE-2.0
+
+
 What is os-log-merger?
 ~~~~~~~~~~~~~~~~~~~~~~
 
