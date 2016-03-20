@@ -2,7 +2,6 @@ from __future__ import print_function
 import argparse
 from datetime import datetime
 import hashlib
-import itertools as it
 import os
 import sys
 import tempfile
@@ -120,7 +119,7 @@ class OpenStackLog:
             # and regenerating later, but, could be useful when mixing
             # log and date formats.
             date_object = datetime.strptime(
-                  datetime_str, "%Y-%m-%d %H:%M:%S.%f")
+                datetime_str, "%Y-%m-%d %H:%M:%S.%f")
             pid, level = chunks[2], chunks[3]
             rest = ' '.join(chunks[4:])
             return (date_object, self._filename, pid, level, rest)
@@ -231,9 +230,10 @@ def process_logs(cfg):
 
     for entry in method(logs):
         (date_object, filename, pid, level, rest) = entry
-        print (' '.join([date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
-                         '[%s]' % alias[filename],
-               pid, level, rest]).rstrip('\n'))
+        print (' '.join(
+               [date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
+                '[%s]' % alias[filename], pid,
+                level, rest]).rstrip('\n'))
 
 
 def get_path_and_alias(filename, log_base, log_postfix):
@@ -357,7 +357,6 @@ def generate_aliases(aliases, cfg):
                 path.append(last_tree[directory][0])
             last_tree = last_tree[directory][1]
         non_aliased[k] = (path, v[1])
-
 
     # Add aliased items back
     result = {k: reconstruct_path(v) for k, v in non_aliased.items()}
