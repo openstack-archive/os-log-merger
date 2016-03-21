@@ -127,19 +127,25 @@ class OpenStackLog:
         except IndexError:
             return None
 
-    def log_entries(self):
-        entry = None
+    def __iter__(self):
+        self.entry = None
+        self.next_entry = None
+        return self
+
+    def _readline(self, entry):
         while True:
             line = self._file.readline()
             if line == "":
-                break
+                return entry, None
+
             try:
                 new_entry = self._extract_with_date(line)
                 if new_entry is None:
                     continue
                 if entry:
-                    yield entry
+                    return entry, new_entry
                 entry = new_entry
+
             except ValueError:
                 # it's a non-dated line, just append to the entry
                 # extra info
@@ -148,33 +154,86 @@ class OpenStackLog:
                     entry = (date_object, filename, pid, level,
                              rest + EXTRALINES_PADDING + line)
 
-        if entry:
-            yield entry
+    def __next__(self):
+        return self.next()
+
+    def next(self):
+        self.entry, self.next_entry = self._readline(self.next_entry)
+        if self.entry is None:
+            raise StopIteration()
+        return self.entry
+
+    def peek(self):
+        return self.entry
+
+    def __cmp__(self, other):
+        if other.peek() is None or self.peek() is None:
+            if self.peek() is None:
+                return 0 if other.peek() is None else 1
+            return -1
+
+        if (other.peek() or self.peek()) is None:
+            return 0 if self.peek() is None else -1
+        return cmp(self.peek()[0], other.peek()[0])
+
+
+def process_logs_limit_memory_usage(logs):
+    oslogs = [iter(log) for log in logs]
+
+    for log in oslogs:
+        next(log)
+
+    while True:
+        entry = min(oslogs)
+        result = entry.peek()
+        if result is None:
+            break
+        yield result
+        try:
+            next(entry)
+        except StopIteration:
+            # We don't need to remove the entry, since the code works with
+            # files that have reached the end, but there is no point in keep
+            # checking a file that has already reached the EOF.
+            oslogs.remove(entry)
+            if not oslogs:
+                break
+
+
+def process_logs_memory_hog(logs):
+    all_entries = []
+    # read all the logs
+    for log in logs:
+        for entry in log:
+            all_entries.append(entry)
+
+    sorted_entries = sorted(all_entries, key=lambda log_entry: log_entry[0])
+    for entry in sorted_entries:
+        yield entry
 
 
 def process_logs(cfg):
-    all_entries = []
     filename_alias = {}
+    logs = []
     for filename in cfg.logfiles:
         path, alias, is_url = get_path_and_alias(filename,
                                                  cfg.log_base,
                                                  cfg.log_postfix)
         filename_alias[path] = (filename, alias, is_url)
-
-        # read the log
-        oslog = OpenStackLog(path)
-        for entry in oslog.log_entries():
-            all_entries.append(entry)
+        logs.append(OpenStackLog(path))
 
     alias = generate_aliases(filename_alias, cfg)
 
-    sorted_entries = sorted(all_entries, key=lambda log_entry: log_entry[0])
-    for entry in sorted_entries:
+    if cfg.limit_memory:
+        method = process_logs_limit_memory_usage
+    else:
+        method = process_logs_memory_hog
+
+    for entry in method(logs):
         (date_object, filename, pid, level, rest) = entry
-        print (' '.join(
-                [date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
-                 '[%s]' % alias[filename], pid,
-                 level, rest]).rstrip('\n'))
+        print (' '.join([date_object.strftime("%Y-%m-%d %H:%M:%S.%f"),
+                         '[%s]' % alias[filename],
+               pid, level, rest]).rstrip('\n'))
 
 
 def get_path_and_alias(filename, log_base, log_postfix):
@@ -397,6 +456,9 @@ one has not been provided:'
     parser.add_argument('--alias-level', '-a', type=int, default=0,
                         dest='alias_level',
                         help='Level of smart alias naming (0-3)')
+    parser.add_argument('--min-memory', '-m', default=False,
+                        action='store_true', dest='limit_memory',
+                        help='Limit memory usage')
 
     return parser.parse_args()
 

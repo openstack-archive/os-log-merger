@@ -18,9 +18,18 @@ Limitations
 This tool is not able to properly (or meaningfully) merge logs if your servers
 are not time synced to a common time source.
 
-This is a naive implementation, not smart at all, instead of runtime comparing
-input dates as they come from log files, we create a big memory list with
-all log lines, sort them, and spite them out. This can be improved.
+By default os-log-merger uses a memory hogging implementation because it
+provides a considerable time reduction to complete the merging.  This
+implementation loads all file contents in memory and then sorts and then
+proceeds to output merged result.
+
+For operation on memory constrained systems and with log files of considerable
+sizes os-log-merger can operate on a memory conservative mode where log entries
+will be read from files one by one and sorted as they come.
+
+This memory reduction has an impact on processing speed, and will increase the
+time to process the files by 25%.
+
 
 How to install
 ~~~~~~~~~~~~~~
@@ -52,3 +61,9 @@ The previous example would produce something like this::
 
 References to http url files instead of local files is also supported. Files
 will be cached locally to avoid re-downloading on next runs.
+
+Limit memory usage
+~~~~~~~~~~~~~~~~~~
+
+We can disabled default speed optimized operation for those case were we want
+to favor a small memory footprint by using option `-m` (`--min-memory`).
