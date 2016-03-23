@@ -1,6 +1,16 @@
 os-log-merger
 =============
 
+.. image:: https://img.shields.io/pypi/v/os-log-merger.svg
+        :target: https://pypi.python.org/pypi/os-log-merger
+
+.. image:: https://img.shields.io/pypi/pyversions/os-log-merger.svg
+         :target: https://pypi.python.org/pypi/os-log-merger
+
+.. image:: https://img.shields.io/:license-apache-blue.svg
+         :target: http://www.apache.org/licenses/LICENSE-2.0
+
+
 What is os-log-merger?
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -33,17 +43,17 @@ time to process the files by 25%.
 
 How to install
 ~~~~~~~~~~~~~~
-pip install os-lo-gmerger
+pip install os-log-merger
 
-How to use it
-~~~~~~~~~~~~~
+Basic Usage
+~~~~~~~~~~~
 
 .. code:: bash
 
-     os-log-merger ../bz/1257567/40-os1ctrl01/var/log/neutron/server.log:NS1 \
-                   ../bz/1257567/50-os1ctrl02/var/log/neutron/server.log:NS2 \
-                   ../bz/1257567/40-os1ctrl01/var/log/neutron/openvswitch-agent.log:OVS1 \
-                   ../bz/1257567/50-os1ctrl02/var/log/neutron/openvswitch-agent.log:OVS2
+    $ os-log-merger ../bz/1257567/40-os1ctrl01/var/log/neutron/server.log:NS1 \
+                    ../bz/1257567/50-os1ctrl02/var/log/neutron/server.log:NS2 \
+                    ../bz/1257567/40-os1ctrl01/var/log/neutron/openvswitch-agent.log:OVS1 \
+                    ../bz/1257567/50-os1ctrl02/var/log/neutron/openvswitch-agent.log:OVS2
 
 
 Please note that the :NS1, :NS2, :OVS1, :OVS2 are aliases and can be omitted,
@@ -67,3 +77,98 @@ Limit memory usage
 
 We can disabled default speed optimized operation for those case were we want
 to favor a small memory footprint by using option `-m` (`--min-memory`).
+
+Common Base
+~~~~~~~~~~~
+
+In many cases we'll have a common base directory where log reside and they'll
+probably share the .log extension. So for the shake of brevity os-log-merger
+allows setting the base directory and postfix for all files with the `-b` and
+`-p` option (`--log-base` and `--log-postfix` long options).
+
+Example for Cinder:
+
+.. code:: bash
+
+    $ os-log-merger -b /var/log/cinder/ -p .log api:api scheduler:sch volume:vol
+
+
+Auto Alias
+~~~~~~~~~~
+
+As we've seen above you can easily set you alias using `:ALIAS` after each log
+file, but since most of log files names and locations are well known,
+os-log-merger has an auto alias feature with different levels to adapt to your
+specific needs.
+
+If an alias has been defined in the command line it will disable the auto alias
+on that file.
+
+**Level 0**
+
+The most basic auto alias generation level is level 0, and is the default
+behavior explained above, where the file path is used as an alias.
+
+**Level 1**
+
+Since default configuration will create considerable long aliases, you can use
+level 1 when using base directory and log postfix options to remove them from
+the alias.
+
+Then the following command line:
+
+.. code:: bash
+
+    $ os-log-merger -a1 -b /var/log/cinder/ -p .log api scheduler volume
+
+Would use `api`, `scheduler` and `volume` aliases::
+
+
+    2016-02-01 12:11:17.573 [api] ...
+    2016-02-01 12:11:17.701 [scheduler] ...
+    2016-02-01 11:11:18.667 [volume] ...
+
+**Level 2**
+
+In some cases we may want to use globbing patterns and auto alias level 1 is no
+longer useful, so you want to have the filename extensions removed as well as
+the common paths and reduce the well know log filenames.
+
+With level 2 os-log-merger will remove all common parts of the path as long as
+resulting paths can still uniquely identify the files within the prefixing path.
+
+It will also rename well known files like cinder/scheduler.log with c-sch like
+in this example:
+
+.. code:: bash
+
+    $ os-log-merger -a2 node?/var/log/{cinder,nova}/*.log
+
+That will give you::
+
+    2016-02-01 10:23:34.680 [node1/C-API] ...
+    2016-02-01 10:24:34.690 [node1/C-SCH] ...
+    2016-02-01 10:25:34.700 [node1/C-VOL] ...
+    2016-02-01 10:26:34.710 [node1/N-API] ...
+    2016-02-01 10:27:34.680 [node2/N-CPU] ...
+
+**Level 3**
+
+Depending on the name of your non common directories in your log paths you may
+want to go one step further and reduce them to the minimum instead of
+preserving them unaltered.
+
+Replacing Level 2 auto alias generation in the previous command with the same
+files:
+
+.. code:: bash
+
+    $ os-log-merger -a3 node?/var/log/{cinder,nova}/*.log
+
+Would result in::
+
+    2016-02-01 10:23:34.680 [1/C-API] ...
+    2016-02-01 10:24:34.690 [1/C-SCH] ...
+    2016-02-01 10:25:34.700 [1/C-VOL] ...
+    2016-02-01 10:26:34.710 [1/N-API] ...
+    2016-02-01 10:27:34.680 [2/N-CPU] ...
