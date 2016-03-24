@@ -338,7 +338,7 @@ def generate_aliases(aliases, cfg):
     for k, v in non_aliased.items():
         last_tree = tree
         for directory in v[0]:
-            last_tree[directory] = (directory, {})
+            last_tree.setdefault(directory, (directory, {}))
             last_tree = last_tree[directory][1]
 
     # Reduce all paths as much as possible if alias level is 3
