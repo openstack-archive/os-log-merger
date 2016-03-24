@@ -93,6 +93,27 @@ Example for Cinder:
     $ os-log-merger -b /var/log/cinder/ -p .log api:api scheduler:sch volume:vol
 
 
+/var/log/messages
+~~~~~~~~~~~~~~~~~
+
+os-log-merger also supports /var/log/messages type of files with options `-ml`
+and `--msg-logs` options.
+
+Since the format for those files is missing year information -MAR 24 14:11:19-
+the year from the last file modification will be used.
+
+These files can also be specified with globs and they support alias definition
+as well.
+
+Beware that openstack files should be listed before `-ml` option files.
+
+Example for Cinder:
+
+.. code:: bash
+
+    $ os-log-merger -b /var/log/ cinder/api.log:API -ml messages:MSG *.log
+
+
 Auto Alias
 ~~~~~~~~~~
 

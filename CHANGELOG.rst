@@ -9,6 +9,8 @@ Changelog
 - Add base log path option: `-b` `--log-base`.
 - Log postfix option: `-p` `--log-postfix`.
 - Auto alias generation: `-a` `--alias-level`.
+- Add support for default /var/log/messages datetime format files with
+  `-ml [FILE [FILE]]`
 
 **Bugfixes:**
 
