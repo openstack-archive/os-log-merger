@@ -6,6 +6,7 @@ Changelog
 
 **Features:**
 
+- Add optional reduced memory operation `-m` `--min-memory`
 - Add base log path option: `-b` `--log-base`.
 - Log postfix option: `-p` `--log-postfix`.
 - Auto alias generation: `-a` `--alias-level`.
