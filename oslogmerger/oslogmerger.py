@@ -334,6 +334,11 @@ def generate_aliases(aliases, cfg):
     # Split the path, and mark it all as not processed
     for k, v in non_aliased.items():
         split = v.split('/')
+        # If it's an absolute path we remove the split string and add / to the
+        # first directory
+        if split and not split[0]:
+            del split[0]
+            split[0] = '/' + split[0]
         non_aliased[k] = (split, '')
 
     non_aliased = process(aliased, non_aliased, map_file)
@@ -354,7 +359,7 @@ def generate_aliases(aliases, cfg):
     if level == 3:
         tree = reduce_tree(tree)
 
-    # Cleanup directorios from the non processed part
+    # Cleanup directories from the non processed part
     for k, v in non_aliased.items():
         last_tree = tree
         path = []
