@@ -1,6 +1,6 @@
 from __future__ import print_function
 import argparse
-from datetime import datetime
+from datetime import datetime, timedelta
 import hashlib
 import os
 import sys
@@ -80,10 +80,15 @@ class LogEntry(object):
     date_format = None
     _date_parse_msg = 'unconverted data remains: '
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         self._date_length = None
+        self.__dict__.update(**kwargs)
 
-    def prepare_line(self, line, file_datetime):
+    @classmethod
+    def get_init_args(cls, filename):
+        return {}
+
+    def prepare_line(self, line):
         return line
 
     def parse_date(self, line):
@@ -108,15 +113,15 @@ class LogEntry(object):
         return self._date_length
 
     @classmethod
-    def factory(cls, filename, line, file_datetime):
-        self = cls()
+    def factory(cls, filename, line, **kwargs):
+        self = cls(**kwargs)
 
         self.filename = filename
         if not line:
             raise ValueError
 
         # Prepare the line for date parsing
-        prepared_line = self.prepare_line(line, file_datetime)
+        prepared_line = self.prepare_line(line)
 
         # Extract the datetime
         self.date = self.parse_date(prepared_line)
@@ -144,6 +149,7 @@ class LogFile(object):
     def factory(cls, filename):
         instance = LogFile(filename)
         instance.log_entry_class = cls
+        instance.entry_kwargs = cls.get_init_args(filename)
         return instance
 
     def __init__(self, filename):
@@ -202,7 +208,7 @@ class LogFile(object):
             try:
                 new_entry = self.log_entry_class.factory(self._filename,
                                                          line,
-                                                         self.mtime)
+                                                         **self.entry_kwargs)
                 if new_entry is None:
                     continue
                 if entry:
@@ -242,11 +248,18 @@ class MsgLogEntry(LogEntry):
     """Message format: Oct 15 14:11:19"""
     date_format = '%Y%b %d %H:%M:%S'
 
-    def prepare_line(self, line, file_datetime):
+    @classmethod
+    def get_init_args(cls, filename):
+        kwargs = super(MsgLogEntry, cls).get_init_args(filename)
+        stat = os.stat(filename)
+        kwargs['file_year'] = datetime.fromtimestamp(stat.st_mtime).year
+        return kwargs
+
+    def prepare_line(self, line):
         # TODO: If year of file creation and file last modification are
         # different we should start with the cration year and then change to
         # the next year once the months go back.
-        return '%s%s' % (file_datetime.year, line)
+        return '%s%s' % (self.file_year, line)
 
     def _calculate_date_length(self):
         return super(MsgLogEntry, self)._calculate_date_length() - 4
@@ -258,6 +271,50 @@ class OSLogEntry(LogEntry):
 
     def _calculate_date_length(self):
         return super(OSLogEntry, self)._calculate_date_length() - 3
+
+
+class TSLogEntry(LogEntry):
+    """Timestamped log: [275514.814982]"""
+
+    @classmethod
+    def get_init_args(cls, filename):
+        kwargs = super(TSLogEntry, cls).get_init_args(filename)
+        stat = os.stat(filename)
+        mtime = datetime.fromtimestamp(stat.st_mtime)
+        timestamp = cls._get_last_timestamp(filename)
+        kwargs['start_date'] = mtime - timedelta(seconds=timestamp)
+        return kwargs
+
+    @classmethod
+    def _get_last_timestamp(cls, filename):
+        result = None
+        with open(filename, 'r') as f:
+            file_size = os.fstat(f.fileno()).st_size
+            # We will jump to the last KB so we don't have to read all file
+            offset = max(0, file_size - 1024)
+            f.seek(offset)
+            for line in f:
+                try:
+                    __, result = cls._read_timestamp(line)
+                except ValueError:
+                    continue
+
+            return result
+
+    @staticmethod
+    def _read_timestamp(line):
+        start = line.index('[') + 1
+        end = line.index(']')
+
+        if end < start:
+            raise ValueError
+
+        return end, float(line[start:end])
+
+    def parse_date(self, date_str):
+        end, timestamp = self._read_timestamp(date_str)
+        self._date_length = end + 1
+        return self.start_date + timedelta(seconds=timestamp)
 
 
 def process_logs_limit_memory_usage(logs):
@@ -298,6 +355,7 @@ def process_logs_memory_hog(logs):
 LOG_TYPES = [
     ('logfiles', OSLogEntry),
     ('logfiles_m', MsgLogEntry),
+    ('logfiles_t', TSLogEntry),
 ]
 
 
@@ -497,6 +555,12 @@ Y-m-d H:M:S.mmm ............
 can optionally be merged as well using "--msg-logs" or "-ml"
 options.  Year will be taken from the last modified time of the file.
 
+    Logs with timestamp format -[    0.003036]- are also supported with
+options "--timestamp-logs" or "-tl".  Since timestamp many times will
+not take epoc time as the source of the timestamp but the time the
+system started, the initial datetime will be calculated by substracting
+from the file modified datetime the last timestamp in the file.
+
     These log files will aso be affected by log base directory and log
 postfix.
 """
@@ -556,6 +620,9 @@ one has not been provided:'
     parser.add_argument('--msg-logs', '-ml', default=[], nargs='+',
                         dest='logfiles_m', metavar='file[:ALIAS]',
                         help='Message log files with format: Oct 15 14:11:19')
+    parser.add_argument('--timestamp-logs', '-tl', default=[], nargs='+',
+                        dest='logfiles_t', metavar='file[:ALIAS]',
+                        help='Message log files with timestamp: [   0.003036]')
 
     return parser.parse_args()
 

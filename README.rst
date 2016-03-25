@@ -114,6 +114,29 @@ Example for Cinder:
     $ os-log-merger -b /var/log/ cinder/api.log:API -ml messages:MSG *.log
 
 
+Timestamped logs
+~~~~~~~~~~~~~~~~
+
+os-log-merger also supports timestamped -[    0.003036]- with options `-tl`
+and `--timestamp-logs` options.
+
+Since timestamp many times will not take epoc time as the source of the
+timestamp but the time the system started, the initial datetime will be
+calculated by substracting from the file modified datetime the last timestamp
+in the file.
+
+These files can also be specified with globs and they support alias definition
+as well.
+
+Beware that openstack files should be listed before `-tl` option files.
+
+Example for Cinder:
+
+.. code:: bash
+
+    $ os-log-merger -b /var/log/ cinder/api.log:API -tl dmesg:DMSG
+
+
 Auto Alias
 ~~~~~~~~~~
 

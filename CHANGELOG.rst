@@ -11,6 +11,7 @@ Changelog
 - Auto alias generation: `-a` `--alias-level`.
 - Add support for default /var/log/messages datetime format files with
   `-ml [FILE [FILE]]`
+- Add support for timestamped log files with `-tl [FILE [FILE]]`
 
 **Bugfixes:**
 
