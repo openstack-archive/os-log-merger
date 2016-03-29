@@ -180,24 +180,24 @@ class OpenStackLog:
 def process_logs_limit_memory_usage(logs):
     oslogs = [iter(log) for log in logs]
 
-    for log in oslogs:
-        next(log)
+    def process_entry(entry_iterable):
+        try:
+            next(entry_iterable)
+        except StopIteration:
+            # There are no more entries in the iterable, we can remove it
+            # from the list to process
+            oslogs.remove(entry_iterable)
 
-    while True:
-        entry = min(oslogs)
-        result = entry.peek()
+    for log in oslogs:
+        process_entry(log)
+
+    while oslogs:
+        entry_iterable = min(oslogs)
+        result = entry_iterable.peek()
         if result is None:
             break
         yield result
-        try:
-            next(entry)
-        except StopIteration:
-            # We don't need to remove the entry, since the code works with
-            # files that have reached the end, but there is no point in keep
-            # checking a file that has already reached the EOF.
-            oslogs.remove(entry)
-            if not oslogs:
-                break
+        process_entry(entry_iterable)
 
 
 def process_logs_memory_hog(logs):
