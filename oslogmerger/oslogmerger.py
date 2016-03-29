@@ -272,10 +272,17 @@ def reduce_strings(strings):
 
 
 def reduce_tree(tree):
-    if not len(tree):
+    # If there are no subdirectories we have finished with this subtree
+    if not len(tree[1]):
         return tree
+    # Reduce the names of all subdirectories in this directory
     reduced = reduce_strings(tree[1].keys())
-    return {k: (reduced[k], reduce_tree(v)) for k, v in tree[1].items()}
+    # For each of those subdirectories reduce subtrees using the reduced name
+    # but we still use the original diretory's name as the directory key.
+    return (tree[0],
+            {k: reduce_tree((reduced[k], v[1], v[2]))
+             for k, v in tree[1].items()},
+            tree[2])
 
 
 def generate_aliases(aliases, cfg):
@@ -327,6 +334,11 @@ def generate_aliases(aliases, cfg):
     # Split the path, and mark it all as not processed
     for k, v in non_aliased.items():
         split = v.split('/')
+        # If it's an absolute path we remove the split string and add / to the
+        # first directory
+        if split and not split[0]:
+            del split[0]
+            split[0] = '/' + split[0]
         non_aliased[k] = (split, '')
 
     non_aliased = process(aliased, non_aliased, map_file)
@@ -334,27 +346,29 @@ def generate_aliases(aliases, cfg):
 
     # Remove all paths that are not unique within their respective directories
     # For convenience we'll use a dictionary as a tree
-    tree = {}
+    tree = (None, {}, [])
     for k, v in non_aliased.items():
         last_tree = tree
         for directory in v[0]:
-            last_tree[directory] = (directory, {})
-            last_tree = last_tree[directory][1]
+            last_tree[1].setdefault(directory, (directory, {}, []))
+            last_tree = last_tree[1][directory]
+        # We have to store the filename in the last directory we visited
+        last_tree[2].append(v[1])
 
     # Reduce all paths as much as possible if alias level is 3
     if level == 3:
-        tree = reduce_tree(('', tree))
+        tree = reduce_tree(tree)
 
-    # Cleanup directorios from the non processed part
+    # Cleanup directories from the non processed part
     for k, v in non_aliased.items():
         last_tree = tree
         path = []
         for directory in v[0]:
-            # If a directory is non relevant (there is only 1 directory) we
-            # can remove it from the resulting path.
-            if len(last_tree) > 1:
-                path.append(last_tree[directory][0])
-            last_tree = last_tree[directory][1]
+            # If a directory is non relevant (there is only 1 directory and no
+            # files in it) we can remove it from the resulting path.
+            if len(last_tree[1]) > 1 or last_tree[2]:
+                path.append(last_tree[1][directory][0])
+            last_tree = last_tree[1][directory]
         non_aliased[k] = (path, v[1])
 
     # Add aliased items back
