@@ -216,3 +216,49 @@ Would result in::
     2016-02-01 10:25:34.700 [1/C-VOL] ...
     2016-02-01 10:26:34.710 [1/N-API] ...
     2016-02-01 10:27:34.680 [2/N-CPU] ...
+
+System probes
+=============
+A set of system probes are provided as companion tools to help debugging
+common issues.
+
+netprobe
+~~~~~~~~
+Under the probes directory netprobe.py can be found, this tool depends on
+tcpdump being available on the host.
+
+This probe will inspect the system for new UP network devices periodically,
+and when found, a tcpdump will be started with the configured filter,
+logging everything on the openstack log format.
+
+The net namespaces are not filtered by default.
+
+The network interfaces default filter is::
+
+    tap.*|qbr.*|qg-\.*|qr-\.*
+
+
+The default packet filter is::
+
+    (arp or rarp) or (udp and (port 67 or port 68)) or icmp or icmp6
+
+
+Usage details::
+
+    usage: netprobe [-h] [-v] [--netns-re NETNS_REGEX] [--netdev-re NETDEV_REGEX]
+                    [--tcpdump-filter TCPDUMP_FILTER]
+                    [--check-interval CHECK_INTERVAL]
+
+    This tool will track system network devices as they appear in a host,
+    and start tcpdump processes for each of them, while the output of all
+    the tcpdumps goes in a single openstack-like log.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -v, --version         show program's version number and exit
+      --netns-re NETNS_REGEX, -n NETNS_REGEX
+      --netdev-re NETDEV_REGEX, -d NETDEV_REGEX
+      --tcpdump-filter TCPDUMP_FILTER, -t TCPDUMP_FILTER
+      --check-interval CHECK_INTERVAL, -i CHECK_INTERVAL
+                            The interval between interface checks
+

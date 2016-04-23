@@ -66,6 +66,7 @@ setup(
         'console_scripts': [
             'os-log-merger=oslogmerger.oslogmerger:main',
             'oslogmerger=oslogmerger.oslogmerger:main',
+	    'netprobe=oslogmerger.probes.netprobe:main',
         ],
     },
 )
