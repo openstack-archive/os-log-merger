@@ -60,6 +60,7 @@ FILE_MAP = {
     'openvswitch-agent': 'VSWI',
     'server': 'API',
     'linuxbridge-agent': 'SVC',
+    'netprobe': 'NET',
     # Heat
     'heat-api': 'API',
     'heat-engine': 'ENG',

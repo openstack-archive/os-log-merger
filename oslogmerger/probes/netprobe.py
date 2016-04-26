@@ -3,7 +3,10 @@ from __future__ import print_function
 
 import argparse
 import datetime
+import fcntl
+import os
 import re
+import select
 import sys
 import subprocess
 import time
@@ -12,15 +15,38 @@ import threading
 __version__ = '0.0.1'
 
 INTERFACE_RE = re.compile('\d+: (.+):')
-DEFAULT_CHECK_INTERVAL = 5
-DEFAULT_INTERFACE_RE = "tap.*|qbr.*|qg-\.*|qr-\.*"
+DEFAULT_CHECK_INTERVAL = 1
+DEFAULT_INTERFACE_RE = "tap.*|qg-\.*|qr-\.*"
 DEFAULT_TCPDUMP_FILTER = '(arp or rarp) or (udp and (port 67 or port 68))' + \
                          ' or icmp or icmp6'
+DEFAULT_OUTPUT_FILE = '/var/log/neutron/netprobe.log'
+
+output = sys.stdout
+
+
+def _execute(cmd):
+    _PIPE = subprocess.PIPE
+    obj = subprocess.Popen(cmd, stdin=_PIPE, stdout=_PIPE, close_fds=True,
+                           shell=False)
+    result = obj.communicate()
+    obj.stdin.close()
+    (stdout, stderr) = result
+    return stdout
+
+
+def execute(cmd):
+    # FIXME: super nasty hack to avoid a deadlock in the above function when
+    #        calling ip link, I have spent 4 hours debugging it, enough for
+    #        today...
+    cmd_str = ' '.join(cmd)
+    os.system(cmd_str + ' >/tmp/exec_out')
+    with open('/tmp/exec_out', 'r') as f:
+        return f.read()
 
 
 def netns():
     return filter(lambda line: len(line) > 0,
-                  subprocess.check_output(['ip', 'netns']).split('\n'))
+                  execute(['ip', 'netns']).split('\n'))
 
 
 def _netns_cmd(netns=None):
@@ -32,7 +58,7 @@ def _netns_cmd(netns=None):
 
 def interfaces(netns=None):
     cmd = _netns_cmd(netns) + ['ip', 'link']
-    out = subprocess.check_output(cmd).split('\n')
+    out = execute(cmd).split('\n')
     not_down = "\n".join(filter(lambda line: line.find(' DOWN ') == -1, out))
     return INTERFACE_RE.findall(not_down)
 
@@ -52,10 +78,18 @@ def spawn_tcpdump(interface, netns=None,
     tcpdump = subprocess.Popen(cmd, bufsize=0,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
+    fd = tcpdump.stdout.fileno()
+    fl = fcntl.fcntl(fd, fcntl.F_GETFL)
+    fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
     print(_time_now(), interface,
-          "started dumping with filter {}".format(filters))
+          "started dumping with filter {}".format(filters),
+          file=output)
     while True:
-        out = tcpdump.stdout.readline()
+        reads, writes, excs = select.select([tcpdump.stdout], [], [])
+        try:
+            out = reads[0].readline()
+        except:
+            continue
         if out == '':
             break
         line = out.rstrip()
@@ -64,7 +98,8 @@ def spawn_tcpdump(interface, netns=None,
         tcpdump_trace = ' '.join(chunks[1:])
         # FIXME: _date_now + tcpdump_timestamp can be raceful at the
         #        end of the day
-        print(_date_now(), timestamp, interface, tcpdump_trace)
+        print(_date_now(), timestamp, interface, tcpdump_trace,
+              file=output)
 
 
 def parse_args():
@@ -98,6 +133,10 @@ the tcpdumps goes in a single openstack-like log.
                         dest='check_interval',
                         help='The interval between interface checks')
 
+    parser.add_argument('--output-file', '-o',
+                        default=DEFAULT_OUTPUT_FILE,
+                        dest='output_file')
+
     return parser.parse_args()
 
 
@@ -117,7 +156,6 @@ def scan_loop(args):
     netdev_re = re.compile(args.netdev_regex)
     tcpdump_filter = args.tcpdump_filter
     while True:
-        print(_time_now(), "checking interfaces", file=sys.stderr)
         namespaces = filter(netns_re.match, netns()) + [None]
         for namespace in namespaces:
             ifs = filter(netdev_re.match, interfaces(namespace))
@@ -126,7 +164,7 @@ def scan_loop(args):
                 if name not in tracked_ifs:
                     print(_time_now(),
                           "Watching interface {}".format(name),
-                          file=sys.stderr)
+                          file=output)
                     tracked_ifs[name] = create_tcpdump_thread(interface,
                                                               namespace,
                                                               tcpdump_filter,
@@ -135,14 +173,18 @@ def scan_loop(args):
         for thread_name, thread in tracked_ifs.items():
             if not thread.is_alive():
                 print(_time_now(),
-                      "Interface {} went away".format(thread_name))
+                      "Interface {} went away".format(thread_name),
+                      file=output)
                 tracked_ifs.pop(thread_name).join()
 
         time.sleep(args.check_interval)
 
 
 def main():
+    global output
     args = parse_args()
+    print(args.output_file)
+    output = open(args.output_file, 'w', 0)
     scan_loop(args)
 
 if __name__ == '__main__':

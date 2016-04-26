@@ -261,4 +261,4 @@ Usage details::
       --tcpdump-filter TCPDUMP_FILTER, -t TCPDUMP_FILTER
       --check-interval CHECK_INTERVAL, -i CHECK_INTERVAL
                             The interval between interface checks
-
+      --output-file OUTPUT_FILE, -o OUTPUT_FILE
