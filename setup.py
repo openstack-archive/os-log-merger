@@ -20,8 +20,8 @@ setup(
     url='https://github.com/mangelajo/os-log-merger',
 
     # Author details
-    author='Miguel Angel Ajo',
-    author_email='majopela@redhat.com',
+    author='Miguel Angel Ajo, Gorka Eguileor',
+    author_email='majopela@redhat.com, geguileo@redhat.com',
 
     # Choose your license
     license='Apache Software License',
