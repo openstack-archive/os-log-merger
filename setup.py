@@ -60,7 +60,6 @@ setup(
     #    'dev': ['check-manifest'],
     #    'test': ['coverage'],
     # },
-    data_files=['README.rst'],
 
     entry_points={
         'console_scripts': [
