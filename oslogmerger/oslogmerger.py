@@ -9,7 +9,7 @@ import time
 import urllib2
 
 
-__version__ = '1.0.5'
+__version__ = '1.0.6'
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
@@ -102,6 +102,7 @@ class LogEntry(object):
                                     len(self._date_parse_msg))
             dt = datetime.strptime(line[:prepared_date_length],
                                    self.date_format)
+            self._date_length = prepared_date_length
         return dt
 
     def _calculate_date_length(self):
