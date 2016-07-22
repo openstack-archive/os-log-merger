@@ -51,10 +51,7 @@ A tool designed to take a bunch of openstack logs across different projects, and
 %{_bindir}/netprobe
 
 
-
 %changelog
 * Tue Jul 19 2016 dani - 1.0.6-1
 - First version of the os-log-merger-package
 
-
-- 
