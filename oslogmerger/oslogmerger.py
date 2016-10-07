@@ -128,13 +128,13 @@ class LogEntry(object):
         # Extract the datetime
         self.date = self.parse_date(prepared_line)
 
-        if (len(line) == self.date_length or
-                line[self.date_length] != self.separator):
+        if (len(prepared_line) == self.date_length or
+                prepared_line[self.date_length] != self.separator):
             raise ValueError
 
-        self.date_str = line[:self.date_length]
+        self.date_str = prepared_line[:self.date_length]
         # +1 to remove the separator so we don't have 2 spaces on output
-        self.data = line[self.date_length + 1:]
+        self.data = prepared_line[self.date_length + 1:]
         return self
 
     def append_line(self, line):
@@ -248,20 +248,27 @@ class LogFile(object):
 
 class MsgLogEntry(LogEntry):
     """Message format: Oct 15 14:11:19"""
-    date_format = '%Y%b %d %H:%M:%S'
+    date_format = '%Y %b %d %H:%M:%S'
 
     @classmethod
     def get_init_args(cls, filename):
         kwargs = super(MsgLogEntry, cls).get_init_args(filename)
-        stat = os.stat(filename)
-        kwargs['file_year'] = datetime.fromtimestamp(stat.st_mtime).year
+        try:
+            stat = os.stat(filename)
+            kwargs['file_year'] = datetime.fromtimestamp(stat.st_mtime).year
+        except:
+            # This does not work over http log files, so we fall back to
+            # current year.
+            # TODO(mangelajo): Find better ways to discover the year
+            #                  from the file
+            kwargs['file_year'] = datetime.today().year
         return kwargs
 
     def prepare_line(self, line):
         # TODO: If year of file creation and file last modification are
         # different we should start with the cration year and then change to
         # the next year once the months go back.
-        return '%s%s' % (self.file_year, line)
+        return '%s %s' % (self.file_year, line)
 
     def _calculate_date_length(self):
         return super(MsgLogEntry, self)._calculate_date_length() - 4
