@@ -90,7 +90,7 @@ class LogEntry(object):
         return {}
 
     def prepare_line(self, line):
-        return line
+        return line.replace('\0', ' ')
 
     def parse_date(self, line):
         try:
@@ -261,6 +261,7 @@ class MsgLogEntry(LogEntry):
         # TODO: If year of file creation and file last modification are
         # different we should start with the cration year and then change to
         # the next year once the months go back.
+        line = super(MsgLogEntry, self).prepare_line(line)
         return '%s%s' % (self.file_year, line)
 
     def _calculate_date_length(self):
