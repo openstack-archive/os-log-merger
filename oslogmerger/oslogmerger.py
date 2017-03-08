@@ -217,9 +217,9 @@ class LogFile(object):
                     return entry, new_entry
                 entry = new_entry
 
-            except ValueError:
-                # it's a non-dated line, just append to the entry
-                # extra info
+            except Exception:
+                # it's probably a non-dated line, or a garbled entry, just
+                # append to the entry extra info
                 if entry:
                     entry.append_line(line)
 
