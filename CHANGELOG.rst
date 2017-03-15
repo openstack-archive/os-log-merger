@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.0 (unreleased)
+1.1.0 (2017-03-17)
 ------------------
 
 **Features:**
@@ -17,6 +17,7 @@ Changelog
 **Bugfixes:**
 
 - #13: timestamp output adding 000 to microseconds.
+- lp#1672921: os-log-merger crashes on strings with null bytes
 
 1.0.3 (2015-11-08)
 ------------------

@@ -9,7 +9,7 @@ import time
 import urllib2
 
 
-__version__ = '1.0.6'
+__version__ = '1.1.0'
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
