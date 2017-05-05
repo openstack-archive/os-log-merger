@@ -2,9 +2,11 @@ from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
 import dateutil.parser
+import dateutil.tz
 import hashlib
 import heapq
 import os
+import re
 import sys
 import tempfile
 import time
@@ -189,6 +191,51 @@ class DateUtilWithColon(LogParser):
             dt = dt.replace(tzinfo=self.default_tz)
 
         return dt, dt_str, data
+
+
+class RawSyslog(LogParser):
+    """Raw syslog: <183>1 2017-04-03T21:48:21.781459-03:30"""
+
+    # NOTE(mdbooth): Parsing the date in this regexp and reconstructing it
+    # manually is a *lot* faster than passing the whole string to
+    # dateutil.parse(). Didn't try strptime due to having to parse tzinfo
+    # manually anyway.
+    HEADER = re.compile('<\d+>\d+\s'
+                        '('
+                         '(\d{4})-(\d{2})-(\d{2})T'       # Date
+                         '(\d{2}):(\d{2}):(\d{2})\.(\d+)' # Time
+                         '('                              #
+                          '([+-])(\d{2}):(\d{2})'         # Timezone
+                         ')'                              #
+                        ')\s*')
+
+    def parse_line(self, line):
+        m = RawSyslog.HEADER.match(line)
+        if m is None:
+            raise ValueError("Not syslog packet")
+
+        groups = list(m.groups())
+        dt_str = groups.pop(0)
+
+        tzoffset = int(groups.pop()) * 60 + int(groups.pop()) * 3600
+        tzsign = groups.pop()
+        tzstr = groups.pop()
+
+        if tzsign == '-':
+            tzoffset = -tzoffset
+
+        dt = datetime(
+            year=int(groups.pop(0)),
+            month=int(groups.pop(0)),
+            day=int(groups.pop(0)),
+            hour=int(groups.pop(0)),
+            minute=int(groups.pop(0)),
+            second=int(groups.pop(0)),
+            microsecond=int(groups.pop(0)),
+            tzinfo=dateutil.tz.tzoffset(tzstr, tzoffset)
+        )
+
+        return dt, dt_str, line[m.end():]
 
 
 class TSLogParser(LogParser):
@@ -381,6 +428,7 @@ LOG_TYPES = {
 # Log file formats which can only be auto-detected
 DETECTED_LOG_TYPES = [
     DateUtilWithColon,
+    RawSyslog,
 ]
 
 
