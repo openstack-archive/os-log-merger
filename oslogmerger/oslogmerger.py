@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import hashlib
 import heapq
 import os
+import re
 import sys
 import tempfile
 import time
@@ -321,10 +322,23 @@ class TSLogEntry(LogEntry):
         return self.start_date + timedelta(seconds=timestamp)
 
 
+class MetacloudLogEntry(LogEntry):
+    """Metacloud log entry: <183>1 2017-04-03T21:48:21.781459+00:00"""
+
+    HEADER = re.compile('<\d+>\d+\s(\S+)[+-]\d{2}:\d{2}')
+    DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f'
+
+    def parse_date(self, line):
+        match = MetacloudLogEntry.HEADER.match(line)
+        self._date_length = match.end()
+        return datetime.strptime(match.group(1), MetacloudLogEntry.DATE_FORMAT)
+
+
 LOG_TYPES = [
     ('logfiles', OSLogEntry),
     ('logfiles_m', MsgLogEntry),
     ('logfiles_t', TSLogEntry),
+    ('logfiles_c', MetacloudLogEntry),
 ]
 
 
@@ -602,6 +616,9 @@ one has not been provided:'
     parser.add_argument('--timestamp-logs', '-tl', default=[], nargs='+',
                         dest='logfiles_t', metavar='file[:ALIAS]',
                         help='Message log files with timestamp: [   0.003036]')
+    parser.add_argument('--metacloud-logs', '-tm', default=[], nargs='+',
+                        dest='logfiles_c', metavar='file[:ALIAS]',
+                        help='Metacloud log files')
 
     return parser.parse_args()
 
