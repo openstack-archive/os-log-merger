@@ -2,6 +2,7 @@ from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
 import hashlib
+import heapq
 import os
 import sys
 import tempfile
@@ -320,41 +321,6 @@ class TSLogEntry(LogEntry):
         return self.start_date + timedelta(seconds=timestamp)
 
 
-def process_logs_limit_memory_usage(logs):
-    oslogs = [iter(log) for log in logs]
-
-    def process_entry(entry_iterable):
-        try:
-            next(entry_iterable)
-        except StopIteration:
-            # There are no more entries in the iterable, we can remove it
-            # from the list to process
-            oslogs.remove(entry_iterable)
-
-    for log in oslogs:
-        process_entry(log)
-
-    while oslogs:
-        entry_iterable = min(oslogs)
-        result = entry_iterable.peek()
-        if result is None:
-            break
-        yield result
-        process_entry(entry_iterable)
-
-
-def process_logs_memory_hog(logs):
-    all_entries = []
-    # read all the logs
-    for log in logs:
-        for entry in log:
-            all_entries.append(entry)
-
-    sorted_entries = sorted(all_entries)
-    for entry in sorted_entries:
-        yield entry
-
-
 LOG_TYPES = [
     ('logfiles', OSLogEntry),
     ('logfiles_m', MsgLogEntry),
@@ -375,12 +341,8 @@ def process_logs(cfg):
 
     alias = generate_aliases(filename_alias, cfg)
 
-    if cfg.limit_memory:
-        method = process_logs_limit_memory_usage
-    else:
-        method = process_logs_memory_hog
-
-    for entry in method(logs):
+    entry_iters = [iter(log) for log in logs]
+    for entry in heapq.merge(*entry_iters):
         print('%s [%s] %s' % (entry.date_str, alias[entry.filename],
               entry.data.rstrip('\n')))
 
@@ -633,7 +595,7 @@ one has not been provided:'
                         help='Level of smart alias naming (0-3)')
     parser.add_argument('--min-memory', '-m', default=False,
                         action='store_true', dest='limit_memory',
-                        help='Limit memory usage')
+                        help='This option is deprecated and has no effect')
     parser.add_argument('--msg-logs', '-ml', default=[], nargs='+',
                         dest='logfiles_m', metavar='file[:ALIAS]',
                         help='Message log files with format: Oct 15 14:11:19')
