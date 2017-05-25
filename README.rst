@@ -63,7 +63,7 @@ Common Base
 ~~~~~~~~~~~
 
 In many cases we'll have a common base directory where log reside and they'll
-probably share the .log extension. So for the shake of brevity os-log-merger
+probably share the .log extension. So for the sake of brevity os-log-merger
 allows setting the base directory and postfix for all files with the `-b` and
 `-p` option (`--log-base` and `--log-postfix` long options).
 
