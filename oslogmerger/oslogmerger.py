@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
+import dateutil.parser
 import hashlib
 import heapq
 import os
@@ -99,6 +100,12 @@ class LogEntry(object):
 
 
 class LogParser(object):
+    # We assume everything's in UTC because we have no other data
+    tzinfo = dateutil.tz.tzutc()
+
+    def __init__(self, filename):
+        pass
+
     def parse_line(self, line):
         raise NotImplementedError
 
@@ -118,6 +125,7 @@ class StrptimeParser(LogParser):
         dt_str = ' '.join(dt_str)
 
         dt = datetime.strptime(dt_str, self.date_format)
+        dt = dt.replace(tzinfo=self.tzinfo)
 
         # +1 to remove the separator so we don't have 2 spaces on output
         return dt, dt_str, data
@@ -143,6 +151,27 @@ class MsgLogParser(StrptimeParser):
     def parse_line(self, line):
         dt, dt_str, data = super(MsgLogParser, self).parse_line(line)
         return dt.replace(self.year), dt_str, data
+
+
+class DateUtilWithColon(LogParser):
+    """Message format: 2017-09-14 15:47:55.896+0000:
+
+    Uses dateutil fuzzy date detection, so detects many date formats.
+    This parser handles qemu logs.
+    """
+
+    def parse_line(self, line):
+        # Interpret the first 2 words as date, remainder as data
+        dt_str = line.split(' ', 2)
+        data = dt_str.pop()
+        dt_str = ' '.join(dt_str)
+
+        # Strip any trailing colon
+        if dt_str[-1] == ':':
+            dt_str = dt_str[:-1]
+
+        dt = dateutil.parser.parse(dt_str)
+        return dt, dt_str, data
 
 
 class TSLogParser(LogParser):
@@ -185,6 +214,7 @@ class TSLogParser(LogParser):
     def parse_line(self, line):
         end, timestamp = self._read_timestamp(line)
         dt = self.start_date + timedelta(seconds=timestamp)
+        dt = dt.replace(tzinfo = self.tzinfo)
         return dt, line[:end + 1], line[end + 1:]
 
 
@@ -193,7 +223,7 @@ class LogFile(object):
         self.open(filename)
 
         parsers = []
-        for cls in LOG_TYPES.values():
+        for cls in LOG_TYPES.values() + DETECTED_LOG_TYPES:
             if cls is None:
                 continue
 
@@ -208,6 +238,9 @@ class LogFile(object):
         # the first to successfully parse a line
         for i in range(0, 5):
             line = self._readline()
+            if line is None:
+                continue
+
             for parser in parsers:
                 try:
                     parser.parse_line(line)
@@ -320,12 +353,18 @@ class LogFile(object):
         return cmp(self.peek(), other.peek())
 
 
+# Log file formats with command line options
 LOG_TYPES = {
     'logfiles_detect': None,
     'logfiles_o': OSLogParser,
     'logfiles_m': MsgLogParser,
     'logfiles_t': TSLogParser,
 }
+
+# Log file formats which can only be auto-detected
+DETECTED_LOG_TYPES = [
+    DateUtilWithColon,
+]
 
 
 def process_logs(cfg):
