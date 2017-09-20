@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
+import dateutil.parser
 import hashlib
 import heapq
 import os
@@ -99,6 +100,12 @@ class LogEntry(object):
 
 
 class LogParser(object):
+    # Default to UTC if we have no explicit TZ
+    default_tz = dateutil.tz.tzutc()
+
+    def __init__(self, filename):
+        pass
+
     def parse_line(self, line):
         raise NotImplementedError
 
@@ -118,6 +125,7 @@ class StrptimeParser(LogParser):
         dt_str = ' '.join(dt_str)
 
         dt = datetime.strptime(dt_str, self.date_format)
+        dt = dt.replace(tzinfo=self.default_tz)
 
         # +1 to remove the separator so we don't have 2 spaces on output
         return dt, dt_str, data
@@ -143,6 +151,44 @@ class MsgLogParser(StrptimeParser):
     def parse_line(self, line):
         dt, dt_str, data = super(MsgLogParser, self).parse_line(line)
         return dt.replace(self.year), dt_str, data
+
+
+class DateUtilWithColon(LogParser):
+    """Message format: 2017-09-18 18:08:49.163+0000:
+       OR:             2017-09-18T18:08:49.216429Z qemu-kvm:
+
+    This parser handles libvirt domain logs.
+
+    The parser uses dateutil fuzzy date detection, so also happens to catch a
+    number of other log formats. However, note that dateutil.parser.parse() is
+    very slow compared to other parsing methods, so if you have a lot of log
+    lines being matched by this parser you will be better served writing a
+    faster, more specific parser for them.
+    """
+    def parse_line(self, line):
+        split = line.split(' ')
+
+        # Look for a 'T' in the middle of the first word to differentiate the 2
+        # formats
+        first = split[0]
+        if len(first) > 11 and first[10] == 'T':
+            dt_str = split.pop(0)
+        elif len(split) >= 2:
+            dt_str = split.pop(0) + ' ' + split.pop(0)
+        else:
+            raise ValueError('Not recognised')
+
+        data = ' '.join(split)
+
+        # Strip any trailing colon from date
+        if len(dt_str) > 0 and dt_str[-1] == ':':
+            dt_str = dt_str[:-1]
+
+        dt = dateutil.parser.parse(dt_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=self.default_tz)
+
+        return dt, dt_str, data
 
 
 class TSLogParser(LogParser):
@@ -185,6 +231,7 @@ class TSLogParser(LogParser):
     def parse_line(self, line):
         end, timestamp = self._read_timestamp(line)
         dt = self.start_date + timedelta(seconds=timestamp)
+        dt = dt.replace(tzinfo = self.default_tz)
         return dt, line[:end + 1], line[end + 1:]
 
 
@@ -193,7 +240,7 @@ class LogFile(object):
         self.open(filename)
 
         parsers = []
-        for cls in LOG_TYPES.values():
+        for cls in LOG_TYPES.values() + DETECTED_LOG_TYPES:
             if cls is None:
                 continue
 
@@ -208,6 +255,9 @@ class LogFile(object):
         # the first to successfully parse a line
         for i in range(0, 5):
             line = self._readline()
+            if line is None:
+                continue
+
             for parser in parsers:
                 try:
                     parser.parse_line(line)
@@ -320,12 +370,18 @@ class LogFile(object):
         return cmp(self.peek(), other.peek())
 
 
+# Log file formats with command line options
 LOG_TYPES = {
     'logfiles_detect': None,
     'logfiles_o': OSLogParser,
     'logfiles_m': MsgLogParser,
     'logfiles_t': TSLogParser,
 }
+
+# Log file formats which can only be auto-detected
+DETECTED_LOG_TYPES = [
+    DateUtilWithColon,
+]
 
 
 def process_logs(cfg):
