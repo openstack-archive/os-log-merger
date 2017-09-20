@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
+import dateutil.parser
 import hashlib
 import heapq
 import os
@@ -99,6 +100,12 @@ class LogEntry(object):
 
 
 class LogParser(object):
+    # Default to UTC if we have no explicit TZ
+    default_tz = dateutil.tz.tzutc()
+
+    def __init__(self, filename):
+        pass
+
     def parse_line(self, line):
         raise NotImplementedError
 
@@ -118,6 +125,7 @@ class StrptimeParser(LogParser):
         dt_str = ' '.join(dt_str)
 
         dt = datetime.strptime(dt_str, self.date_format)
+        dt = dt.replace(tzinfo=self.default_tz)
 
         # +1 to remove the separator so we don't have 2 spaces on output
         return dt, dt_str, data
@@ -143,6 +151,84 @@ class MsgLogParser(StrptimeParser):
     def parse_line(self, line):
         dt, dt_str, data = super(MsgLogParser, self).parse_line(line)
         return dt.replace(self.year), dt_str, data
+
+
+def make_tzinfo(name, sign, hours, minutes):
+    tzoffset = int(minutes) * 60 + int(hours) * 3600
+    if sign == '-':
+        tzoffset = -tzoffset
+    return dateutil.tz.tzoffset(name, tzoffset)
+
+
+class LibvirtdParser(LogParser):
+    """Message format: 2017-09-18 18:08:49.163+0000:
+       OR:             2017-09-18T18:08:49.216429Z qemu-kvm:
+
+    This parser handles libvirtd.log and libvirt domain logs. Domain logs
+    contain a mixture of libvirt and qemu logs, hence the 2 log formats.
+    """
+    LIBVIRT = re.compile('(\d{4})-(\d{2})-(\d{2}) '         # Date
+                         '(\d{2}):(\d{2}):(\d{2})\.(\d{3})' # Time
+                         '('                                #
+                          '([+-])(\d{2})(\d{2})'            # Timezone
+                         '):\s*')                           #
+
+    QEMU = re.compile('(\d{4})-(\d{2})-(\d{2})T'            # Date
+                      '(\d{2}):(\d{2}):(\d{2})\.(\d+)Z\s*') # Time
+
+    def parse_line(self, line):
+        m = self.LIBVIRT.match(line)
+        if m is not None:
+            return self._parse_libvirt(line, m)
+
+        m = self.QEMU.match(line)
+        if m is not None:
+            return self._parse_qemu(line, m)
+
+        raise ValueError('Unsupported format')
+
+    def _parse_libvirt(self, line, match):
+        groups = list(match.groups())
+
+        (tzminutes, tzhours, tzsign, tzstr) = (
+                groups.pop(), groups.pop(), groups.pop(), groups.pop())
+        tzinfo = make_tzinfo(tzstr, tzsign, tzhours, tzminutes)
+
+        dt = datetime(
+            year=int(groups.pop(0)),
+            month=int(groups.pop(0)),
+            day=int(groups.pop(0)),
+            hour=int(groups.pop(0)),
+            minute=int(groups.pop(0)),
+            second=int(groups.pop(0)),
+            microsecond=int(groups.pop(0)) * 1000,
+            tzinfo=tzinfo,
+        )
+
+        # Strip colon and trailing whitespace from full date string
+        dt_str = match.group(0).rstrip()[:-1]
+
+        return dt, dt_str, line[match.end():]
+
+    def _parse_qemu(self, line, match):
+        groups = list(match.groups())
+
+        dt = datetime(
+            year=int(groups.pop(0)),
+            month=int(groups.pop(0)),
+            day=int(groups.pop(0)),
+            hour=int(groups.pop(0)),
+            minute=int(groups.pop(0)),
+            second=int(groups.pop(0)),
+            microsecond=int(groups.pop(0)),
+            # The trailing 'Z' means UTC
+            tzinfo=dateutil.tz.tzutc(),
+        )
+
+        # Strip trailing whitespace from full date string
+        dt_str = match.group(0).rstrip()
+
+        return dt, dt_str, line[match.end():]
 
 
 class TSLogParser(LogParser):
@@ -185,6 +271,7 @@ class TSLogParser(LogParser):
     def parse_line(self, line):
         end, timestamp = self._read_timestamp(line)
         dt = self.start_date + timedelta(seconds=timestamp)
+        dt = dt.replace(tzinfo = self.default_tz)
         return dt, line[:end + 1], line[end + 1:]
 
 
@@ -193,7 +280,7 @@ class LogFile(object):
         self.open(filename)
 
         parsers = []
-        for cls in LOG_TYPES.values():
+        for cls in LOG_TYPES.values() + DETECTED_LOG_TYPES:
             if cls is None:
                 continue
 
@@ -208,6 +295,9 @@ class LogFile(object):
         # the first to successfully parse a line
         for i in range(0, 5):
             line = self._readline()
+            if line is None:
+                continue
+
             for parser in parsers:
                 try:
                     parser.parse_line(line)
@@ -320,12 +410,19 @@ class LogFile(object):
         return cmp(self.peek(), other.peek())
 
 
+# Log file formats with command line options
 LOG_TYPES = {
     'logfiles_detect': None,
     'logfiles_o': OSLogParser,
     'logfiles_m': MsgLogParser,
     'logfiles_t': TSLogParser,
 }
+
+
+# Log file formats which can only be auto-detected
+DETECTED_LOG_TYPES = [
+    LibvirtdParser,
+]
 
 
 def process_logs(cfg):
