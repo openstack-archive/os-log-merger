@@ -304,7 +304,8 @@ class TSLogParser(LogParser):
 
     @staticmethod
     def _read_timestamp(line):
-        start = line.index('[') + 1
+        # skip leading '['
+        start = 1
         end = line.index(']')
 
         if end < start:
@@ -347,6 +348,9 @@ class LogFile(object):
                     parser.parse_line(line)
 
                     # It worked!
+                    print('Detected %s as %s' %
+                          (filename, parser.__class__.__name__),
+                          file=sys.stderr)
                     return parser
                 except ValueError:
                     pass
