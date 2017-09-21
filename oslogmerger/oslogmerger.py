@@ -403,19 +403,6 @@ class LogFile(object):
             raise StopIteration()
         return self.entry
 
-    def peek(self):
-        return self.entry
-
-    def __cmp__(self, other):
-        if other.peek() is None or self.peek() is None:
-            if self.peek() is None:
-                return 0 if other.peek() is None else 1
-            return -1
-
-        if (other.peek() or self.peek()) is None:
-            return 0 if self.peek() is None else -1
-        return cmp(self.peek(), other.peek())
-
 
 # Log file formats with command line options
 LOG_TYPES = {
