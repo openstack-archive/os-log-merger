@@ -102,11 +102,8 @@ class LogEntry(object):
 
 
 class LogParser(object):
-    # Default to UTC if we have no explicit TZ
-    default_tz = dateutil.tz.tzutc()
-
-    def __init__(self, filename):
-        pass
+    def __init__(self, filename, cfg):
+        self.cfg = cfg
 
     def parse_line(self, line):
         raise NotImplementedError
@@ -115,7 +112,8 @@ class LogParser(object):
 class StrptimeParser(LogParser):
     date_format = None
 
-    def __init__(self, filename):
+    def __init__(self, filename, cfg):
+        super(StrptimeParser, self).__init__(filename, cfg)
         self.date_format_words = len(self.date_format.split(' '))
 
     def parse_line(self, line):
@@ -127,7 +125,7 @@ class StrptimeParser(LogParser):
         dt_str = ' '.join(dt_str)
 
         dt = datetime.strptime(dt_str, self.date_format)
-        dt = dt.replace(tzinfo=self.default_tz)
+        dt = dt.replace(tzinfo=self.cfg.default_tz)
 
         # +1 to remove the separator so we don't have 2 spaces on output
         return dt, dt_str, data
@@ -142,8 +140,8 @@ class MsgLogParser(StrptimeParser):
     """Message format: Oct 15 14:11:19"""
     date_format = '%b %d %H:%M:%S'
 
-    def __init__(self, filename):
-        super(MsgLogParser, self).__init__(filename)
+    def __init__(self, filename, cfg):
+        super(MsgLogParser, self).__init__(filename, cfg)
         stat = os.stat(filename)
 
         # TODO: handle the case where log file was closed after a year boundary
@@ -159,6 +157,9 @@ def make_tzinfo(name, sign, hours, minutes):
     tzoffset = int(minutes) * 60 + int(hours) * 3600
     if sign == '-':
         tzoffset = -tzoffset
+    elif sign != '+':
+        raise ValueError('Invalid timezone sign: %s' % sign)
+
     return dateutil.tz.tzoffset(name, tzoffset)
 
 
@@ -278,7 +279,9 @@ class RawSyslog(LogParser):
 class TSLogParser(LogParser):
     """Timestamped log: [275514.814982]"""
 
-    def __init__(self, filename):
+    def __init__(self, filename, cfg):
+        super(TSLogParser, self).__init__(filename, cfg)
+
         stat = os.stat(filename)
         mtime = datetime.fromtimestamp(stat.st_mtime)
         timestamp = self._get_last_timestamp(filename)
@@ -316,12 +319,12 @@ class TSLogParser(LogParser):
     def parse_line(self, line):
         end, timestamp = self._read_timestamp(line)
         dt = self.start_date + timedelta(seconds=timestamp)
-        dt = dt.replace(tzinfo = self.default_tz)
+        dt = dt.replace(tzinfo = self.cfg.default_tz)
         return dt, line[:end + 1], line[end + 1:]
 
 
 class LogFile(object):
-    def _detect_format(self, filename):
+    def _detect_format(self, filename, cfg):
         self.open(filename)
 
         parsers = []
@@ -330,7 +333,7 @@ class LogFile(object):
                 continue
 
             try:
-                parsers.append(cls(filename))
+                parsers.append(cls(filename, cfg))
             except ValueError:
                 # Don't consider the parser if we can't instantiate it for this
                 # file
@@ -357,13 +360,13 @@ class LogFile(object):
 
         raise ValueError("Failed to detect format of %s" % self.alias)
 
-    def __init__(self, filename, alias, parser_cls=None):
+    def __init__(self, filename, alias, cfg, parser_cls=None):
         self.alias = alias
 
         if parser_cls is None:
-            self.parser = self._detect_format(filename)
+            self.parser = self._detect_format(filename, cfg)
         else:
-            self.parser = parser_cls(filename)
+            self.parser = parser_cls(filename, cfg)
 
         self.open(filename)
 
@@ -482,7 +485,8 @@ def process_logs(cfg):
     logs = []
     for path, parser_cls in paths_parsers.items():
         try:
-            logs.append(LogFile(path, aliases[path], parser_cls))
+            logs.append(LogFile(path, aliases[path], cfg,
+                                parser_cls=parser_cls))
         except ValueError:
             print('WARNING: %s unable to determine format, ignoring' % path,
                   file=sys.stderr)
@@ -654,6 +658,29 @@ def all_unique_values(*args):
     return original_len == len(values)
 
 
+class TimezoneAction(argparse.Action):
+    def __init__(self, option_strings, dest, nargs=None, **kwargs):
+        if nargs is not None:
+            raise ValueError("nargs not allowed")
+
+        super(TimezoneAction, self).__init__(option_strings, dest, **kwargs)
+
+    @staticmethod
+    def parse(tzstr):
+        # Format: +HHMM
+        if len(tzstr) != 5:
+            raise ValueError('Invalid timezone: %s' % tzstr)
+
+        sign = tzstr[0]
+        hours = tzstr[1:3]
+        minutes = tzstr[3:5]
+
+        return make_tzinfo(tzstr, sign, hours, minutes)
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        setattr(namespace, self.dest, self.parse(values))
+
+
 def parse_args():
     class MyParser(argparse.ArgumentParser):
         """Class to print verbose help on error."""
@@ -751,6 +778,12 @@ one has not been provided:'
     parser.add_argument('--timestamp-logs', '-tl', default=[], nargs='+',
                         dest='logfiles_t', metavar='file[:ALIAS]',
                         help='Message log files with timestamp: [   0.003036]')
+    parser.add_argument('--default-tz', '-tz',
+                        default=TimezoneAction.parse('+0000'),
+                        dest='default_tz', action=TimezoneAction,
+                        help="Default timezone for timestamps without a "
+                             "timezone, specified as UTC offset. "
+                             "Default: +0000")
 
     return parser.parse_args()
 
