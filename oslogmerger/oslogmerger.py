@@ -5,6 +5,7 @@ import dateutil.parser
 import dateutil.tz
 import hashlib
 import heapq
+import itertools
 import os
 import re
 import sys
@@ -325,8 +326,6 @@ class TSLogParser(LogParser):
 
 class LogFile(object):
     def _detect_format(self, filename, cfg):
-        self.open(filename)
-
         parsers = []
         for cls in LOG_TYPES.values() + DETECTED_LOG_TYPES:
             if cls is None:
@@ -341,11 +340,7 @@ class LogFile(object):
 
         # Try to parse the first few lines with each parser in turn, returning
         # the first to successfully parse a line
-        for i in range(0, 5):
-            line = self._readline()
-            if line is None:
-                continue
-
+        for line in itertools.islice(self._lines(), 0, 5):
             for parser in parsers:
                 try:
                     parser.parse_line(line)
@@ -361,6 +356,11 @@ class LogFile(object):
         raise ValueError("Failed to detect format of %s" % self.alias)
 
     def __init__(self, filename, alias, cfg, parser_cls=None):
+        if filename.startswith("http://"):
+            self.filename = self._cached_download(filename)
+        else:
+            self.filename = filename
+
         self.alias = alias
 
         if parser_cls is None:
@@ -368,14 +368,15 @@ class LogFile(object):
         else:
             self.parser = parser_cls(filename, cfg)
 
-        self.open(filename)
+    def _lines(self):
+        with open(self.filename, 'r') as logfile:
+            while True:
+                line = logfile.readline()
+                if line == "":
+                    break
 
-    def open(self, filename):
-        self._filename = filename
-        if filename.startswith("http://"):
-            filename = self._cached_download(filename)
-
-        self._file = open(filename, 'r')
+                line.replace('\0', ' ')
+                yield line
 
     def _url_cache_path(self, url):
         md5 = hashlib.md5()
@@ -408,29 +409,17 @@ class LogFile(object):
         return path
 
     def __iter__(self):
-        self.entry = None
-        self.next_entry = None
-        return self
-
-    def _readline(self):
-        line = self._file.readline()
-        if line == "":
-            return None
-        line.replace('\0', ' ')
-        return line
-
-    def _next_entry(self, entry):
-        while True:
-            line = self._readline()
-            if line is None:
-                return entry, None
-
+        entry = None
+        for line in self._lines():
             try:
                 dt, dt_str, data = self.parser.parse_line(line)
-                new_entry = LogEntry(self.alias, dt, data, dt_str=dt_str)
+
+                # If we successfully parsed a line, it means that we've
+                # finished appending un-timestamped lines to the previous entry
                 if entry:
-                    return entry, new_entry
-                entry = new_entry
+                    yield entry
+
+                entry = LogEntry(self.alias, dt, data, dt_str=dt_str)
 
             except ValueError:
                 # it's probably a non-dated line, or a garbled entry, just
@@ -438,14 +427,9 @@ class LogFile(object):
                 if entry:
                     entry.append_line(line)
 
-    def __next__(self):
-        return self.next()
-
-    def next(self):
-        self.entry, self.next_entry = self._next_entry(self.next_entry)
-        if self.entry is None:
-            raise StopIteration()
-        return self.entry
+        # We reached EOF, to return the in-progress entry
+        if entry is not None:
+            yield entry
 
 
 # Log file formats with command line options
