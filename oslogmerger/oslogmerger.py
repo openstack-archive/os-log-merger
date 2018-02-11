@@ -600,7 +600,7 @@ one has not been provided:'
                         help='Base path for all the log files')
     parser.add_argument('--log-postfix ', '-p', dest='log_postfix',
                         help='Append to all the log files path')
-    parser.add_argument('logfiles_detect', nargs='+',
+    parser.add_argument('logfiles_detect', nargs='*',
                         metavar='log_file[:ALIAS]',
                         help='Log file (auto-detect format)')
     parser.add_argument('--alias-level', '-a', type=int, default=0,
