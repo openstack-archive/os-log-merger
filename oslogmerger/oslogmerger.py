@@ -78,85 +78,119 @@ FILE_MAP = {
 
 
 class LogEntry(object):
-    separator = ' '
-    date_format = None
-    _date_parse_msg = 'unconverted data remains: '
+    def __init__(self, alias, dt, data, dt_str=None):
+        self.alias = alias
+        self.dt = dt
+        self.data = data
 
-    def __init__(self, **kwargs):
-        self._date_length = None
-        self.__dict__.update(**kwargs)
-
-    @classmethod
-    def get_init_args(cls, filename):
-        return {}
-
-    def prepare_line(self, line):
-        return line.replace('\0', ' ')
-
-    def parse_date(self, line):
-        try:
-            dt = datetime.strptime(line, self.date_format)
-        except ValueError as e:
-            if not e.args[0].startswith(self._date_parse_msg):
-                raise
-            prepared_date_length = (len(line) - len(e.args[0]) +
-                                    len(self._date_parse_msg))
-            dt = datetime.strptime(line[:prepared_date_length],
-                                   self.date_format)
-            self._date_length = prepared_date_length
-        return dt
-
-    def _calculate_date_length(self):
-        return len(self.date.strftime(self.date_format))
-
-    @property
-    def date_length(self):
-        if not self._date_length:
-            self._date_length = self._calculate_date_length()
-        return self._date_length
-
-    @classmethod
-    def factory(cls, filename, line, **kwargs):
-        self = cls(**kwargs)
-
-        self.filename = filename
-        if not line:
-            raise ValueError
-
-        # Prepare the line for date parsing
-        prepared_line = self.prepare_line(line)
-
-        # Extract the datetime
-        self.date = self.parse_date(prepared_line)
-
-        if (len(line) == self.date_length or
-                line[self.date_length] != self.separator):
-            raise ValueError
-
-        self.date_str = line[:self.date_length]
-        # +1 to remove the separator so we don't have 2 spaces on output
-        self.data = line[self.date_length + 1:]
-        return self
+        if dt_str is not None:
+            self.dt_str = dt_str
+        else:
+            self.dt_str = self.dt.strftime('%Y-%m-%d %H:%M:%S.%f')
 
     def append_line(self, line):
         self.data += EXTRALINES_PADDING + line
 
     def __cmp__(self, other):
-        return cmp(self.date, other.date)
+        return cmp(self.dt, other.dt)
+
+    def __str__(self):
+        return '%s [%s] %s' % (self.dt_str, self.alias, self.data.rstrip('\n'))
+
+
+class LogParser(object):
+    def parse_line(self, line):
+        raise NotImplementedError
+
+
+class StrptimeParser(LogParser):
+    date_format = None
+
+    def __init__(self, filename):
+        self.date_format_words = len(self.date_format.split(' '))
+
+    def parse_line(self, line):
+        # Split the input line into words, up to <date_format_words>. Data is
+        # anything after that. Join the first <date_format_words> words to
+        # recreate the date.
+        dt_str = line.split(' ', self.date_format_words)
+        data = dt_str.pop()
+        dt_str = ' '.join(dt_str)
+
+        dt = datetime.strptime(dt_str, self.date_format)
+
+        # +1 to remove the separator so we don't have 2 spaces on output
+        return dt, dt_str, data
+
+
+class OSLogParser(StrptimeParser):
+    """OpenStack default log: 2016-02-01 10:22:59.239"""
+    date_format = '%Y-%m-%d %H:%M:%S.%f'
+
+
+class MsgLogParser(StrptimeParser):
+    """Message format: Oct 15 14:11:19"""
+    date_format = '%b %d %H:%M:%S'
+
+    def __init__(self, filename):
+        super(MsgLogParser, self).__init__(filename)
+        stat = os.stat(filename)
+
+        # TODO: handle the case where log file was closed after a year boundary
+        log_modified = datetime.fromtimestamp(stat.st_mtime)
+        self.year = log_modified.year
+
+    def parse_line(self, line):
+        dt, dt_str, data = super(MsgLogParser, self).parse_line(line)
+        return dt.replace(self.year), dt_str, data
+
+
+class TSLogParser(LogParser):
+    """Timestamped log: [275514.814982]"""
+
+    def __init__(self, filename):
+        stat = os.stat(filename)
+        mtime = datetime.fromtimestamp(stat.st_mtime)
+        timestamp = self._get_last_timestamp(filename)
+        self.start_date = mtime - timedelta(seconds=timestamp)
+
+    @classmethod
+    def _get_last_timestamp(cls, filename):
+        result = None
+        with open(filename, 'r') as f:
+            file_size = os.fstat(f.fileno()).st_size
+            # We will jump to the last KB so we don't have to read all file
+            offset = max(0, file_size - 1024)
+            f.seek(offset)
+            for line in f:
+                try:
+                    __, result = cls._read_timestamp(line)
+                except ValueError:
+                    continue
+
+            return result
+
+    @staticmethod
+    def _read_timestamp(line):
+        start = line.index('[') + 1
+        end = line.index(']')
+
+        if end < start:
+            raise ValueError
+
+        return end, float(line[start:end])
+
+    def parse_line(self, line):
+        end, timestamp = self._read_timestamp(line)
+        dt = self.start_date + timedelta(seconds=timestamp)
+        return dt, line[:end + 1], line[end + 1:]
 
 
 class LogFile(object):
-    log_entry_class = LogEntry
-
-    @staticmethod
-    def factory(cls, filename):
-        instance = LogFile(filename)
-        instance.log_entry_class = cls
-        instance.entry_kwargs = cls.get_init_args(filename)
-        return instance
-
-    def __init__(self, filename):
+    def __init__(self, filename, alias, parser_cls):
         self.open(filename)
+        self.alias = alias
+        self.parser = parser_cls(filename)
 
     def open(self, filename):
         self._filename = filename
@@ -164,8 +198,6 @@ class LogFile(object):
             filename = self._cached_download(filename)
 
         self._file = open(filename, 'r')
-        stat = os.stat(filename)
-        self.mtime = datetime.fromtimestamp(stat.st_mtime)
 
     def _url_cache_path(self, url):
         md5 = hashlib.md5()
@@ -207,18 +239,16 @@ class LogFile(object):
             line = self._file.readline()
             if line == "":
                 return entry, None
+            line.replace('\0', ' ')
 
             try:
-                new_entry = self.log_entry_class.factory(self._filename,
-                                                         line,
-                                                         **self.entry_kwargs)
-                if new_entry is None:
-                    continue
+                dt, dt_str, data = self.parser.parse_line(line)
+                new_entry = LogEntry(self.alias, dt, data, dt_str=dt_str)
                 if entry:
                     return entry, new_entry
                 entry = new_entry
 
-            except Exception:
+            except ValueError:
                 # it's probably a non-dated line, or a garbled entry, just
                 # append to the entry extra info
                 if entry:
@@ -247,104 +277,37 @@ class LogFile(object):
         return cmp(self.peek(), other.peek())
 
 
-class MsgLogEntry(LogEntry):
-    """Message format: Oct 15 14:11:19"""
-    date_format = '%Y%b %d %H:%M:%S'
-
-    @classmethod
-    def get_init_args(cls, filename):
-        kwargs = super(MsgLogEntry, cls).get_init_args(filename)
-        stat = os.stat(filename)
-        kwargs['file_year'] = datetime.fromtimestamp(stat.st_mtime).year
-        return kwargs
-
-    def prepare_line(self, line):
-        # TODO: If year of file creation and file last modification are
-        # different we should start with the cration year and then change to
-        # the next year once the months go back.
-        line = super(MsgLogEntry, self).prepare_line(line)
-        return '%s%s' % (self.file_year, line)
-
-    def _calculate_date_length(self):
-        return super(MsgLogEntry, self)._calculate_date_length() - 4
-
-
-class OSLogEntry(LogEntry):
-    """OpenStack default log: 2016-02-01 10:22:59.239"""
-    date_format = '%Y-%m-%d %H:%M:%S.%f'
-
-    def _calculate_date_length(self):
-        return super(OSLogEntry, self)._calculate_date_length() - 3
-
-
-class TSLogEntry(LogEntry):
-    """Timestamped log: [275514.814982]"""
-
-    @classmethod
-    def get_init_args(cls, filename):
-        kwargs = super(TSLogEntry, cls).get_init_args(filename)
-        stat = os.stat(filename)
-        mtime = datetime.fromtimestamp(stat.st_mtime)
-        timestamp = cls._get_last_timestamp(filename)
-        kwargs['start_date'] = mtime - timedelta(seconds=timestamp)
-        return kwargs
-
-    @classmethod
-    def _get_last_timestamp(cls, filename):
-        result = None
-        with open(filename, 'r') as f:
-            file_size = os.fstat(f.fileno()).st_size
-            # We will jump to the last KB so we don't have to read all file
-            offset = max(0, file_size - 1024)
-            f.seek(offset)
-            for line in f:
-                try:
-                    __, result = cls._read_timestamp(line)
-                except ValueError:
-                    continue
-
-            return result
-
-    @staticmethod
-    def _read_timestamp(line):
-        start = line.index('[') + 1
-        end = line.index(']')
-
-        if end < start:
-            raise ValueError
-
-        return end, float(line[start:end])
-
-    def parse_date(self, date_str):
-        end, timestamp = self._read_timestamp(date_str)
-        self._date_length = end + 1
-        return self.start_date + timedelta(seconds=timestamp)
-
-
-LOG_TYPES = [
-    ('logfiles', OSLogEntry),
-    ('logfiles_m', MsgLogEntry),
-    ('logfiles_t', TSLogEntry),
-]
+LOG_TYPES = {
+    'logfiles': OSLogParser,
+    'logfiles_m': MsgLogParser,
+    'logfiles_t': TSLogParser,
+}
 
 
 def process_logs(cfg):
     filename_alias = {}
     logs = []
-    for arg_name, entry_cls in LOG_TYPES:
-        for filename in getattr(cfg, arg_name):
-            path, alias, is_url = get_path_and_alias(filename,
-                                                     cfg.log_base,
-                                                     cfg.log_postfix)
-            filename_alias[path] = (filename, alias, is_url)
-            logs.append(LogFile.factory(entry_cls, path))
 
-    alias = generate_aliases(filename_alias, cfg)
+    paths_aliases = {}
+    paths_parsers = {}
+    for arg_name, parser_cls in LOG_TYPES.items():
+        for filename in getattr(cfg, arg_name):
+            path, alias, is_url = get_path_and_alias(filename, cfg.log_base,
+                                                     cfg.log_postfix)
+            paths_aliases[path] = (filename, alias, is_url)
+            paths_parsers[path] = parser_cls
+
+    # NOTE(mdbooth): I feel like generate_aliases should take a single path,
+    # which would make this loop much tidier. I don't want to unpick it right
+    # now, though.
+    aliases = generate_aliases(paths_aliases, cfg)
+
+    logs = [LogFile(path, aliases[path], parser_cls)
+            for path, parser_cls in paths_parsers.items()]
 
     entry_iters = [iter(log) for log in logs]
     for entry in heapq.merge(*entry_iters):
-        print('%s [%s] %s' % (entry.date_str, alias[entry.filename],
-              entry.data.rstrip('\n')))
+        print(entry)
 
 
 def get_path_and_alias(filename, log_base, log_postfix):
