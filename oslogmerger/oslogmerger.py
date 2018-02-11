@@ -152,6 +152,8 @@ class TSLogParser(LogParser):
         stat = os.stat(filename)
         mtime = datetime.fromtimestamp(stat.st_mtime)
         timestamp = self._get_last_timestamp(filename)
+        if timestamp is None:
+            raise ValueError("Didn't find timestamp")
         self.start_date = mtime - timedelta(seconds=timestamp)
 
     @classmethod
@@ -187,10 +189,45 @@ class TSLogParser(LogParser):
 
 
 class LogFile(object):
-    def __init__(self, filename, alias, parser_cls):
+    def _detect_format(self, filename):
         self.open(filename)
+
+        parsers = []
+        for cls in LOG_TYPES.values():
+            if cls is None:
+                continue
+
+            try:
+                parsers.append(cls(filename))
+            except ValueError:
+                # Don't consider the parser if we can't instantiate it for this
+                # file
+                pass
+
+        # Try to parse the first few lines with each parser in turn, returning
+        # the first to successfully parse a line
+        for i in range(0, 5):
+            line = self._readline()
+            for parser in parsers:
+                try:
+                    parser.parse_line(line)
+
+                    # It worked!
+                    return parser
+                except ValueError:
+                    pass
+
+        raise ValueError("Failed to detect format of %s" % self.alias)
+
+    def __init__(self, filename, alias, parser_cls=None):
         self.alias = alias
-        self.parser = parser_cls(filename)
+
+        if parser_cls is None:
+            self.parser = self._detect_format(filename)
+        else:
+            self.parser = parser_cls(filename)
+
+        self.open(filename)
 
     def open(self, filename):
         self._filename = filename
@@ -234,12 +271,18 @@ class LogFile(object):
         self.next_entry = None
         return self
 
-    def _readline(self, entry):
+    def _readline(self):
+        line = self._file.readline()
+        if line == "":
+            return None
+        line.replace('\0', ' ')
+        return line
+
+    def _next_entry(self, entry):
         while True:
-            line = self._file.readline()
-            if line == "":
+            line = self._readline()
+            if line is None:
                 return entry, None
-            line.replace('\0', ' ')
 
             try:
                 dt, dt_str, data = self.parser.parse_line(line)
@@ -258,7 +301,7 @@ class LogFile(object):
         return self.next()
 
     def next(self):
-        self.entry, self.next_entry = self._readline(self.next_entry)
+        self.entry, self.next_entry = self._next_entry(self.next_entry)
         if self.entry is None:
             raise StopIteration()
         return self.entry
@@ -278,7 +321,8 @@ class LogFile(object):
 
 
 LOG_TYPES = {
-    'logfiles': OSLogParser,
+    'logfiles_detect': None,
+    'logfiles_o': OSLogParser,
     'logfiles_m': MsgLogParser,
     'logfiles_t': TSLogParser,
 }
@@ -302,8 +346,13 @@ def process_logs(cfg):
     # now, though.
     aliases = generate_aliases(paths_aliases, cfg)
 
-    logs = [LogFile(path, aliases[path], parser_cls)
-            for path, parser_cls in paths_parsers.items()]
+    logs = []
+    for path, parser_cls in paths_parsers.items():
+        try:
+            logs.append(LogFile(path, aliases[path], parser_cls))
+        except ValueError:
+            print('WARNING: %s unable to determine format, ignoring' % path,
+                  file=sys.stderr)
 
     entry_iters = [iter(log) for log in logs]
     for entry in heapq.merge(*entry_iters):
@@ -551,14 +600,18 @@ one has not been provided:'
                         help='Base path for all the log files')
     parser.add_argument('--log-postfix ', '-p', dest='log_postfix',
                         help='Append to all the log files path')
-    parser.add_argument('logfiles', nargs='+', metavar='log_file[:ALIAS]',
-                        help='OpenStack log file.')
+    parser.add_argument('logfiles_detect', nargs='+',
+                        metavar='log_file[:ALIAS]',
+                        help='Log file (auto-detect format)')
     parser.add_argument('--alias-level', '-a', type=int, default=0,
                         dest='alias_level',
                         help='Level of smart alias naming (0-3)')
     parser.add_argument('--min-memory', '-m', default=False,
                         action='store_true', dest='limit_memory',
                         help='This option is deprecated and has no effect')
+    parser.add_argument('--os-logs', '-ol', default=[], nargs='+',
+                        dest='logfiles_o', metavar='file[:ALIAS]',
+                        help='Openstack log files')
     parser.add_argument('--msg-logs', '-ml', default=[], nargs='+',
                         dest='logfiles_m', metavar='file[:ALIAS]',
                         help='Message log files with format: Oct 15 14:11:19')
