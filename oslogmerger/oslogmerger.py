@@ -11,8 +11,8 @@ import re
 import sys
 import tempfile
 import time
-import urllib2
 
+from six.moves.urllib.parse import urlparse
 
 __version__ = '1.1.0'
 
@@ -96,7 +96,11 @@ class LogEntry(object):
         self.data += EXTRALINES_PADDING + line
 
     def __cmp__(self, other):
-        return cmp(self.dt, other.dt)
+        return cmp(self.dt, other.dt) * 2 + cmp(self.alias, other.alias)
+
+    def __lt__(self, other):
+        return self.dt < other.dt or (self.dt == other.dt and
+                                      (self.alias < other.alias))
 
     def __str__(self):
         return '%s [%s] %s' % (self.dt_str, self.alias, self.data.rstrip('\n'))
@@ -327,7 +331,7 @@ class TSLogParser(LogParser):
 class LogFile(object):
     def _detect_format(self, filename, cfg):
         parsers = []
-        for cls in LOG_TYPES.values() + DETECTED_LOG_TYPES:
+        for cls in list(LOG_TYPES.values()) + DETECTED_LOG_TYPES:
             if cls is None:
                 continue
 
@@ -394,7 +398,7 @@ class LogFile(object):
             print("CACHED: %s at %s" % (url, path), file=sys.stderr)
             return path
         print("DOWNLOADING: %s to %s" % (url, path), file=sys.stderr)
-        http_in = urllib2.urlopen(url)
+        http_in = urlopen(url)
         file_out = open(path, 'w')
         file_out.write(http_in.read())
         file_out.close()
@@ -521,7 +525,7 @@ def reduce_tree(tree):
     if not len(tree[1]):
         return tree
     # Reduce the names of all subdirectories in this directory
-    reduced = reduce_strings(tree[1].keys())
+    reduced = reduce_strings(list(tree[1].keys()))
     # For each of those subdirectories reduce subtrees using the reduced name
     # but we still use the original diretory's name as the directory key.
     return (tree[0],
@@ -634,7 +638,7 @@ def all_unique_values(*args):
 
     values = set()
     for a in args:
-        vals = a.values()
+        vals = list(a.values())
         if vals and isinstance(vals[0], tuple):
             vals = [reconstruct_path(v) for v in vals]
         values.update(vals)
@@ -736,8 +740,7 @@ one has not been provided:'
                 2016-02-01 10:26:34.680 [1/N-API]
                 2016-02-01 10:27:34.680 [2/N-CPU]
 """
-
-    parser = MyParser(description=general_description, version=__version__,
+    parser = MyParser(description=general_description,
                       epilog=general_epilog, argument_default='',
                       formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--log-base ', '-b', dest='log_base',
