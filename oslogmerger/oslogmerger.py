@@ -1,8 +1,6 @@
 from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
-import dateutil.parser
-import dateutil.tz
 import hashlib
 import heapq
 import itertools
@@ -12,9 +10,11 @@ import sys
 import tempfile
 import time
 
-from six.moves.urllib.parse import urlparse
+import dateutil.parser
+import dateutil.tz
+from six.moves.urllib.request import urlopen
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
@@ -62,7 +62,6 @@ FILE_MAP = {
     'lbaas-agent': 'LBAAS',
     'metadata-agent': 'META',
     'metering-agent': 'MTR',
-    'openvswitch-agent': 'VSWI',
     'server': 'API',
     'linuxbridge-agent': 'SVC',
     'netprobe': 'NET',
@@ -77,7 +76,6 @@ FILE_MAP = {
     'ceilometer-dbsync': 'DBSY',
     'central': 'CENT',
     'collector': 'COLL',
-    'compute': 'CPT',
 }
 
 
@@ -175,14 +173,14 @@ class LibvirtdParser(LogParser):
     This parser handles libvirtd.log and libvirt domain logs. Domain logs
     contain a mixture of libvirt and qemu logs, hence the 2 log formats.
     """
-    LIBVIRT = re.compile('(\d{4})-(\d{2})-(\d{2}) '         # Date
-                         '(\d{2}):(\d{2}):(\d{2})\.(\d{3})' # Time
-                         '('                                #
-                          '([+-])(\d{2})(\d{2})'            # Timezone
-                         '):\s*')                           #
+    LIBVIRT = re.compile('(\d{4})-(\d{2})-(\d{2}) '  # Date
+                         '(\d{2}):(\d{2}):(\d{2})\.(\d{3})'  # Time
+                         '('
+                         '([+-])(\d{2})(\d{2})'  # Timezone
+                         '):\s*')
 
-    QEMU = re.compile('(\d{4})-(\d{2})-(\d{2})T'            # Date
-                      '(\d{2}):(\d{2}):(\d{2})\.(\d+)Z\s*') # Time
+    QEMU = re.compile('(\d{4})-(\d{2})-(\d{2})T'  # Date
+                      '(\d{2}):(\d{2}):(\d{2})\.(\d+)Z\s*')  # Time
 
     def parse_line(self, line):
         m = self.LIBVIRT.match(line)
@@ -248,11 +246,11 @@ class RawSyslog(LogParser):
     # manually anyway.
     HEADER = re.compile('<\d+>\d+\s'
                         '('
-                         '(\d{4})-(\d{2})-(\d{2})T'       # Date
-                         '(\d{2}):(\d{2}):(\d{2})\.(\d+)' # Time
-                         '('                              #
-                          '([+-])(\d{2}):(\d{2})'         # Timezone
-                         ')'                              #
+                        '(\d{4})-(\d{2})-(\d{2})T'  # Date
+                        '(\d{2}):(\d{2}):(\d{2})\.(\d+)'  # Time
+                        '('
+                        '([+-])(\d{2}):(\d{2})'  # Timezone
+                        ')'
                         ')\s*')
 
     def parse_line(self, line):
@@ -324,7 +322,7 @@ class TSLogParser(LogParser):
     def parse_line(self, line):
         end, timestamp = self._read_timestamp(line)
         dt = self.start_date + timedelta(seconds=timestamp)
-        dt = dt.replace(tzinfo = self.cfg.default_tz)
+        dt = dt.replace(tzinfo=self.cfg.default_tz)
         return dt, line[:end + 1], line[end + 1:]
 
 
@@ -453,7 +451,6 @@ DETECTED_LOG_TYPES = [
 
 
 def process_logs(cfg):
-    filename_alias = {}
     logs = []
 
     paths_aliases = {}
