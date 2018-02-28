@@ -88,7 +88,7 @@ def spawn_tcpdump(interface, netns=None,
         reads, writes, excs = select.select([tcpdump.stdout], [], [])
         try:
             out = reads[0].readline()
-        except:
+        except Exception:
             continue
         if out == '':
             break
@@ -186,6 +186,7 @@ def main():
     print(args.output_file)
     output = open(args.output_file, 'w', 0)
     scan_loop(args)
+
 
 if __name__ == '__main__':
     main()
