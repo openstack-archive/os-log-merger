@@ -1,8 +1,6 @@
 from __future__ import print_function
 import argparse
 from datetime import datetime, timedelta
-import dateutil.parser
-import dateutil.tz
 import hashlib
 import heapq
 import itertools
@@ -12,6 +10,8 @@ import sys
 import tempfile
 import time
 
+import dateutil.parser
+import dateutil.tz
 from six.moves.urllib.parse import urlparse
 
 __version__ = '1.1.0'
