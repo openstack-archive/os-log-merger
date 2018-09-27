@@ -1,0 +1,8 @@
+Code-Review+2: Miguel Angel Ajo <mangelajo@redhat.com>
+Workflow+1: Miguel Angel Ajo <mangelajo@redhat.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 27 Sep 2018 09:09:41 +0000
+Reviewed-on: https://review.openstack.org/563071
+Project: openstack/os-log-merger
+Branch: refs/heads/master
