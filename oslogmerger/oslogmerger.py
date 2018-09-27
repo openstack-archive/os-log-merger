@@ -156,6 +156,11 @@ class MsgLogParser(StrptimeParser):
         return dt.replace(self.year), dt_str, data
 
 
+class MsgLogWithMicrosecondsParser(MsgLogParser):
+    """Message format: Mar 13 15:19:08.525234"""
+    date_format = '%b %d %H:%M:%S.%f'
+
+
 def make_tzinfo(name, sign, hours, minutes):
     tzoffset = int(minutes) * 60 + int(hours) * 3600
     if sign == '-':
@@ -439,6 +444,7 @@ LOG_TYPES = {
     'logfiles_detect': None,
     'logfiles_o': OSLogParser,
     'logfiles_m': MsgLogParser,
+    'logfiles_ms': MsgLogWithMicrosecondsParser,
     'logfiles_t': TSLogParser,
 }
 
@@ -759,6 +765,10 @@ one has not been provided:'
     parser.add_argument('--msg-logs', '-ml', default=[], nargs='+',
                         dest='logfiles_m', metavar='file[:ALIAS]',
                         help='Message log files with format: Oct 15 14:11:19')
+    parser.add_argument('--msg-logs-ms', '-ms', default=[], nargs='+',
+                        dest='logfiles_ms', metavar='file[:ALIAS]',
+                        help='Message log files with format: '
+                             'Mar 13 15:19:08.525234')
     parser.add_argument('--timestamp-logs', '-tl', default=[], nargs='+',
                         dest='logfiles_t', metavar='file[:ALIAS]',
                         help='Message log files with timestamp: [   0.003036]')
