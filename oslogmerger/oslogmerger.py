@@ -13,8 +13,9 @@ import time
 import dateutil.parser
 import dateutil.tz
 from six.moves.urllib.request import urlopen
+import pbr.version
 
-__version__ = '1.1.1'
+__version__ = pbr.version.VersionInfo('os-log-merger').version_string()
 
 EXTRALINES_PADDING = " " * 40
 CACHE_DIR = "%s/oslogmerger-cache/" % tempfile.gettempdir()
