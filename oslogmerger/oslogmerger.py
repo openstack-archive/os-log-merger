@@ -14,6 +14,7 @@
 #    under the License.
 
 from __future__ import print_function
+
 import argparse
 from datetime import datetime, timedelta
 import hashlib
@@ -110,7 +111,8 @@ class LogEntry(object):
         self.data += EXTRALINES_PADDING + line
 
     def __cmp__(self, other):
-        return cmp(self.dt, other.dt) * 2 + cmp(self.alias, other.alias)
+        return (self._cmp(self.dt, other.dt) * 2 +
+                self._cmp(self.alias, other.alias))
 
     def __lt__(self, other):
         return self.dt < other.dt or (self.dt == other.dt and
@@ -118,6 +120,10 @@ class LogEntry(object):
 
     def __str__(self):
         return '%s [%s] %s' % (self.dt_str, self.alias, self.data.rstrip('\n'))
+
+    @staticmethod
+    def _cmp(a, b):
+        return (a > b) - (a < b)
 
 
 class LogParser(object):

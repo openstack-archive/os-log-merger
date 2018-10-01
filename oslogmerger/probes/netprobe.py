@@ -135,7 +135,7 @@ the tcpdumps goes in a single openstack-like log.
 
     general_epilog = ""
 
-    parser = MyParser(description=general_description, version=__version__,
+    parser = MyParser(description=general_description,
                       epilog=general_epilog, argument_default='',
                       formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--netns-re', '-n', dest='netns_regex',
