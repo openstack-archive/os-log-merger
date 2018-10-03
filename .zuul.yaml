@@ -13,13 +13,7 @@
 # limitations under the License.
 
 - project:
-    check:
-      jobs:
-        - tox-pep8
-        - tox-py35
-        - tox-py27
-    gate:
-      jobs:
-        - tox-pep8
-        - tox-py35
-        - tox-py27
+   templates:
+     - openstack-python-jobs
+     - openstack-python35-jobs
+     - openstack-python36-jobs
