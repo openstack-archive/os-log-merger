@@ -17,3 +17,13 @@
      - openstack-python-jobs
      - openstack-python35-jobs
      - openstack-python36-jobs
+   check:
+     jobs:
+       - openstack-tox-functional
+       - openstack-tox-functional-python35
+       - openstack-tox-functional-python36
+   gate:
+     jobs:
+       - openstack-tox-functional
+       - openstack-tox-functional-python35
+       - openstack-tox-functional-python36
