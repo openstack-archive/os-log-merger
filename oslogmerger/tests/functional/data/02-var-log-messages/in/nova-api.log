@@ -1,0 +1,9 @@
+2018-10-11 08:00:49.397 16 INFO nova.api.openstack.requestlog [req-53208dc7-ecfa-4513-ab32-45dfbca11606 da7b75a2835b4ac4b96601359670a922 83d7d5557c61458b8f95322d95305a41 - default default] 172.16.2.13 "OPTIONS /" status: 200 len: 431 microversion: - time: 0.001817
+2018-10-11 08:00:50.902 16 INFO nova.api.openstack.requestlog [req-53208dc7-ecfa-4513-ab32-45dfbca11606 da7b75a2835b4ac4b96601359670a922 83d7d5557c61458b8f95322d95305a41 - default default] 172.16.2.4 "OPTIONS /" status: 200 len: 431 microversion: - time: 0.000306
+            multiline part 1
+            multiline part 2
+2018-10-11 08:00:51.091 16 INFO nova.api.openstack.requestlog [req-53208dc7-ecfa-4513-ab32-45dfbca11606 da7b75a2835b4ac4b96601359670a922 83d7d5557c61458b8f95322d95305a41 - default default] 172.16.2.29 "OPTIONS /" status: 200 len: 431 microversion: - time: 0.000300
+            more multiline
+and more multiline...
+2018-10-11 08:00:51.404 16 INFO nova.api.openstack.requestlog [req-53208dc7-ecfa-4513-ab32-45dfbca11606 da7b75a2835b4ac4b96601359670a922 83d7d5557c61458b8f95322d95305a41 - default default] 172.16.2.13 "OPTIONS /" status: 200 len: 431 microversion: - time: 0.000322
+2018-10-11 08:00:52.923 16 INFO nova.api.openstack.requestlog [req-53208dc7-ecfa-4513-ab32-45dfbca11606 da7b75a2835b4ac4b96601359670a922 83d7d5557c61458b8f95322d95305a41 - default default] 172.16.2.4 "OPTIONS /" status: 200 len: 431 microversion: - time: 0.000312
