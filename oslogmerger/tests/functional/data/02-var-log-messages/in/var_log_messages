@@ -1,9 +1,0 @@
-Oct 11 07:49:20 overcloud-controller-1 systemd: Starting Serial Getty on ttyS0...
-Oct 11 07:49:20 overcloud-controller-1 systemd: Reached target Login Prompts.
-Oct 11 07:49:20 overcloud-controller-1 systemd: Starting Login Prompts.
-Oct 11 07:49:21 overcloud-controller-1 kernel: ip6_tables: (C) 2000-2006 Netfilter Core Team
-Oct 11 07:49:21 overcloud-controller-1 sshd-keygen: Generating SSH2 RSA host key: [  OK  ]
-Oct 11 08:00:50 overcloud-controller-1 test: entry 2
-Oct 11 08:00:51 overcloud-controller-1 test: entry 3
-Oct 11 08:00:52 overcloud-controller-1 test: entry 4
-Oct 11 08:00:53 overcloud-controller-1 test: entry 5

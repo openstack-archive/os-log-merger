@@ -1,5 +1,0 @@
-2015-10-20 09:23:45.717 5411 INFO neutron.common.config [-] Logging enabled!
-2015-10-20 09:23:45.719 5411 INFO neutron.common.config [-] /usr/bin/neutron-metadata-agent version 2014.2.3-19.el7ost
-2015-10-20 09:23:45.801 5411 INFO neutron.openstack.common.service [req-7522c96c-2b7c-4f99-9d14-fde98e04da25 None] Starting 4 workers
-2015-10-20 09:23:45.808 5411 INFO neutron.openstack.common.service [req-7522c96c-2b7c-4f99-9d14-fde98e04da25 None] Started child 5498
-2015-10-20 09:23:45.822 5411 INFO neutron.openstack.common.service [req-7522c96c-2b7c-4f99-9d14-fde98e04da25 None] Started child 5499

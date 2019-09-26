@@ -1,4 +1,0 @@
-2015-10-29 10:53:12.582 21476 INFO nova.compute.manager [-] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] VM Paused (Lifecycle Event)
-2015-10-29 10:53:13.484 21476 INFO nova.compute.manager [-] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] VM Stopped (Lifecycle Event)
-2015-10-29 10:54:23.269 21476 INFO nova.compute.manager [-] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] VM Started (Lifecycle Event)
-2015-10-29 10:54:27.592 21476 INFO nova.compute.manager [-] [instance: a18a5824-4215-4e24-bcfc-cb9f89f6bcbd] VM Resumed (Lifecycle Event)

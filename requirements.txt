@@ -1,3 +1,0 @@
-pbr
-python-dateutil
-six
